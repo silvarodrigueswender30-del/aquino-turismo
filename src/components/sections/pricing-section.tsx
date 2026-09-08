@@ -1,90 +1,106 @@
-import { Badge } from "@/components/ui/badge";
-import { CTAButton } from "@/components/ui/cta-button";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 function PricingSection() {
   return (
-    <section id="valores" className="w-full bg-white pt-20 pb-8 md:pt-32 md:pb-12 scroll-mt-24">
+    <section id="planejamento" className="w-full bg-shell-white pt-20 pb-16 md:pt-32 md:pb-24 scroll-mt-24">
       {/* Content Layer */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2 mb-8 md:mb-12">
-          <div className="flex gap-4 flex-col">
-            <div>
-              <Badge variant="outline" className="font-sans">Vagas Limitadas</Badge>
-            </div>
-            <div className="flex gap-4 flex-col">
-              <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0B2530] leading-[1.1] tracking-tight max-w-2xl text-left">
-                Valores do Passeio de Lancha em Ubatuba
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Editorial Content & Steps */}
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase">
+                PLANEJE SUA EXPERIÊNCIA
+              </p>
+              <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ocean-navy leading-[1.1] tracking-tight">
+                Seu passeio começa com uma boa escolha.
               </h2>
-              <p className="font-sans font-light text-base md:text-xl leading-relaxed max-w-md text-left text-[#4B6570]">
-                Conforto no mar não precisa ser um mistério de preço. O passeio privativo com a RF Turismo começa em R$1.800, com roteiro e tempo de parada definidos por você. Para o passeio compartilhado, valores por pessoa variam conforme o roteiro escolhido — fale com a gente no WhatsApp e receba a tabela completa e a disponibilidade para sua data.
+              <p className="font-sans font-light text-base md:text-lg leading-relaxed text-slate-blue max-w-lg mt-2">
+                Cada visita a Paraty tem um ritmo diferente. A AquinoTour ajuda você a encontrar a experiência mais adequada para o seu dia, grupo ou excursão.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <CTAButton
-                href="https://wa.me/5512996125606?text=Ol%C3%A1!%20Quero%20reservar%20um%20passeio%20de%20lancha%20com%20a%20RF%20Turismo."
-                variant="on-light"
-              >
-                Reservar Agora
-              </CTAButton>
-              <CTAButton
-                href="#servicos"
-                variant="secondary-light"
-              >
-                Ver Roteiros
-              </CTAButton>
+
+            {/* Steps */}
+            <div className="flex flex-col gap-8 mt-4">
+              {/* Step 1 */}
+              <div className="flex flex-col gap-1 border-l-2 border-golden-sand pl-5">
+                <span className="font-sans text-sm font-semibold text-golden-sand tracking-widest mb-1">
+                  01
+                </span>
+                <h3 className="font-heading font-medium text-ocean-navy text-xl">
+                  Escolha a experiência
+                </h3>
+                <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
+                  Escuna, Day Use ou atendimento para grupos.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex flex-col gap-1 border-l-2 border-golden-sand/30 pl-5">
+                <span className="font-sans text-sm font-semibold text-golden-sand/70 tracking-widest mb-1">
+                  02
+                </span>
+                <h3 className="font-heading font-medium text-ocean-navy text-xl">
+                  Conte como você vem
+                </h3>
+                <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
+                  Sozinho, em família, com amigos ou em excursão.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col gap-1 border-l-2 border-golden-sand/30 pl-5">
+                <span className="font-sans text-sm font-semibold text-golden-sand/70 tracking-widest mb-1">
+                  03
+                </span>
+                <h3 className="font-heading font-medium text-ocean-navy text-xl">
+                  Receba orientação local
+                </h3>
+                <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
+                  A equipe local ajuda a organizar a opção mais adequada em Paraty.
+                </p>
+              </div>
             </div>
           </div>
           
-          {/* Grid de Imagens à direita */}
-          <div className="grid grid-cols-2 gap-4 md:gap-8">
-            {/* Imagem 1: Casal na lancha */}
-            <div className="relative bg-[#F7FBFC] rounded-2xl aspect-square overflow-hidden shadow-sm group">
-              <img 
+          {/* Right Column: Image Grid (Provisional Images) */}
+          <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-0">
+            {/* Image 1 */}
+            <div className="relative bg-deep-marine/5 rounded-[20px] aspect-square overflow-hidden group">
+              <Image 
                 src="/images/imagem5.avif" 
-                alt="Lancha privativa navegando pelas águas de Ubatuba" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                loading="lazy" 
+                alt="Turismo náutico em Paraty (imagem provisória)" 
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#063A45]/85 via-transparent to-transparent z-10 pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4 z-20 pointer-events-none">
-                <span className="font-heading text-white text-xl md:text-2xl drop-shadow-md">
-                  A partir de R$1.800
-                </span>
-              </div>
             </div>
 
-            {/* Imagem 2 (Central alta): Passeio na proa */}
-            <div className="relative bg-[#F7FBFC] rounded-2xl row-span-2 overflow-hidden shadow-sm group">
-              <img 
+            {/* Image 2 (Central alta) */}
+            <div className="relative bg-deep-marine/5 rounded-[20px] row-span-2 overflow-hidden group min-h-[300px] md:min-h-0">
+              <Image 
                 src="/images/hero-1.jpeg" 
-                alt="Passeio exclusivo de lancha em Ubatuba" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                loading="lazy" 
+                alt="Vista do mar em Paraty (imagem provisória)" 
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#063A45]/85 via-[#063A45]/10 to-transparent z-10 pointer-events-none" />
-              <div className="absolute bottom-5 left-5 right-5 z-20 pointer-events-none">
-                <span className="font-heading text-white text-lg md:text-xl drop-shadow-md">
-                  Seu roteiro, seu ritmo
-                </span>
-              </div>
             </div>
 
-            {/* Imagem 3: Paisagem / Ilhas */}
-            <div className="relative bg-[#F7FBFC] rounded-2xl aspect-square overflow-hidden shadow-sm group">
-              <img 
+            {/* Image 3 */}
+            <div className="relative bg-deep-marine/5 rounded-[20px] aspect-square overflow-hidden group">
+              <Image 
                 src="/images/imagem6.avif" 
-                alt="Praia cristalina nas ilhas de Ubatuba" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                loading="lazy" 
+                alt="Praia cristalina de Paraty (imagem provisória)" 
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#063A45]/85 via-transparent to-transparent z-10 pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4 z-20 pointer-events-none">
-                <span className="font-heading text-white text-lg md:text-xl drop-shadow-md">
-                  Ilhas de Ubatuba
-                </span>
-              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

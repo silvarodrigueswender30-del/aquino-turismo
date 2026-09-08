@@ -4,45 +4,43 @@ import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Plus, X } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { CTAButton } from "@/components/ui/cta-button";
 
 const faqs = [
   {
-    question: "Preciso levar crianças pequenas? Elas pagam passeio inteiro?",
+    question: "O que a AquinoTour oferece em Paraty?",
     answer:
-      "Crianças são bem-vindas a bordo! A taxa de embarque (R$30,00) se aplica normalmente — consulte condições especiais para crianças pequenas direto no WhatsApp.",
+      "A AquinoTour atua com turismo e receptivo em Paraty, com passeio de escuna, atendimento a grupos e excursões e Day Use divulgado entre seus serviços.",
   },
   {
-    question: "O que está incluído no valor do passeio?",
+    question: "A AquinoTour oferece passeio de escuna?",
     answer:
-      "Navegação com tripulação habilitada, coletes salva-vidas, paradas conforme o roteiro escolhido e toda a estrutura de segurança da lancha. Itens como churrasco a bordo podem ser incluídos mediante consulta.",
+      "Sim. O passeio de escuna é um dos serviços divulgados oficialmente pela AquinoTour em Paraty.",
   },
   {
-    question: "Os passeios acontecem com qualquer condição de tempo?",
+    question: "Vocês atendem grupos e excursões?",
     answer:
-      "Não. Todos os nossos roteiros são sujeitos às condições do mar e do clima. Caso não seja seguro navegar, remarcamos sua data sem custo adicional.",
+      "Sim. A AquinoTour trabalha com atendimento e receptivo para grupos e excursões em Paraty, oferecendo apoio local.",
   },
   {
-    question: "Posso desembarcar na Ilha das Couves em qualquer roteiro?",
+    question: "A AquinoTour oferece Day Use?",
     answer:
-      "O desembarque na Ilha das Couves está disponível no Roteiro Norte Completo, sujeito à disponibilidade — somos uma das empresas credenciadas para esse desembarque.",
+      "O Day Use aparece entre os serviços divulgados pela AquinoTour. Os detalhes da experiência devem ser confirmados diretamente com a equipe antes da reserva.",
   },
   {
-    question: "Qual a diferença entre passeio compartilhado e privativo?",
+    question: "Como consultar valores e horários?",
     answer:
-      "No compartilhado, você reserva assentos e divide a lancha com outros passageiros, num roteiro fixo. No privativo, a lancha é só do seu grupo — você escolhe o roteiro, o tempo em cada parada e o ritmo do passeio.",
+      "Valores, horários, disponibilidade e detalhes operacionais podem variar e devem ser confirmados diretamente com a equipe AquinoTour antes da reserva.",
   },
   {
-    question: "Quanto tempo dura o passeio?",
+    question: "A AquinoTour é de Paraty?",
     answer:
-      "Temos roteiros de 3h (Norte Express) e de 6h (Norte Completo e Sul Completo). A duração exata pode variar conforme condições do mar.",
+      "Sim. A AquinoTour atua em Paraty, no Rio de Janeiro, com atendimento local voltado ao turismo e receptivo na região.",
   },
   {
-    question: "Como faço para reservar?",
+    question: "Qual a relação entre AquinoTour e Aquino Mar?",
     answer:
-      "É simples: fale com a gente pelo WhatsApp, escolha o roteiro e a lancha, confirme a data e pronto — te passamos todos os detalhes de embarque.",
-  },
+      "AquinoTour e Pousada Aquino Mar fazem parte do mesmo universo familiar Aquino, com operações distintas de turismo e hospedagem em Paraty.",
+  }
 ];
 
 function FaqItem({
@@ -63,36 +61,37 @@ function FaqItem({
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-5%" }}
-      transition={{ duration: 0.45, delay: index * 0.07, ease: [0.25, 0.1, 0.25, 1] }}
-      className="border-b border-[#DDE3EC]"
+      transition={{ duration: 0.45, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
+      className="border-b border-ocean-navy/15"
     >
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 py-7 md:py-8 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 rounded-sm"
+        className="w-full flex items-center justify-between gap-4 py-6 md:py-8 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean-navy/50 focus-visible:ring-offset-2 rounded-sm"
         aria-expanded={isOpen}
+        aria-controls={`faq-answer-${index}`}
+        id={`faq-question-${index}`}
       >
-        <span className="font-mono text-xs text-sky-500 tracking-widest mr-4 md:mr-6 shrink-0">
-          {String(index + 1).padStart(2, "0")}
-        </span>
-        <span className="flex-1 font-heading font-semibold text-base md:text-lg leading-snug text-[#0B1D2E] group-hover:text-[#1F6FA3] transition-colors duration-200">
+        <span className="flex-1 font-heading font-medium text-base md:text-lg text-ocean-navy transition-colors duration-200">
           {question}
         </span>
-        <span className="shrink-0 w-7 h-7 flex items-center justify-center rounded-full border border-[#DDE3EC] text-[#1F6FA3] group-hover:bg-[#1F6FA3] group-hover:border-[#1F6FA3] group-hover:text-white transition-all duration-200">
-          {isOpen ? <X size={14} strokeWidth={2.5} /> : <Plus size={14} strokeWidth={2.5} />}
+        <span className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full border border-ocean-navy/15 text-ocean-navy group-hover:bg-ocean-navy group-hover:text-shell-white transition-all duration-200">
+          {isOpen ? <X size={16} strokeWidth={2} /> : <Plus size={16} strokeWidth={2} />}
         </span>
       </button>
 
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            key="answer"
+            id={`faq-answer-${index}`}
+            role="region"
+            aria-labelledby={`faq-question-${index}`}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="overflow-hidden"
           >
-            <p className="font-sans text-[#5C6672] leading-relaxed pb-7 md:pb-8 text-sm md:text-base">
+            <p className="font-sans text-slate-blue leading-relaxed pb-6 md:pb-8 text-sm md:text-base pr-4 md:pr-8">
               {answer}
             </p>
           </motion.div>
@@ -114,7 +113,7 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="w-full bg-white pt-8 pb-20 md:pt-12 md:pb-32 scroll-mt-24"
+      className="w-full bg-shell-white pt-16 pb-20 md:pt-24 md:pb-32 scroll-mt-24"
     >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
 
@@ -125,19 +124,19 @@ export function FaqSection() {
           transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
           className="flex flex-col items-center text-center mb-12 md:mb-16"
         >
-          <Badge variant="outline" className="font-sans mb-5">
-            Dúvidas Comuns
-          </Badge>
-          <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-[#0B1D2E] max-w-2xl">
-            Perguntas Frequentes
+          <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
+            DÚVIDAS FREQUENTES
+          </p>
+          <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-ocean-navy max-w-2xl">
+            Antes de embarcar.
           </h2>
-          <p className="font-sans font-light text-base md:text-xl leading-relaxed text-[#5C6672] mt-4 max-w-xl">
-            Tudo o que você precisa saber antes de embarcar com a gente.
+          <p className="font-sans text-base md:text-lg leading-relaxed text-slate-blue mt-4 max-w-xl">
+            Informações essenciais para planejar sua experiência em Paraty.
           </p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="border-t border-[#DDE3EC]">
+          <div className="border-t border-ocean-navy/15">
             {faqs.map((faq, index) => (
               <FaqItem
                 key={faq.question}
@@ -149,24 +148,6 @@ export function FaqSection() {
               />
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-5%" }}
-            transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex flex-col items-center gap-5 mt-12 md:mt-16"
-          >
-            <p className="font-sans text-[#5C6672] text-sm md:text-base text-center">
-              Ainda tem dúvidas? Fale diretamente com nossa equipe.
-            </p>
-            <CTAButton
-              href="https://wa.me/5512996125606"
-              variant="on-light"
-            >
-              Tirar dúvidas no WhatsApp
-            </CTAButton>
-          </motion.div>
         </div>
 
       </div>

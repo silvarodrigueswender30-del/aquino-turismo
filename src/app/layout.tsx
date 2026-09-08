@@ -20,27 +20,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rfturismoprojeto.vercel.app"),
-  title: "RF Turismo — Passeios de Lancha em Ubatuba",
-  description: "Passeios exclusivos de lancha nas ilhas mais bonitas de Ubatuba. Operadora credenciada para desembarque na Ilha das Couves. Reserve agora!",
+  metadataBase: new URL("https://aquinotour.vercel.app"),
+  title: "Aquino Tour — Passeios e Experiências Náuticas em Paraty",
+  description: "Descubra Paraty por outro ângulo. Passeios, experiências e atendimento local para descobrir o melhor de Paraty, praias e ilhas.",
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://rfturismoprojeto.vercel.app",
+    canonical: "https://aquinotour.vercel.app",
+  },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
-    title: "RF Turismo — Passeios de Lancha em Ubatuba",
-    description: "Passeios exclusivos de lancha nas ilhas mais bonitas de Ubatuba. Reserve agora!",
-    url: "https://rfturismoprojeto.vercel.app",
-    siteName: "RF Turismo",
+    title: "Aquino Tour — Passeios em Paraty",
+    description: "Passeios, experiências e atendimento local para descobrir o melhor de Paraty.",
+    url: "https://aquinotour.vercel.app",
+    siteName: "Aquino Tour",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "RF Turismo — Passeio de Lancha em Ubatuba",
+        alt: "Aquino Tour — Passeio em Paraty",
       },
     ],
     locale: "pt_BR",
@@ -48,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RF Turismo — Passeios de Lancha em Ubatuba",
-    description: "Passeios exclusivos de lancha nas ilhas mais bonitas de Ubatuba. Reserve agora!",
+    title: "Aquino Tour — Passeios em Paraty",
+    description: "Descubra Paraty por outro ângulo. Passeios e experiências náuticas.",
     images: ["/og-image.jpg"],
   },
 };

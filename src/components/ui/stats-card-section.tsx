@@ -1,72 +1,57 @@
 "use client";
 
-import { Star, UserCheck, ShieldCheck } from "lucide-react";
-import { CountingNumber } from "@/components/ui/counting-number";
+import { Star } from "lucide-react";
+
+const stats = [
+  {
+    value: "5,0",
+    label: "Avaliacao no Google",
+    detail: "Nota no Google",
+    icon: true,
+  },
+  {
+    value: "25+",
+    label: "Avaliacoes publicas",
+    detail: "Relatos",
+  },
+  {
+    value: "PARATY",
+    label: "Atendimento local",
+    detail: "Equipe local",
+  },
+  {
+    value: "GRUPOS",
+    label: "Excursoes em Paraty",
+    detail: "Grupos e Receptivo",
+  },
+];
 
 export default function StatsCardSection() {
   return (
-    <section className="py-12 md:py-16">
-      <div className="mx-auto w-full max-w-5xl px-4 sm:px-6">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:divide-x md:divide-[#2FB8D9]/20">
-
-          {/* Item 1 — Nota no Google */}
-          <div className="flex flex-col items-center justify-center text-center space-y-2 md:px-6">
-            {/* Ícone acima do número */}
-            <Star
-              size={24}
-              strokeWidth={1.5}
-              className="text-[#2FB8D9] mb-1"
-              aria-hidden="true"
-            />
-            {/* Número animado — sem o caractere ★ duplicado */}
-            <div className="relative inline-block">
-              <div className="font-heading font-light tracking-[-0.025em] text-[clamp(2rem,5vw,2.75rem)] leading-none text-[#0B2530]">
-                <CountingNumber target={5} decimals={1} formatLocale={false} />
+    <section className="border-b border-ocean-navy/10 bg-transparent py-10 md:py-14">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+        <div className="grid grid-cols-2 border-y border-ocean-navy/10 md:grid-cols-4 md:divide-x md:divide-ocean-navy/10">
+          {stats.map((item) => (
+            <div
+              key={item.label}
+              className="flex min-h-[7.5rem] flex-col justify-center border-b border-ocean-navy/10 px-3 py-5 text-center last:border-b-0 even:border-l even:border-ocean-navy/10 md:min-h-36 md:border-b-0 md:px-8 md:py-7 md:text-left md:even:border-l-0"
+            >
+              <div className="mb-2 flex items-center justify-center gap-1.5 md:mb-3 md:justify-start md:gap-2">
+                {item.icon
+                  ? <Star className="h-3 w-3 fill-golden-sand text-golden-sand md:h-4 md:w-4" strokeWidth={1.5} aria-hidden="true" />
+                  : <span className="h-px w-6 bg-golden-sand md:w-8" aria-hidden="true" />}
+                <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-slate-blue md:text-[0.72rem] md:tracking-[0.16em]">
+                  {item.detail}
+                </span>
               </div>
-              {/* Traço decorativo fino sob o número */}
-              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 block w-8 h-[2px] rounded-full bg-[#2FB8D9]" aria-hidden="true" />
-            </div>
-            <p className="text-[#4B6570] text-xs sm:text-sm font-sans font-medium pt-3">
-              Nota no Google
-            </p>
-          </div>
-
-          {/* Item 2 — Avaliações */}
-          <div className="flex flex-col items-center justify-center text-center space-y-2 md:px-6">
-            <UserCheck
-              size={24}
-              strokeWidth={1.5}
-              className="text-[#2FB8D9] mb-1"
-              aria-hidden="true"
-            />
-            <div className="relative inline-block">
-              <div className="font-heading font-light tracking-[-0.025em] text-[clamp(2rem,5vw,2.75rem)] leading-none text-[#0B2530]">
-                <CountingNumber target={100} />+
+              <div className="font-heading text-[clamp(1.5rem,6.5vw,2.55rem)] font-light leading-none tracking-normal text-ocean-navy md:text-[clamp(1.75rem,3.4vw,2.55rem)]">
+                {item.value}
               </div>
-              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 block w-8 h-[2px] rounded-full bg-[#2FB8D9]" aria-hidden="true" />
-            </div>
-            <p className="text-[#4B6570] text-xs sm:text-sm font-sans font-medium pt-3">
-              Avaliações reais
-            </p>
-          </div>
-
-          {/* Texto descritivo (Col-span 2) */}
-          <div className="col-span-2 border-t border-[#2FB8D9]/20 pt-6 md:border-t-0 md:border-l-0 md:pl-10 md:pt-0 flex items-center justify-center md:justify-start text-center md:text-left">
-            <div className="flex items-start gap-3 max-w-md">
-              {/* Badge ícone ShieldCheck */}
-              <span className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#2FB8D9] mt-0.5" aria-hidden="true">
-                <ShieldCheck size={18} strokeWidth={1.5} className="text-[#2FB8D9]" />
-              </span>
-              <p className="text-[#4B6570] font-sans text-sm sm:text-base leading-relaxed">
-                Como uma{" "}
-                <strong className="text-[#0B2530] font-semibold">operadora credenciada oficial</strong>
-                , garantimos seu desembarque legalizado e seguro na cobiçada{" "}
-                <strong className="text-[#0B2530] font-semibold">Ilha das Couves</strong>
-                , sem filas ou imprevistos.
+              <p className="mt-2 font-sans text-[0.72rem] font-medium leading-snug text-slate-blue md:mt-3 md:text-sm">
+                {item.label}
               </p>
             </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>
