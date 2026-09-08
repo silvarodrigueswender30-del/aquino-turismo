@@ -1,5 +1,5 @@
-﻿import React from "react"
-import { FaInstagram } from "react-icons/fa"
+import React from "react"
+import { FaWhatsapp } from "react-icons/fa"
 
 export function GruposCtaSection() {
   return (
@@ -17,14 +17,14 @@ export function GruposCtaSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mt-4">
             <a
-              href="https://www.instagram.com/aquinotourparaty/"
+              href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pela página de Grupos & Caravanas da AquinoTour. Estou organizando uma viagem para Paraty e gostaria de informações sobre passeios e atendimento para o meu grupo.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-[10px] bg-turquoise-sea text-white font-semibold text-sm transition-[background-color,transform] duration-150 hover:bg-tropical-lagoon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy"
-              aria-label="Falar pelo Instagram da AquinoTour"
+              aria-label="Planejar meu grupo pelo WhatsApp da AquinoTour"
             >
-              <FaInstagram size={18} aria-hidden />
-              Falar pelo Instagram
+              <FaWhatsapp size={18} aria-hidden />
+              Planejar meu grupo pelo WhatsApp
             </a>
             <a
               href="https://pousadaaquinomarparaty.com.br/grupos-e-caravanas"

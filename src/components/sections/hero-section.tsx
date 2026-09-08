@@ -70,7 +70,7 @@ export function HeroSection() {
                                             variant="secondary"
                                             className="aquino-hero-control h-12 w-full rounded-[10px] border border-shell-white/24 bg-shell-white/[0.02] px-7 font-medium text-shell-white/90 transition-[background-color,color,border-color,transform] duration-100 hover:border-shell-white/50 hover:bg-shell-white hover:text-ocean-navy focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy sm:w-auto"
                                         >
-                                            <a href="https://www.instagram.com/aquinotourparaty/" target="_blank" rel="noopener noreferrer">
+                                            <a href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty.")}`} target="_blank" rel="noopener noreferrer">
                                                 <span>Falar com a AquinoTour</span>
                                             </a>
                                         </Button>

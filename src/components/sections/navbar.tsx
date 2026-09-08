@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
@@ -82,11 +82,11 @@ export function AquinoNavbar() {
                                     asChild
                                     className="aquino-nav-control h-10 rounded-[10px] border-none bg-turquoise-sea px-6 text-sm font-medium tracking-normal text-white shadow-none transition-[background-color,transform] duration-150 hover:bg-tropical-lagoon focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy">
                                     <a
-                                        href="https://www.instagram.com/aquinotourparaty/"
+                                        href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty.")}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <span>Falar pelo Instagram</span>
+                                        <span>Falar pelo WhatsApp</span>
                                     </a>
                                 </Button>
                             </div>

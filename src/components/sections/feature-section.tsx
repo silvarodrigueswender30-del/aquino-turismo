@@ -116,7 +116,7 @@ export function FeatureSection() {
               </div>
               {/* CTA */}
               <a
-                href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios em Paraty.")}`}
+                href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/cta inline-flex items-center gap-2 text-turquoise-sea hover:text-tropical-lagoon transition-colors duration-200 font-sans font-medium text-sm"

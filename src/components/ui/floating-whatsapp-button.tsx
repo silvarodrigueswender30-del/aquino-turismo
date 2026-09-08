@@ -15,8 +15,8 @@ export function FloatingWhatsappButton() {
 
   const isGroupsPage = pathname === "/grupos-e-caravanas"
   const URL_MESSAGE = isGroupsPage
-    ? "Olá! Vim pela página de Grupos & Caravanas da AquinoTour. Estou organizando uma viagem para Paraty e gostaria de informações para o meu grupo."
-    : "Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios em Paraty."
+    ? "Olá! Vim pela página de Grupos & Caravanas da AquinoTour. Estou organizando uma viagem para Paraty e gostaria de informações sobre passeios e atendimento para o meu grupo."
+    : "Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty."
 
   /* --- Lógica de Visibilidade: 5s ou 30% scroll --- */
   useEffect(() => {
