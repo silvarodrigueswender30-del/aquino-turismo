@@ -4,29 +4,39 @@ import { Marquee } from "@/components/ui/marquee";
 
 /**
  * IMAGENS PROVISÓRIAS
- * Fotografias sem marca RF/Ubatuba visível usadas como placeholders.
+ * Fotografias genéricas de paisagens marítimas usadas como placeholders.
  * Aguardando acervo fotográfico oficial da AquinoTour — Paraty.
  */
 const galleryItems = [
   {
-    nome: "Baía de Paraty",
-    alt: "Paisagem costeira usada como imagem provisória no site AquinoTour",
-    image: "/images/galeria/ilhas/ilha-das-couves.webp",
-  },
-  {
-    nome: "Ilhas de Paraty",
-    alt: "Paisagem costeira usada como imagem provisória no site AquinoTour",
-    image: "/images/galeria/ilhas/ilha-dos-porcos.avif",
-  },
-  {
     nome: "Praia da Lula",
-    alt: "Paisagem costeira usada como imagem provisória no site AquinoTour",
-    image: "/images/galeria/ilhas/ilha-do-prumirim.webp",
+    descricao: "Águas calmas e Mata Atlântica na Baía de Paraty",
+    alt: "Praia da Lula na Baía de Paraty",
+    image: "/images/galeria/ilhas/island-1.avif",
   },
   {
-    nome: "Mata Atlântica",
-    alt: "Paisagem costeira usada como imagem provisória no site AquinoTour",
-    image: "/images/galeria/ilhas/ilha-rachada-rapada.avif",
+    nome: "Praia Vermelha",
+    descricao: "Uma das praias conhecidas dos roteiros de escuna da região",
+    alt: "Praia Vermelha em Paraty",
+    image: "/images/galeria/ilhas/island-2.avif",
+  },
+  {
+    nome: "Ilha Comprida",
+    descricao: "Área conhecida pelas águas transparentes e vida marinha",
+    alt: "Ilha Comprida em Paraty",
+    image: "/images/galeria/ilhas/island-3.avif",
+  },
+  {
+    nome: "Lagoa Azul",
+    descricao: "Uma das paisagens mais procuradas nos passeios pela Baía de Paraty",
+    alt: "Lagoa Azul em Paraty",
+    image: "/images/galeria/ilhas/island-4.avif",
+  },
+  {
+    nome: "Saco da Velha",
+    descricao: "Enseada tranquila com natureza preservada na Baía de Paraty",
+    alt: "Saco da Velha em Paraty",
+    image: "/images/galeria/ilhas/island-5.avif",
   },
 ];
 
@@ -40,10 +50,10 @@ export function IslandsSection() {
             DESCUBRA PARATY
           </p>
           <h2 className="font-heading font-light tracking-[-0.01em] text-2xl sm:text-3xl md:text-4xl text-ocean-navy leading-[1.1] max-w-2xl">
-            Entre o mar e a Mata Atlântica.
+            Entre praias, ilhas e águas da baía.
           </h2>
           <p className="max-w-xl font-sans text-base md:text-lg leading-relaxed text-slate-blue mt-4">
-            Uma paisagem de ilhas, praias e águas protegidas pela natureza de Paraty.
+            Alguns dos lugares que fazem parte da paisagem dos passeios pelo mar em Paraty.
           </p>
         </div>
 

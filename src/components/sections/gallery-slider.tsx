@@ -19,50 +19,50 @@ const galleryItems: GalleryItem[] = [
   {
     id: 1,
     imageUrl: "/images/galeria/ilhas/island-1.avif",
-    title: "Lancha Privativa",
-    location: "Ubatuba, SP",
+    title: "Praia da Lula",
+    location: "Baía de Paraty",
   },
   {
     id: 2,
     imageUrl: "/images/galeria/ilhas/island-2.avif",
-    title: "Passeio em Família",
-    location: "Ubatuba, SP",
+    title: "Praia Vermelha",
+    location: "Paraty, RJ",
   },
   {
     id: 3,
     imageUrl: "/images/galeria/ilhas/island-3.avif",
-    title: "Águas Cristalinas",
-    location: "Ubatuba, SP",
+    title: "Ilha Comprida",
+    location: "Baía de Paraty",
   },
   {
     id: 4,
     imageUrl: "/images/galeria/ilhas/island-4.avif",
-    title: "Mergulho Livre",
-    location: "Ubatuba, SP",
+    title: "Lagoa Azul",
+    location: "Paraty, RJ",
   },
   {
     id: 5,
     imageUrl: "/images/galeria/ilhas/island-5.avif",
-    title: "Roteiro Exclusivo",
-    location: "Ubatuba, SP",
+    title: "Saco da Velha",
+    location: "Baía de Paraty",
   },
   {
     id: 6,
     imageUrl: "/images/galeria/ilhas/island-6.avif",
-    title: "Visual Paradisíaco",
-    location: "Ubatuba, SP",
+    title: "Praia da Conceição",
+    location: "Paraty, RJ",
   },
   {
     id: 7,
     imageUrl: "/images/galeria/ilhas/island-7.avif",
-    title: "Pôr do Sol no Mar",
-    location: "Ubatuba, SP",
+    title: "Ilha dos Cocos",
+    location: "Baía de Paraty",
   },
   {
     id: 8,
     imageUrl: "/images/galeria/ilhas/island-8.avif",
-    title: "Experiência Náutica",
-    location: "Ubatuba, SP",
+    title: "Baía de Paraty",
+    location: "Paraty, RJ",
   },
 ];
 
@@ -85,7 +85,7 @@ export function GallerySlider() {
       <div className="absolute inset-0">
         <img 
           src="/images/galeria/002.avif" 
-          alt="Lancha em Ubatuba" 
+          alt="Paisagem marítima na Baía de Paraty" 
           className="w-full h-full object-cover" 
         />
       </div>
