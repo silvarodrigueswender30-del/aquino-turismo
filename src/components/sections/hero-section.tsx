@@ -13,7 +13,7 @@ const carouselCards = [
     { title: "Ilhas de Paraty",       imageUrl: "/images/hero-carousel/slide-2.avif", alt: "Enseada tropical com barcos ancorados em Paraty" },
     { title: "Praias Paradisíacas",   imageUrl: "/images/hero-carousel/slide-3.avif", alt: "Praia paradisíaca no pôr do sol em Paraty" },
     { title: "Mergulho e Natureza",   imageUrl: "/images/hero-carousel/slide-4.avif", alt: "Passageiros mergulhando em Paraty" },
-    { title: "Passeio em Família",    imageUrl: "/images/hero-carousel/slide-5.avif", alt: "Passeio premium exclusivo para casais e famílias em Paraty" },
+    { title: "Passeio em Família",    imageUrl: "/images/hero-carousel/slide-5.avif", alt: "Passeio premium para casais e famílias em Paraty" },
 ]
 
 export function HeroSection() {

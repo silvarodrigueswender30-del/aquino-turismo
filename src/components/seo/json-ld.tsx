@@ -18,15 +18,17 @@ export function JsonLd({ data }: JsonLdProps) {
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
-  name: SITE_NAME,
+  "@id": `${SITE_URL}/#organization`,
+  name: "Aquino Tour",
   url: SITE_URL,
   sameAs: [INSTAGRAM_URL],
+  telephone: "+55 24 99909-6384",
+  logo: `${SITE_URL}/images/brand/aquinotour-logo.png`,
   areaServed: {
     "@type": "AdministrativeArea",
     name: "Paraty, Rio de Janeiro, Brasil",
   },
-  description:
-    "Passeios e turismo receptivo em Paraty para turistas, famílias, grupos, excursões e agências.",
+  description: "Agência de passeios e turismo receptivo em Paraty.",
 };
 
 export const websiteJsonLd = {

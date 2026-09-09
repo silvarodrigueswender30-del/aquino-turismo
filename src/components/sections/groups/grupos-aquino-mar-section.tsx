@@ -22,7 +22,7 @@ export function GruposAquinoMarSection() {
               className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-ocean-navy border-b-2 border-golden-sand pb-0.5 w-fit transition-colors duration-200 hover:text-turquoise-sea hover:border-turquoise-sea"
               aria-label="Consultar hospedagem para o grupo na Pousada Aquino Mar"
             >
-              Consultar hospedagem para o grupo
+              Conhecer opções de hospedagem para grupos na Pousada Aquino Mar
               <span aria-hidden>&rarr;</span>
             </a>
           </div>

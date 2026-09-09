@@ -52,9 +52,7 @@ const groupsJsonLd = [
     "@type": "Service",
     name: "Turismo receptivo para grupos em Paraty",
     provider: {
-      "@type": "TravelAgency",
-      name: SITE_NAME,
-      url: SITE_URL,
+      "@id": `${SITE_URL}/#organization`
     },
     areaServed: {
       "@type": "AdministrativeArea",

@@ -26,9 +26,9 @@ const services: Service[] = [
     description:
       "Conheça experiências da região rural de Paraty em um roteiro que conecta natureza, cachoeiras, alambiques e cultura local.",
     icon: Car,
-    cta: "Consultar passeio de jipe",
-    href: getWhatsappUrl(WHATSAPP_MESSAGES.jeep),
-    external: true,
+    cta: "Conhecer passeio de jipe",
+    href: "/passeio-de-jipe-em-paraty",
+    external: false,
   },
   {
     number: "002",
@@ -36,9 +36,9 @@ const services: Service[] = [
     description:
       "Navegue pela baía de Paraty em uma experiência com paradas em praias e ilhas para banho, contemplação e momentos em grupo.",
     icon: Ship,
-    cta: "Consultar passeio de escuna",
-    href: getWhatsappUrl(WHATSAPP_MESSAGES.escuna),
-    external: true,
+    cta: "Conhecer passeio de escuna",
+    href: "/passeio-de-escuna-em-paraty",
+    external: false,
   },
   {
     number: "003",
@@ -46,9 +46,9 @@ const services: Service[] = [
     description:
       "Explore praias e ilhas com mais privacidade e flexibilidade em uma opção indicada para famílias e pequenos grupos.",
     icon: Waves,
-    cta: "Consultar passeio de lancha",
-    href: getWhatsappUrl(WHATSAPP_MESSAGES.lancha),
-    external: true,
+    cta: "Conhecer passeio de lancha",
+    href: "/passeio-de-lancha-em-paraty",
+    external: false,
   },
   {
     number: "004",
@@ -58,6 +58,7 @@ const services: Service[] = [
     icon: Anchor,
     cta: "Planejar excursão",
     href: "/grupos-e-caravanas",
+    external: false,
   },
 ];
 
@@ -91,30 +92,49 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
       </div>
 
       {/* Bottom Content: Info */}
-      <div className="z-20 flex flex-col gap-2 mt-auto">
-        <h3 className="text-2xl md:text-3xl font-heading font-light tracking-wide text-shell-white drop-shadow-sm">
+      <div className="z-20 flex flex-col mt-auto">
+        <h3 className="text-2xl md:text-3xl font-heading font-light tracking-wide text-shell-white drop-shadow-sm mb-2">
           {service.title}
         </h3>
-        <p className="text-sm md:text-base text-shell-white/90 leading-relaxed font-sans font-light drop-shadow-sm">
+        <p className="text-sm md:text-base text-shell-white/90 leading-relaxed font-sans font-light drop-shadow-sm mb-4">
           {service.description}
         </p>
-        {service.external ? (
-          <a
-            href={service.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-flex w-fit rounded-[10px] bg-shell-white/90 px-4 py-2 font-sans text-xs font-semibold text-ocean-navy transition hover:bg-shell-white"
-          >
-            {service.cta}
-          </a>
-        ) : (
-          <Link
-            href={service.href}
-            className="mt-3 inline-flex w-fit rounded-[10px] bg-shell-white/90 px-4 py-2 font-sans text-xs font-semibold text-ocean-navy transition hover:bg-shell-white"
-          >
-            {service.cta}
-          </Link>
-        )}
+        
+        <div className="flex flex-col gap-2 mt-auto">
+          {service.external ? (
+            <a
+              href={service.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit rounded-[10px] bg-shell-white/90 px-4 py-2 font-sans text-xs font-semibold text-ocean-navy transition hover:bg-shell-white"
+            >
+              {service.cta}
+            </a>
+          ) : (
+            <Link
+              href={service.href}
+              className="inline-flex w-fit rounded-[10px] bg-shell-white/90 px-4 py-2 font-sans text-xs font-semibold text-ocean-navy transition hover:bg-shell-white"
+            >
+              {service.cta}
+            </Link>
+          )}
+          
+          {/* Secondary WhatsApp link for tours */}
+          {!service.external && service.href !== "/grupos-e-caravanas" && (
+            <a
+              href={
+                service.href.includes('jipe') ? getWhatsappUrl(WHATSAPP_MESSAGES.jeep) :
+                service.href.includes('escuna') ? getWhatsappUrl(WHATSAPP_MESSAGES.escuna) :
+                getWhatsappUrl(WHATSAPP_MESSAGES.lancha)
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-1.5 font-sans text-[11px] font-medium text-shell-white/80 hover:text-shell-white transition-colors"
+            >
+              Consultar via WhatsApp
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

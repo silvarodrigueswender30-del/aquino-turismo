@@ -18,8 +18,7 @@ const faqs = [
   },
   {
     question: "Quanto tempo dura o passeio de escuna?",
-    answer:
-      "Os passeios de escuna comercializados pela Aquino Tour possuem opções com duração aproximada de cinco horas. Horários, embarcação, roteiro e paradas devem ser confirmados para a data escolhida.",
+    answer: "Há opções comercializadas pela Aquino Tour com duração aproximada de cinco horas. Consulte a equipe para confirmar duração, horário e roteiro disponíveis para sua data.",
   },
   {
     question: "A Aquino Tour oferece passeio de lancha?",

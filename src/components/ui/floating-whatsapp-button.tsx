@@ -14,8 +14,18 @@ export function FloatingWhatsappButton() {
   const pathname = usePathname()
 
   const isGroupsPage = pathname === "/grupos-e-caravanas"
+  const isJeepPage = pathname === "/passeio-de-jipe-em-paraty"
+  const isEscunaPage = pathname === "/passeio-de-escuna-em-paraty"
+  const isLanchaPage = pathname === "/passeio-de-lancha-em-paraty"
+
   const URL_MESSAGE = isGroupsPage
     ? WHATSAPP_MESSAGES.grupos
+    : isJeepPage
+    ? WHATSAPP_MESSAGES.jeep
+    : isEscunaPage
+    ? WHATSAPP_MESSAGES.escuna
+    : isLanchaPage
+    ? WHATSAPP_MESSAGES.lancha
     : WHATSAPP_MESSAGES.home
 
   /* --- Lógica de Visibilidade: 5s ou 30% scroll --- */

@@ -1,4 +1,7 @@
-﻿import Image from "next/image"
+import Image from "next/image"
+
+import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 
 const experiencias = [
   {
@@ -6,18 +9,21 @@ const experiencias = [
     alt: "Passeio de escuna na baía de Paraty",
     title: "Passeio de Jipe",
     body: "Uma experiência pela região rural de Paraty que combina natureza, cachoeiras, alambiques e cultura local.",
+    href: "/passeio-de-jipe-em-paraty"
   },
   {
     image: "/images/hero-carousel/slide-3.avif",
     alt: "Embarcação em passeio marítimo em Paraty",
     title: "Passeio de Escuna",
     body: "Uma opção coletiva para navegar pela baía de Paraty e conhecer praias e ilhas da região.",
+    href: "/passeio-de-escuna-em-paraty"
   },
   {
     image: "/images/hero-carousel/slide-2.avif",
     alt: "Ilhas de Paraty",
     title: "Passeio de Lancha",
     body: "Alternativa para famílias e grupos menores que procuram uma experiência mais reservada e flexível.",
+    href: "/passeio-de-lancha-em-paraty"
   },
   {
     image: "/images/galeria/passeio-1.webp",
@@ -47,29 +53,45 @@ export function GruposExperienciasSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
-          {experiencias.map((exp, index) => (
-            <div key={index} className="flex flex-col gap-4">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-deep-marine/10">
-                <Image
-                  src={exp.image}
-                  alt={exp.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="font-heading font-medium text-ocean-navy text-xl">
-                  {exp.title}
-                </h3>
-                <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
-                  {exp.body}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+          {experiencias.map((exp, index) => {
+            const CardContent = (
+              <>
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-deep-marine/10">
+                  <Image
+                    src={exp.image}
+                    alt={exp.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="font-heading font-medium text-ocean-navy text-xl group-hover:text-turquoise-sea transition-colors duration-200 flex items-center gap-1.5">
+                    {exp.title}
+                    {exp.href && <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />}
+                  </h3>
+                  <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
+                    {exp.body}
+                  </p>
+                </div>
+              </>
+            )
 
+            return exp.href ? (
+              <Link 
+                key={index} 
+                href={exp.href}
+                className="group flex flex-col gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 rounded-2xl"
+              >
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index} className="flex flex-col gap-4">
+                {CardContent}
+              </div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

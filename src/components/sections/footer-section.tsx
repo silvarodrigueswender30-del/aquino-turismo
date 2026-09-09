@@ -63,9 +63,9 @@ export function FooterSection() {
               Experiências
             </h3>
             <ul className="font-sans text-sm text-shell-white/70 space-y-2 mb-4">
-              <li><Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">Passeio de Jipe</Link></li>
-              <li><Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">Passeio de Escuna</Link></li>
-              <li><Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">Passeio de Lancha</Link></li>
+              <li><Link href="/passeio-de-jipe-em-paraty" className="hover:text-shell-white transition-colors duration-200">Passeio de Jipe</Link></li>
+              <li><Link href="/passeio-de-escuna-em-paraty" className="hover:text-shell-white transition-colors duration-200">Passeio de Escuna</Link></li>
+              <li><Link href="/passeio-de-lancha-em-paraty" className="hover:text-shell-white transition-colors duration-200">Passeio de Lancha</Link></li>
               <li><Link href="/grupos-e-caravanas" className="hover:text-shell-white transition-colors duration-200">Grupos & Excursões</Link></li>
             </ul>
 

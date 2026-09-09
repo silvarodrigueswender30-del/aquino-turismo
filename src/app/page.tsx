@@ -25,9 +25,7 @@ const homeJsonLd = [
     "@type": "Service",
     name: "Passeios em Paraty",
     provider: {
-      "@type": "TravelAgency",
-      name: "Aquino Tour",
-      url: SITE_URL,
+      "@id": `${SITE_URL}/#organization`
     },
     areaServed: {
       "@type": "AdministrativeArea",
