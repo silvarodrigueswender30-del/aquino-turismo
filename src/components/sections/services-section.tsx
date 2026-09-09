@@ -66,7 +66,7 @@ const services: Service[] = [
 const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
   return (
     <div
-      className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] aspect-[4/5] max-h-[360px] md:aspect-[5/6] md:max-h-[460px] w-full p-6 md:p-8 transition-transform duration-500 ease-out md:hover:-translate-y-1 bg-deep-marine/5"
+      className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] aspect-[4/5] max-h-[400px] md:aspect-[4/5] lg:aspect-[3/4] lg:max-h-[480px] w-full p-6 lg:p-6 xl:p-8 transition-transform duration-500 ease-out md:hover:-translate-y-1 bg-deep-marine/5"
     >
       {/* Background Image (Provisional) */}
       <Image 
@@ -93,10 +93,10 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
 
       {/* Bottom Content: Info */}
       <div className="z-20 flex flex-col mt-auto">
-        <h3 className="text-2xl md:text-3xl font-heading font-light tracking-wide text-shell-white drop-shadow-sm mb-2">
+        <h3 className="text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-heading font-light tracking-wide text-shell-white drop-shadow-sm mb-2">
           {service.title}
         </h3>
-        <p className="text-sm md:text-base text-shell-white/90 leading-relaxed font-sans font-light drop-shadow-sm mb-4">
+        <p className="text-sm md:text-base lg:text-sm xl:text-base text-shell-white/90 leading-relaxed font-sans font-light drop-shadow-sm mb-4">
           {service.description}
         </p>
         
@@ -153,7 +153,7 @@ export function ServicesSection() {
 
   return (
     <section id="passeios" className="relative w-full bg-warm-sand py-16 md:py-24 scroll-mt-24">
-      <div className="relative z-20 flex flex-col items-center justify-center w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 overflow-hidden md:overflow-visible">
+      <div className="relative z-20 flex flex-col items-center justify-center w-full max-w-[1320px] mx-auto px-6 md:px-12 lg:px-8 xl:px-12 overflow-hidden md:overflow-visible">
         
         {/* Header editorial */}
         <div className="flex flex-col items-center text-center w-full max-w-2xl mb-12 md:mb-16">
@@ -170,7 +170,7 @@ export function ServicesSection() {
 
         {/* Grid / Carousel de Serviços */}
         <div className="w-full" ref={emblaRef}>
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 -ml-4 md:ml-0 gap-0 md:gap-8 w-full">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 -ml-4 md:ml-0 gap-0 md:gap-6 xl:gap-8 w-full">
             {services.map((service, index) => (
               <div 
                 key={index} 

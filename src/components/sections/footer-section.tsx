@@ -91,6 +91,18 @@ export function FooterSection() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-shell-white/50">
           <p className="text-center sm:text-left">
             © {currentYear} Aquino Tour Paraty. Todos os direitos reservados.
+            <span className="hidden md:inline mx-1.5">·</span>
+            <span className="block md:inline mt-1 md:mt-0">
+              Desenvolvido por{" "}
+              <a 
+                href="https://www.offdata.digital/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:text-golden-sand transition-colors duration-200"
+              >
+                Off-Data
+              </a>
+            </span>
           </p>
           <p className="text-center sm:text-right">
             Paraty, Rio de Janeiro
