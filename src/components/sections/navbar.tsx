@@ -6,12 +6,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
+import { getWhatsappUrl, WHATSAPP_MESSAGES } from '@/lib/whatsapp'
 
 const menuItems = [
-    { name: 'Experiências', href: '/#experiencias' },
-    { name: 'Como Trabalhamos', href: '/#pilares' },
-    { name: 'Passeios', href: '/#servicos' },
-    { name: 'Grupos & Caravanas', href: '/grupos-e-caravanas' },
+    { name: 'Passeios', href: '/#passeios' },
+    { name: 'Como funciona', href: '/#planejamento' },
+    { name: 'Grupos & Excursões', href: '/grupos-e-caravanas' },
     { name: 'FAQ', href: '/#faq' },
 ]
 
@@ -40,11 +40,11 @@ export function AquinoNavbar() {
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link
                                 href="/"
-                                aria-label="AquinoTour - Voltar para a Home"
+                                aria-label="Aquino Tour - Voltar para a Home"
                                 className="aquino-nav-control flex items-center space-x-2 rounded-[8px] text-shell-white outline-none focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy">
                                 <Image
                                     src="/images/brand/logo-navbar.webp"
-                                    alt="AquinoTour Paraty"
+                                    alt="Aquino Tour Paraty"
                                     width={1086}
                                     height={362}
                                     priority
@@ -82,7 +82,7 @@ export function AquinoNavbar() {
                                     asChild
                                     className="aquino-nav-control h-10 rounded-[10px] border-none bg-turquoise-sea px-6 text-sm font-medium tracking-normal text-white shadow-none transition-[background-color,transform] duration-150 hover:bg-tropical-lagoon focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy">
                                     <a
-                                        href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty.")}`}
+                                        href={getWhatsappUrl(WHATSAPP_MESSAGES.home)}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

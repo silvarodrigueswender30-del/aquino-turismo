@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { FloatingWhatsappButton } from "@/components/ui/floating-whatsapp-button";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,15 +21,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aquinotour.vercel.app"),
-  title: "Aquino Tour — Passeios e Experiências Náuticas em Paraty",
-  description: "Descubra Paraty por outro ângulo. Passeios, experiências e atendimento local para descobrir o melhor de Paraty, praias e ilhas.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Aquino Tour | Passeios e Turismo Receptivo em Paraty",
+    template: `%s | ${SITE_NAME}`,
+  },
+  description:
+    "Passeios e turismo receptivo em Paraty para turistas, famílias, grupos, excursões e agências. Conheça opções de jipe, escuna e lancha com atendimento local.",
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://aquinotour.vercel.app",
+    canonical: SITE_URL,
   },
   icons: {
     icon: "/favicon.png",
@@ -36,10 +41,11 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Aquino Tour — Passeios em Paraty",
-    description: "Passeios, experiências e atendimento local para descobrir o melhor de Paraty.",
-    url: "https://aquinotour.vercel.app",
-    siteName: "Aquino Tour",
+    title: "Aquino Tour | Passeios e Turismo Receptivo em Paraty",
+    description:
+      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famílias, grupos e agências.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     images: [
       {
         url: "/og-image.jpg",
@@ -53,8 +59,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aquino Tour — Passeios em Paraty",
-    description: "Descubra Paraty por outro ângulo. Passeios e experiências náuticas.",
+    title: "Aquino Tour | Passeios em Paraty",
+    description:
+      "Passeios e turismo receptivo em Paraty com atendimento local.",
     images: ["/og-image.jpg"],
   },
 };
@@ -62,7 +69,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >

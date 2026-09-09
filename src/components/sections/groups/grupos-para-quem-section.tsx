@@ -2,24 +2,32 @@
 
 const perfis = [
   {
-    title: "Excursões",
-    body: "Para responsáveis por grupos que incluem Paraty em seu roteiro.",
+    title: "Agências de turismo",
+    body: "Para agências que organizam excursões rodoviárias, viagens em grupo e roteiros para Paraty.",
   },
   {
-    title: "Caravanas",
-    body: "Para viagens coletivas que precisam alinhar a experiência antes da chegada.",
+    title: "Guias e organizadores",
+    body: "Para profissionais e responsáveis que precisam montar a programação turística dos passageiros.",
   },
   {
-    title: "Agências de Turismo",
-    body: "Um contato local para apoiar operações e experiências em Paraty.",
+    title: "Excursões e caravanas",
+    body: "Atendimento para grupos que chegam a Paraty com programação organizada.",
   },
   {
-    title: "Guias e Organizadores",
-    body: "Para quem precisa centralizar informações da experiência do grupo.",
+    title: "Grupos religiosos",
+    body: "Opções de passeios e consulta de hospedagem para caravanas e viagens comunitárias.",
   },
   {
-    title: "Empresas e Grupos Privados",
-    body: "Para equipes, famílias, associações e grupos de amigos viajando juntos.",
+    title: "Terceira idade",
+    body: "Experiências planejadas considerando organização, horários e características do grupo.",
+  },
+  {
+    title: "Empresas e equipes",
+    body: "Atendimento para viagens corporativas, confraternizações e grupos profissionais.",
+  },
+  {
+    title: "Famílias e amigos",
+    body: "Experiências para pequenos e grandes grupos que desejam conhecer Paraty juntos.",
   },
 ]
 
@@ -32,7 +40,7 @@ export function GruposParaQuemSection() {
             PARA QUEM ORGANIZA
           </p>
           <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl text-shell-white leading-[1.1] tracking-[-0.02em]">
-            Um atendimento pensado para quem cuida da viagem de muita gente.
+            Atendimento para diferentes perfis de grupo
           </h2>
         </div>
 

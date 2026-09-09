@@ -3,23 +3,23 @@
 const pilares = [
   {
     number: "01",
-    title: "Atendimento ao Organizador",
-    body: "Um ponto de contato para alinhar as principais informações da experiência em Paraty.",
+    title: "Atendimento para grupos",
+    body: "Um ponto de contato para alinhar as informações principais da experiência em Paraty.",
   },
   {
     number: "02",
-    title: "Experiências em Grupo",
-    body: "Passeios e atividades para descobrir o mar, a natureza e a atmosfera de Paraty.",
+    title: "Experiências em Paraty",
+    body: "Passeios de jipe, escuna e lancha para diferentes perfis de passageiros.",
   },
   {
     number: "03",
-    title: "Conhecimento Local",
-    body: "Atendimento de uma equipe que está em Paraty e acompanha de perto a dinâmica do destino.",
+    title: "Organização local",
+    body: "Apoio para reunir informações, disponibilidade e condições antes da chegada do grupo.",
   },
   {
     number: "04",
-    title: "Grupos & Excursões",
-    body: "Estrutura de atendimento pensada para quem chega à cidade em grupo.",
+    title: "Integração com hospedagem",
+    body: "Consulta de hospedagem na Pousada Aquino Mar quando isso fizer parte da necessidade da excursão.",
   },
 ]
 
@@ -30,13 +30,13 @@ export function GruposAutoridadeSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 items-start">
           <div className="flex flex-col gap-6 max-w-lg">
             <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase">
-              RECEPTIVO PARA GRUPOS EM PARATY
+              PARATY PARA GRUPOS
             </p>
             <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl text-ocean-navy leading-[1.1] tracking-[-0.02em]">
-              Paraty é melhor quando o grupo chega com tudo alinhado.
+              Sua agência traz o grupo. Nós ajudamos a organizar a experiência em Paraty.
             </h2>
             <p className="font-sans text-base md:text-lg leading-relaxed text-slate-blue">
-              A AquinoTour atende grupos, excursões e operações de turismo em Paraty com uma equipe local que conhece o destino e suas experiências.
+              Montar uma excursão exige fornecedores confiáveis, informações claras e planejamento. A Aquino Tour atende agências, guias e organizadores que desejam incluir experiências em Paraty na programação dos passageiros.
             </p>
           </div>
 

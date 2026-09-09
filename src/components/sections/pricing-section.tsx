@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 function PricingSection() {
   return (
@@ -15,10 +15,10 @@ function PricingSection() {
                 PLANEJE SUA EXPERIÊNCIA
               </p>
               <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ocean-navy leading-[1.1] tracking-tight">
-                Seu passeio começa com uma boa escolha.
+                Encontre o passeio ideal para sua viagem
               </h2>
               <p className="font-sans font-light text-base md:text-lg leading-relaxed text-slate-blue max-w-lg mt-2">
-                Cada visita a Paraty tem um ritmo diferente. A AquinoTour ajuda você a encontrar a experiência mais adequada para o seu dia, grupo ou excursão.
+                Valores, horários e disponibilidade variam conforme o serviço, a data e o perfil da viagem. Pelo WhatsApp, a equipe ajuda você a consultar passeio de jipe, escuna, lancha ou atendimento para grupos e excursões.
               </p>
             </div>
 
@@ -30,10 +30,10 @@ function PricingSection() {
                   01
                 </span>
                 <h3 className="font-heading font-medium text-ocean-navy text-xl">
-                  Escolha a experiência
+                  Escolha o passeio
                 </h3>
                 <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
-                  Escuna, Day Use ou atendimento para grupos.
+                  Passeio de jipe, passeio de escuna, passeio de lancha ou grupos e excursões.
                 </p>
               </div>
 
@@ -43,10 +43,10 @@ function PricingSection() {
                   02
                 </span>
                 <h3 className="font-heading font-medium text-ocean-navy text-xl">
-                  Conte como você vem
+                  Informe o perfil da viagem
                 </h3>
                 <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
-                  Sozinho, em família, com amigos ou em excursão.
+                  Turistas, famílias, pequenos grupos, excursões e agências têm necessidades diferentes.
                 </p>
               </div>
 
@@ -56,13 +56,21 @@ function PricingSection() {
                   03
                 </span>
                 <h3 className="font-heading font-medium text-ocean-navy text-xl">
-                  Receba orientação local
+                  Consulte valores e horários
                 </h3>
                 <p className="font-sans text-slate-blue text-sm md:text-base leading-relaxed">
-                  A equipe local ajuda a organizar a opção mais adequada em Paraty.
+                  A equipe verifica disponibilidade e condições para a data escolhida.
                 </p>
               </div>
             </div>
+            <a
+              href={getWhatsappUrl(WHATSAPP_MESSAGES.home)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 w-fit items-center justify-center rounded-[10px] bg-turquoise-sea px-7 font-sans text-sm font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-tropical-lagoon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2"
+            >
+              Consultar valores e horários
+            </a>
           </div>
           
           {/* Right Column: Image Grid (Provisional Images) */}
@@ -71,7 +79,7 @@ function PricingSection() {
             <div className="relative bg-deep-marine/5 rounded-[20px] aspect-square overflow-hidden group">
               <Image 
                 src="/images/imagem5.avif" 
-                alt="Turismo náutico em Paraty (imagem provisória)" 
+                alt="Embarcação em passeio marítimo em Paraty" 
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -82,7 +90,7 @@ function PricingSection() {
             <div className="relative bg-deep-marine/5 rounded-[20px] row-span-2 overflow-hidden group min-h-[300px] md:min-h-0">
               <Image 
                 src="/images/hero-1.jpeg" 
-                alt="Vista do mar em Paraty (imagem provisória)" 
+                alt="Paisagem marítima em Paraty" 
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -93,7 +101,7 @@ function PricingSection() {
             <div className="relative bg-deep-marine/5 rounded-[20px] aspect-square overflow-hidden group">
               <Image 
                 src="/images/imagem6.avif" 
-                alt="Praia cristalina de Paraty (imagem provisória)" 
+                alt="Praia e mar em Paraty" 
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 

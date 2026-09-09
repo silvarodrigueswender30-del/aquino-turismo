@@ -11,19 +11,19 @@ export function Stats() {
             </div>
             <div className="flex flex-col gap-3 md:gap-4">
               <h2 className="max-w-xl text-left font-heading text-3xl font-light leading-[1.08] tracking-normal text-ocean-navy md:text-5xl">
-                Paraty é a nossa casa.
+                Paraty é o nosso ponto de partida.
               </h2>
               <p className="max-w-lg text-left font-sans text-base font-normal leading-7 text-slate-blue sm:text-lg">
-                Experiências, passeios e receptivo feitos por uma equipe local, com atenção ao ritmo do mar e ao jeito certo de viver Paraty.
+                Passeios e turismo receptivo com orientação local para turistas, famílias, grupos e agências que querem viver Paraty com mais clareza.
               </p>
             </div>
           </div>
 
           <div className="grid gap-0 border-y border-ocean-navy/10 sm:grid-cols-3 sm:divide-x sm:divide-ocean-navy/10">
             {[
-              ["Oceano", "roteiros conduzidos pelo tempo do mar"],
-              ["Mata Atlântica", "paisagens preservadas no entorno de Paraty"],
-              ["Receptivo", "atendimento próximo antes e durante a experiência"],
+              ["Por terra", "experiências que conectam natureza, cultura local e região rural"],
+              ["Pelo mar", "praias, ilhas e paisagens da baía de Paraty"],
+              ["Receptivo", "atendimento próximo para planejar passeios individuais e em grupo"],
             ].map(([title, text]) => (
               <div key={title} className="border-b border-ocean-navy/10 py-5 sm:border-b-0 sm:px-6 sm:py-7">
                 <span className="mb-4 block h-px w-8 bg-golden-sand sm:mb-5" aria-hidden="true" />
@@ -41,4 +41,3 @@ export function Stats() {
     </div>
   );
 }
-

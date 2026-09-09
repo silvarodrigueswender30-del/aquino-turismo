@@ -8,18 +8,18 @@ export interface FeatureGridProps {
 const pillars = [
   {
     id: "local",
-    title: "Atendimento Local",
-    body: "Equipe em Paraty. Conhecemos o ritmo do mar, as melhores saídas e a forma certa de viver a cidade.",
+    title: "Atendimento local",
+    body: "Orientação para escolher experiências de acordo com o perfil, o tempo disponível e o tamanho do grupo.",
   },
   {
     id: "experiencias",
-    title: "Experiências no Mar",
-    body: "Passeios e turismo náutico em Paraty para descobrir a baía por um ângulo diferente.",
+    title: "Paraty por terra e pelo mar",
+    body: "Passeios que conectam cachoeiras, alambiques, praias, ilhas e diferentes experiências da região.",
   },
   {
     id: "grupos",
-    title: "Grupos & Receptivo",
-    body: "Atendimento para excursões, grupos e receptivo local. Organizamos a experiência do início ao fim, em Paraty.",
+    title: "Grupos e excursões",
+    body: "Atendimento para famílias, excursões, guias, organizadores e agências de turismo.",
   },
 ];
 
@@ -29,7 +29,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
       id="pilares"
       className={cn("py-16 sm:py-24 bg-shell-white scroll-mt-24", className)}
       role="region"
-      aria-label="Pilares da AquinoTour"
+      aria-label="Pilares da Aquino Tour"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
 
@@ -39,7 +39,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
             COMO TRABALHAMOS
           </p>
           <h2 className="font-heading font-light tracking-[-0.02em] leading-[1.1] text-ocean-navy text-2xl sm:text-3xl md:text-4xl">
-            O jeito AquinoTour de receber.
+            O jeito Aquino Tour de receber.
           </h2>
         </div>
 
@@ -75,6 +75,4 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
 
 export default FeatureGrid;
 export { FeatureGrid };
-
-
 

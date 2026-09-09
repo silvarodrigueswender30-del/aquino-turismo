@@ -1,23 +1,18 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
-/** ─────────────────────────────────────────────────────────────
- *  IMAGENS PROVISÓRIAS
- *  Fotografias genéricas de mar/barco sem identidade visual RF.
- *  Aguardando acervo fotográfico oficial da AquinoTour.
- * ───────────────────────────────────────────────────────────── */
 const CARDS = [
   {
     image: "/images/imagem5.avif",
-    alt: "Passeio de Escuna em Paraty — imagem provisória",
-    title: "Passeio de Escuna",
-    support: "Ilhas e praias de Paraty",
+    alt: "Embarcação em passeio marítimo em Paraty",
+    title: "Paraty pelo mar",
+    support: "Praias e ilhas da região",
   },
   {
     image: "/images/imagem6.avif",
-    alt: "Vista do mar em Paraty — imagem provisória",
-    title: "Paraty pelo Mar",
-    support: "Paisagens, praias e Mata Atlântica",
+    alt: "Praia e vegetação da Mata Atlântica em Paraty",
+    title: "Paraty por terra",
+    support: "Cachoeiras, alambiques e cultura local",
   },
 ];
 
@@ -29,13 +24,13 @@ export function FeatureSection() {
         {/* ── Abertura editorial ─────────────────────────────── */}
         <div className="mb-14 md:mb-16 max-w-2xl">
           <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
-            PASSEIOS AQUINOTOUR
+            PASSEIOS AQUINO TOUR
           </p>
           <h2 className="font-heading font-light tracking-[-0.02em] leading-[1.1] text-ocean-navy text-3xl md:text-4xl lg:text-5xl">
-            Experiências no mar
+            Descubra Paraty por terra e pelo mar
           </h2>
           <p className="mt-4 text-slate-blue font-sans text-base md:text-lg leading-relaxed max-w-xl">
-            Descubra Paraty pelo mar, entre ilhas, praias e paisagens da Mata Atlântica.
+            A Aquino Tour ajuda você a encontrar o passeio mais adequado para o seu perfil, seja uma experiência de jipe pela região de cachoeiras e alambiques, um passeio de escuna pela baía ou uma saída de lancha para conhecer praias e ilhas.
           </p>
         </div>
 
@@ -49,7 +44,6 @@ export function FeatureSection() {
             transition-transform duration-500 ease-out
             hover:-translate-y-[3px]
           ">
-            {/* Foto — imagem provisória aguardando acervo oficial */}
             <img
               src={CARDS[0].image}
               alt={CARDS[0].alt}
@@ -108,21 +102,21 @@ export function FeatureSection() {
             ">
               <div>
                 <p className="font-heading font-normal text-ocean-navy text-lg md:text-xl leading-snug tracking-[-0.01em]">
-                  Grupos & Experiências
+                  Passeios para cada perfil
                 </p>
                 <p className="mt-2 text-slate-blue font-sans text-sm leading-relaxed">
-                  Atendimento local em Paraty
+                  Atendimento local para turistas, famílias, grupos e agências.
                 </p>
               </div>
               {/* CTA */}
               <a
-                href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty.")}`}
+                href="/#passeios"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/cta inline-flex items-center gap-2 text-turquoise-sea hover:text-tropical-lagoon transition-colors duration-200 font-sans font-medium text-sm"
-                aria-label="Falar com a AquinoTour pelo WhatsApp"
+                aria-label="Conhecer passeios em Paraty"
               >
-                Falar com a AquinoTour
+                Conhecer passeios em Paraty
                 <ArrowUpRight
                   className="size-4 transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5"
                   aria-hidden="true"
@@ -136,4 +130,3 @@ export function FeatureSection() {
     </section>
   );
 }
-

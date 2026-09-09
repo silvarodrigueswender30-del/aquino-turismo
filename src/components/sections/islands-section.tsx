@@ -2,11 +2,6 @@
 
 import { Marquee } from "@/components/ui/marquee";
 
-/**
- * IMAGENS PROVISÓRIAS
- * Fotografias genéricas de paisagens marítimas usadas como placeholders.
- * Aguardando acervo fotográfico oficial da AquinoTour — Paraty.
- */
 const galleryItems = [
   {
     nome: "Praia da Lula",
@@ -50,10 +45,10 @@ export function IslandsSection() {
             DESCUBRA PARATY
           </p>
           <h2 className="font-heading font-light tracking-[-0.01em] text-2xl sm:text-3xl md:text-4xl text-ocean-navy leading-[1.1] max-w-2xl">
-            Entre praias, ilhas e águas da baía.
+            Praias e ilhas para descobrir em Paraty
           </h2>
           <p className="max-w-xl font-sans text-base md:text-lg leading-relaxed text-slate-blue mt-4">
-            Alguns dos lugares que fazem parte da paisagem dos passeios pelo mar em Paraty.
+            A baía de Paraty reúne diferentes paisagens e paradas que podem fazer parte das experiências marítimas disponíveis na região.
           </p>
         </div>
 

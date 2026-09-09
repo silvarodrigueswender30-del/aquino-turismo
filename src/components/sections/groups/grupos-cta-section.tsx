@@ -1,5 +1,6 @@
-import React from "react"
-import { FaWhatsapp } from "react-icons/fa"
+import { FaWhatsapp } from "react-icons/fa";
+import { AQUINO_MAR_GROUPS_URL } from "@/lib/site";
+import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export function GruposCtaSection() {
   return (
@@ -10,33 +11,33 @@ export function GruposCtaSection() {
             PLANEJE SEU GRUPO
           </p>
           <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl text-shell-white leading-[1.1] tracking-[-0.02em]">
-            Está trazendo um grupo para Paraty?
+            Vamos organizar a experiência do seu grupo em Paraty?
           </h2>
           <p className="font-sans text-base md:text-lg leading-relaxed text-shell-white/75 max-w-lg">
-            Data da viagem, quantidade aproximada de pessoas e perfil do grupo são as primeiras informações para começar o planejamento.
+            Envie as informações da excursão e consulte opções de passeios e hospedagem de acordo com o perfil dos passageiros.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mt-4">
             <a
-              href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pela página de Grupos & Caravanas da AquinoTour. Estou organizando uma viagem para Paraty e gostaria de informações sobre passeios e atendimento para o meu grupo.")}`}
+              href={getWhatsappUrl(WHATSAPP_MESSAGES.grupos)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-[10px] bg-turquoise-sea text-white font-semibold text-sm transition-[background-color,transform] duration-150 hover:bg-tropical-lagoon focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy"
-              aria-label="Planejar meu grupo pelo WhatsApp da AquinoTour"
+              aria-label="Solicitar orçamento pelo WhatsApp da Aquino Tour"
             >
               <FaWhatsapp size={18} aria-hidden />
-              Planejar meu grupo pelo WhatsApp
+              Solicitar orçamento pelo WhatsApp
             </a>
             <a
-              href="https://pousadaaquinomarparaty.com.br/grupos-e-caravanas"
+              href={AQUINO_MAR_GROUPS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-12 px-7 rounded-[10px] border border-shell-white/24 bg-shell-white/5 text-shell-white/90 font-medium text-sm transition-[background-color,color,border-color] duration-150 hover:border-shell-white/50 hover:bg-shell-white hover:text-ocean-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy"
             >
-              Hospedagem para grupos
+              Consultar hospedagem
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

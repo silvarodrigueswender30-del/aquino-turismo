@@ -1,50 +1,61 @@
-﻿"use client"
+"use client";
 
-import React, { useState } from "react"
-import { ChevronDown } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
-const faqs = [
+export const gruposFaqs = [
   {
-    question: "A AquinoTour atende grupos e excursões em Paraty?",
+    question: "A Aquino Tour atende agências de outras cidades?",
     answer:
-      "Sim. A AquinoTour trabalha com turismo e receptivo para grupos e excursões em Paraty.",
+      "Sim. O atendimento receptivo é realizado em Paraty para agências, guias e grupos provenientes de diferentes cidades e estados.",
   },
   {
-    question: "A AquinoTour atende caravanas?",
+    question: "Vocês atendem excursões que chegam de ônibus?",
     answer:
-      "A AquinoTour possui atendimento voltado a grupos e excursões, e o ecossistema Aquino trabalha também com o público de caravanas em Paraty. Os detalhes da operação devem ser alinhados diretamente com a equipe.",
+      "Sim. A Aquino Tour atende grupos e excursões rodoviárias. Informações específicas sobre logística, embarque, desembarque e programação devem ser alinhadas de acordo com cada grupo.",
   },
   {
-    question: "Que informações devo enviar para consultar uma experiência para meu grupo?",
+    question: "Vocês fornecem o ônibus da excursão?",
     answer:
-      "Data da viagem, quantidade aproximada de pessoas e perfil do grupo são um bom ponto de partida para o atendimento.",
+      "O transporte rodoviário de origem normalmente é organizado pela agência ou pelo responsável pelo grupo. Consulte a equipe caso exista alguma necessidade específica.",
   },
   {
-    question: "É possível consultar passeio de escuna para grupos?",
+    question: "É possível organizar hospedagem e passeios?",
     answer:
-      "O passeio de escuna está entre as experiências divulgadas pela AquinoTour. Condições, disponibilidade e detalhes para grupos devem ser confirmados diretamente com a equipe.",
+      "Sim. A programação turística pode ser combinada com consulta de hospedagem na Pousada Aquino Mar, conforme disponibilidade.",
   },
   {
-    question: "A AquinoTour atende agências e organizadores?",
+    question: "Quais passeios podem ser organizados para grupos?",
     answer:
-      "A operação trabalha com atendimento a grupos e receptivo local em Paraty, permitindo que o responsável pela viagem alinhe previamente as principais informações da experiência.",
+      "Entre as opções trabalhadas estão passeio de jipe, passeio de escuna e passeio de lancha. A indicação depende do tamanho e do perfil do grupo.",
   },
   {
-    question: "Também existe hospedagem para grupos?",
+    question: "A escuna atende excursões?",
     answer:
-      "A Pousada Aquino Mar possui uma operação própria de hospedagem em Paraty voltada também a grupos, excursões e caravanas.",
+      "Existem opções de embarcação adequadas para grupos, mas capacidade, disponibilidade, roteiro e condições precisam ser confirmados para cada data.",
   },
   {
-    question: "Quanto custa uma experiência para grupo?",
+    question: "Existe atendimento para guia ou agência de turismo?",
     answer:
-      "Os valores dependem da experiência, data, disponibilidade e características do grupo. A cotação deve ser confirmada diretamente com a equipe.",
+      "Sim. A Aquino Tour trabalha com atendimento voltado a agências, guias e organizadores que precisam estruturar experiências para seus passageiros em Paraty.",
   },
-]
+  {
+    question: "É possível montar uma programação personalizada?",
+    answer:
+      "A equipe pode auxiliar na composição de uma programação de acordo com o tempo disponível, perfil dos passageiros e serviços disponíveis.",
+  },
+  {
+    question: "Como solicitar uma proposta?",
+    answer:
+      "Envie pelo WhatsApp as datas, a cidade de origem, a quantidade aproximada de passageiros e os serviços desejados.",
+  },
+];
 
 function FaqItem({ faq }: { faq: { question: string; answer: string } }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="border-b border-ocean-navy/10 last:border-0">
       <button
@@ -58,7 +69,7 @@ function FaqItem({ faq }: { faq: { question: string; answer: string } }) {
         <ChevronDown
           className={cn(
             "shrink-0 mt-0.5 text-slate-blue/60 transition-transform duration-300",
-            open ? "rotate-180" : ""
+            open ? "rotate-180" : "",
           )}
           size={20}
           aria-hidden
@@ -81,7 +92,7 @@ function FaqItem({ faq }: { faq: { question: string; answer: string } }) {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 
 export function GruposFaqSection() {
@@ -94,16 +105,16 @@ export function GruposFaqSection() {
               PERGUNTAS FREQUENTES
             </p>
             <h2 className="font-heading font-light text-3xl sm:text-4xl text-ocean-navy leading-[1.1] tracking-[-0.02em]">
-              Dúvidas sobre grupos em Paraty.
+              Dúvidas sobre grupos e excursões em Paraty.
             </h2>
           </div>
           <div className="lg:col-span-8">
-            {faqs.map((faq, index) => (
+            {gruposFaqs.map((faq, index) => (
               <FaqItem key={index} faq={faq} />
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -7,40 +7,45 @@ import { Plus, X } from "lucide-react";
 
 const faqs = [
   {
-    question: "O que a AquinoTour oferece em Paraty?",
+    question: "Quais passeios a Aquino Tour oferece em Paraty?",
     answer:
-      "A AquinoTour atua com turismo e receptivo em Paraty, com passeio de escuna, atendimento a grupos e excursões e Day Use divulgado entre seus serviços.",
+      "A Aquino Tour trabalha com opções de passeio de jipe, escuna e lancha, além de atendimento para grupos e excursões. A disponibilidade e as condições de cada experiência devem ser consultadas para a data da viagem.",
   },
   {
-    question: "A AquinoTour oferece passeio de escuna?",
+    question: "O que inclui o passeio de jipe em Paraty?",
     answer:
-      "Sim. O passeio de escuna é um dos serviços divulgados oficialmente pela AquinoTour em Paraty.",
+      "O passeio de jipe trabalha experiências pela região rural de Paraty, com atrações relacionadas a natureza, cachoeiras, alambiques e cultura local. Os pontos e condições do roteiro devem ser confirmados no atendimento.",
   },
   {
-    question: "Vocês atendem grupos e excursões?",
+    question: "Quanto tempo dura o passeio de escuna?",
     answer:
-      "Sim. A AquinoTour trabalha com atendimento e receptivo para grupos e excursões em Paraty, oferecendo apoio local.",
+      "Os passeios de escuna comercializados pela Aquino Tour possuem opções com duração aproximada de cinco horas. Horários, embarcação, roteiro e paradas devem ser confirmados para a data escolhida.",
   },
   {
-    question: "A AquinoTour oferece Day Use?",
+    question: "A Aquino Tour oferece passeio de lancha?",
     answer:
-      "O Day Use aparece entre os serviços divulgados pela AquinoTour. Os detalhes da experiência devem ser confirmados diretamente com a equipe antes da reserva.",
+      "Sim. Há opções de lancha para conhecer praias e ilhas da região. Capacidade, duração, roteiro e disponibilidade dependem da embarcação escolhida.",
+  },
+  {
+    question: "A Aquino Tour atende grupos e excursões?",
+    answer:
+      "Sim. A Aquino Tour atende agências, guias, organizadores, caravanas, famílias e outros grupos que desejam incluir passeios em sua programação em Paraty.",
+  },
+  {
+    question: "É possível consultar hospedagem para grupos?",
+    answer:
+      "Sim. Para grupos que também precisam de hospedagem, é possível consultar disponibilidade na Pousada Aquino Mar por meio da integração comercial entre as operações.",
   },
   {
     question: "Como consultar valores e horários?",
     answer:
-      "Valores, horários, disponibilidade e detalhes operacionais podem variar e devem ser confirmados diretamente com a equipe AquinoTour antes da reserva.",
+      "Informe pelo WhatsApp a data da viagem, a quantidade de pessoas e o passeio de interesse. A equipe verifica disponibilidade, horários e condições para o seu perfil.",
   },
   {
-    question: "A AquinoTour é de Paraty?",
+    question: "A Aquino Tour é de Paraty?",
     answer:
-      "Sim. A AquinoTour atua em Paraty, no Rio de Janeiro, com atendimento local voltado ao turismo e receptivo na região.",
+      "Sim. A Aquino Tour atua com turismo, passeios e atendimento receptivo em Paraty, no Rio de Janeiro.",
   },
-  {
-    question: "Qual a relação entre AquinoTour e Aquino Mar?",
-    answer:
-      "AquinoTour e Pousada Aquino Mar fazem parte do mesmo universo familiar Aquino, com operações distintas de turismo e hospedagem em Paraty.",
-  }
 ];
 
 function FaqItem({

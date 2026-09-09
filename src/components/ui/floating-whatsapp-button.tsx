@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
 import { usePathname } from "next/navigation"
+import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp"
 
-const WHATSAPP_NUMBER = "5524999096384"
-const MESSAGE = "Ficou com alguma dúvida? Fale com a AquinoTour pelo WhatsApp."
+const MESSAGE = "Ficou com alguma dúvida? Fale com a Aquino Tour pelo WhatsApp."
 
 export function FloatingWhatsappButton() {
   const [isVisible, setIsVisible] = useState(false)
@@ -15,8 +15,8 @@ export function FloatingWhatsappButton() {
 
   const isGroupsPage = pathname === "/grupos-e-caravanas"
   const URL_MESSAGE = isGroupsPage
-    ? "Olá! Vim pela página de Grupos & Caravanas da AquinoTour. Estou organizando uma viagem para Paraty e gostaria de informações sobre passeios e atendimento para o meu grupo."
-    : "Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty."
+    ? WHATSAPP_MESSAGES.grupos
+    : WHATSAPP_MESSAGES.home
 
   /* --- Lógica de Visibilidade: 5s ou 30% scroll --- */
   useEffect(() => {
@@ -49,8 +49,6 @@ export function FloatingWhatsappButton() {
 
   if (!isVisible) return null
 
-  const encodedMessage = encodeURIComponent(URL_MESSAGE)
-
   // Verificação simplificada de mobile
   const isMobile =
     typeof window !== "undefined" &&
@@ -58,8 +56,8 @@ export function FloatingWhatsappButton() {
       window.innerWidth < 768)
 
   const linkUrl = isMobile
-    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
-    : `https://web.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`
+    ? getWhatsappUrl(URL_MESSAGE)
+    : getWhatsappUrl(URL_MESSAGE, true)
 
   const closeBalloon = (e: React.MouseEvent) => {
     e.preventDefault()

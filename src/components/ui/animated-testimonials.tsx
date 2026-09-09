@@ -56,7 +56,7 @@ export function AnimatedTestimonialsBasic() {
             Quem conhece, recomenda.
           </h2>
           <p className="font-sans text-base md:text-lg text-slate-blue max-w-xl mx-auto">
-            Experiências compartilhadas por quem já contou com a AquinoTour em Paraty.
+            Experiências compartilhadas por quem já contou com a Aquino Tour em Paraty.
           </p>
         </div>
 

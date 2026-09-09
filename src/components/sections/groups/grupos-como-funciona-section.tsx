@@ -3,23 +3,28 @@
 const steps = [
   {
     number: "01",
-    title: "Conte sobre o grupo",
-    body: "Data, quantidade aproximada de pessoas e perfil da viagem.",
+    title: "Envie os dados da excursão",
+    body: "Informe cidade de origem, datas, quantidade aproximada de passageiros e serviços desejados.",
   },
   {
     number: "02",
-    title: "Defina o tipo de experiência",
-    body: "Mar, natureza e outras possibilidades disponíveis em Paraty.",
+    title: "Analisamos as opções",
+    body: "A equipe verifica disponibilidade de passeios e, quando solicitado, hospedagem.",
   },
   {
     number: "03",
-    title: "Alinhe as opções",
-    body: "A equipe orienta sobre as experiências disponíveis para o período.",
+    title: "Preparamos a proposta",
+    body: "A proposta considera o tamanho, o perfil e a programação desejada para o grupo.",
   },
   {
     number: "04",
-    title: "Chegue a Paraty",
-    body: "Com as principais informações da experiência organizadas previamente.",
+    title: "Alinhamos a operação",
+    body: "Após a aprovação, são confirmados serviços, condições, horários e informações necessárias para a viagem.",
+  },
+  {
+    number: "05",
+    title: "O grupo chega a Paraty",
+    body: "A equipe local orienta o responsável sobre os serviços contratados e a programação.",
   },
 ]
 
@@ -32,12 +37,11 @@ export function GruposComoFuncionaSection() {
             COMO FUNCIONA
           </p>
           <h2 className="font-heading font-light text-3xl sm:text-4xl md:text-5xl text-ocean-navy leading-[1.1] tracking-[-0.02em]">
-            Você conta como será a viagem.
-            <br className="hidden sm:block" />A gente começa por aí.
+            Como organizamos a experiência do seu grupo
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-5 lg:gap-6">
           {steps.map((step) => (
             <div key={step.number} className="flex flex-col gap-3 border-t-2 border-golden-sand/30 pt-6">
               <span className="font-sans text-sm font-semibold text-golden-sand tracking-widest">

@@ -15,15 +15,15 @@ import {
 
 // Imagens provisórias
 const baseImages = [
-  { src: "/images/galeria/clientes/cliente-1.avif", alt: "Navegação em Paraty (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-2.avif", alt: "Roteiro náutico em Paraty (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-3.avif", alt: "Mergulho livre em águas cristalinas (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-4.avif", alt: "Pausa para fotos no barco (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-5.avif", alt: "Relaxando na praia (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-6.avif", alt: "Explorando as ilhas de Paraty (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-7.avif", alt: "Vista panorâmica durante a navegação (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-8.avif", alt: "Momentos especiais no mar (imagem provisória)" },
-  { src: "/images/galeria/clientes/cliente-9.avif", alt: "Fim de tarde na baía (imagem provisória)" },
+  { src: "/images/galeria/clientes/cliente-1.avif", alt: "Navegação em Paraty" },
+  { src: "/images/galeria/clientes/cliente-2.avif", alt: "Roteiro náutico em Paraty" },
+  { src: "/images/galeria/clientes/cliente-3.avif", alt: "Mergulho livre em águas cristalinas" },
+  { src: "/images/galeria/clientes/cliente-4.avif", alt: "Pausa para fotos no passeio" },
+  { src: "/images/galeria/clientes/cliente-5.avif", alt: "Momento de descanso na praia" },
+  { src: "/images/galeria/clientes/cliente-6.avif", alt: "Passeio por ilhas de Paraty" },
+  { src: "/images/galeria/clientes/cliente-7.avif", alt: "Vista panorâmica durante a navegação" },
+  { src: "/images/galeria/clientes/cliente-8.avif", alt: "Momentos especiais no mar" },
+  { src: "/images/galeria/clientes/cliente-9.avif", alt: "Fim de tarde na baía" },
 ]
 
 // Array triplicado para garantir buffer de clonagem do loop em qualquer resolução

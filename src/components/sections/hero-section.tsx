@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Marquee } from '@/components/ui/marquee'
 import { AquinoNavbar } from '@/components/sections/navbar'
+import { getWhatsappUrl, WHATSAPP_MESSAGES } from '@/lib/whatsapp'
 
 const carouselCards = [
     { title: "Passeio de Escuna",     imageUrl: "/images/hero-carousel/slide-1.avif", alt: "Escuna navegando em águas cristalinas em Paraty" },
@@ -25,7 +26,7 @@ export function HeroSection() {
                     {/* Imagem de Fundo cobrindo toda a seção */}
                     <Image 
                         src="/images/hero/escuna-home.webp" 
-                        alt="Passeio de escuna em Paraty — AquinoTour" 
+                        alt="Passeio de escuna na baía de Paraty" 
                         fill
                         priority
                         sizes="100vw"
@@ -46,13 +47,13 @@ export function HeroSection() {
                             {/* Texto Principal à Esquerda */}
                             <div className="mx-auto max-w-[40rem] text-center text-shell-white lg:ml-0 lg:w-[56%] lg:text-left">
                                 
-                                <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand drop-shadow-sm sm:mb-4 sm:text-xs">AQUINOTOUR · PARATY</p>
+                                <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand drop-shadow-sm sm:mb-4 sm:text-xs">AQUINO TOUR · PARATY</p>
                                 
                                 <h1 className="mx-auto max-w-[37rem] text-balance font-heading text-[2.7rem] font-normal leading-[1.03] tracking-[-0.025em] drop-shadow-lg sm:text-5xl md:text-[3.4rem] lg:mx-0 xl:text-[3.95rem]">
-                                    Descubra Paraty<br />por outro ângulo.
+                                    Passeios em Paraty para viver o melhor da cidade
                                 </h1>
                                 <p className="mx-auto mt-5 max-w-[30rem] text-base font-normal leading-7 text-shell-white/92 drop-shadow-md sm:mt-6 sm:text-lg lg:mx-0">
-                                    Passeios, experiências e atendimento local para descobrir o melhor de Paraty.
+                                    Conheça cachoeiras, alambiques, praias e ilhas com passeios de jipe, escuna e lancha e conte com atendimento local para escolher a experiência ideal.
                                 </p>
 
                                 <div>
@@ -61,8 +62,8 @@ export function HeroSection() {
                                             asChild
                                             className="aquino-hero-control h-12 w-full rounded-[10px] border-none bg-turquoise-sea px-7 font-semibold text-white transition-[background-color,transform] duration-100 hover:bg-tropical-lagoon focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy sm:w-auto"
                                         >
-                                            <Link href="#servicos">
-                                                <span>Encontrar meu passeio</span>
+                                            <Link href="#passeios">
+                                                <span>Ver passeios</span>
                                             </Link>
                                         </Button>
                                         <Button
@@ -70,16 +71,16 @@ export function HeroSection() {
                                             variant="secondary"
                                             className="aquino-hero-control h-12 w-full rounded-[10px] border border-shell-white/24 bg-shell-white/[0.02] px-7 font-medium text-shell-white/90 transition-[background-color,color,border-color,transform] duration-100 hover:border-shell-white/50 hover:bg-shell-white hover:text-ocean-navy focus-visible:ring-2 focus-visible:ring-turquoise-sea focus-visible:ring-offset-2 focus-visible:ring-offset-ocean-navy sm:w-auto"
                                         >
-                                            <a href={`https://wa.me/5524999096384?text=${encodeURIComponent("Olá! Vim pelo site da AquinoTour e gostaria de informações sobre passeios e experiências em Paraty.")}`} target="_blank" rel="noopener noreferrer">
-                                                <span>Falar com a AquinoTour</span>
+                                            <a href={getWhatsappUrl(WHATSAPP_MESSAGES.home)} target="_blank" rel="noopener noreferrer">
+                                                <span>Falar com a Aquino Tour</span>
                                             </a>
                                         </Button>
                                     </div>
 
                                     <ul className="flex list-none flex-col items-center gap-2 text-sm font-normal leading-6 text-shell-white/78 lg:items-start">
-                                        <li className="flex items-center gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-golden-sand"></span> Nossa Frota</li>
-                                        <li className="flex items-center gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-golden-sand"></span> Ilhas e Praias de Paraty</li>
-                                        <li className="flex items-center gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-golden-sand"></span> Passeios Exclusivos</li>
+                                        <li className="flex items-center gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-golden-sand"></span> Atendimento para turistas e famílias</li>
+                                        <li className="flex items-center gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-golden-sand"></span> Grupos, excursões e agências</li>
+                                        <li className="flex items-center gap-2.5"><span className="h-1.5 w-1.5 rounded-full bg-golden-sand"></span> Experiências por terra e pelo mar</li>
                                     </ul>
                                 </div>
                             </div>
@@ -134,19 +135,5 @@ function MarqueeCard({ card, index }: { card: { title: string, imageUrl: string,
                 </p>
             </div>
         </div>
-    )
-}
-
-const Logo = ({ className }: { className?: string }) => {
-    return (
-        <Image
-            src="/images/brand/logo-navbar.webp"
-            alt="AquinoTour Paraty"
-            width={1086}
-            height={362}
-            priority
-            sizes="(max-width: 768px) 118px, 132px"
-            className={cn("h-11 w-auto object-contain md:h-12", className)}
-        />
     )
 }

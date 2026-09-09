@@ -2,7 +2,9 @@
 
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { FaInstagram } from "react-icons/fa"
+import { INSTAGRAM_URL } from "@/lib/site"
 
 export function FooterSection() {
   const currentYear = new Date().getFullYear()
@@ -16,13 +18,13 @@ export function FooterSection() {
           <div className="md:col-span-5 flex flex-col items-start text-left">
             <Image
               src="/images/brand/aquinotour-logo.png"
-              alt="AquinoTour Paraty"
+              alt="Aquino Tour Paraty"
               width={180}
               height={100}
               className="h-14 md:h-16 w-auto object-contain mb-4"
             />
             <p className="font-sans text-sm md:text-base text-shell-white/80 max-w-sm leading-relaxed">
-              Turismo, experiências e receptivo em Paraty.
+              Passeios e turismo receptivo em Paraty.
             </p>
           </div>
 
@@ -33,34 +35,24 @@ export function FooterSection() {
             </h3>
             <ul className="font-sans text-sm text-shell-white/70 space-y-2.5">
               <li>
-                <a href="#experiencias" className="hover:text-shell-white transition-colors duration-200">
-                  Experiências
-                </a>
-              </li>
-              <li>
-                <a href="#pilares" className="hover:text-shell-white transition-colors duration-200">
-                  Como trabalhamos
-                </a>
-              </li>
-              <li>
-                <a href="#servicos" className="hover:text-shell-white transition-colors duration-200">
+                <Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">
                   Passeios
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#planejamento" className="hover:text-shell-white transition-colors duration-200">
-                  Planejamento
-                </a>
+                <Link href="/#planejamento" className="hover:text-shell-white transition-colors duration-200">
+                  Como funciona
+                </Link>
               </li>
               <li>
-                <a href="/grupos-e-caravanas" className="hover:text-shell-white transition-colors duration-200">
-                  Grupos &amp; Caravanas
-                </a>
+                <Link href="/grupos-e-caravanas" className="hover:text-shell-white transition-colors duration-200">
+                  Grupos &amp; Excursões
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="hover:text-shell-white transition-colors duration-200">
+                <Link href="/#faq" className="hover:text-shell-white transition-colors duration-200">
                   Perguntas Frequentes
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,9 +63,10 @@ export function FooterSection() {
               Experiências
             </h3>
             <ul className="font-sans text-sm text-shell-white/70 space-y-2 mb-4">
-              <li>Passeio de Escuna</li>
-              <li>Grupos & Excursões</li>
-              <li>Day Use</li>
+              <li><Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">Passeio de Jipe</Link></li>
+              <li><Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">Passeio de Escuna</Link></li>
+              <li><Link href="/#passeios" className="hover:text-shell-white transition-colors duration-200">Passeio de Lancha</Link></li>
+              <li><Link href="/grupos-e-caravanas" className="hover:text-shell-white transition-colors duration-200">Grupos & Excursões</Link></li>
             </ul>
 
             <div className="pt-2">
@@ -81,11 +74,11 @@ export function FooterSection() {
                 Redes Sociais
               </h4>
               <a
-                href="https://www.instagram.com/aquinotourparaty/"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-sans text-sm text-shell-white/70 hover:text-shell-white transition-colors duration-200"
-                aria-label="Instagram da AquinoTour Paraty"
+                aria-label="Instagram da Aquino Tour Paraty"
               >
                 <FaInstagram size={18} className="text-golden-sand" />
                 <span>@aquinotourparaty</span>
@@ -97,7 +90,7 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-shell-white/50">
           <p className="text-center sm:text-left">
-            © {currentYear} AquinoTour Paraty. Todos os direitos reservados.
+            © {currentYear} Aquino Tour Paraty. Todos os direitos reservados.
           </p>
           <p className="text-center sm:text-right">
             Paraty, Rio de Janeiro
@@ -109,4 +102,3 @@ export function FooterSection() {
 }
 
 export default FooterSection
-

@@ -5,24 +5,24 @@ import { Star } from "lucide-react";
 const stats = [
   {
     value: "5,0",
-    label: "Avaliacao no Google",
+    label: "Avaliação no Google",
     detail: "Nota no Google",
     icon: true,
   },
   {
     value: "25+",
-    label: "Avaliacoes publicas",
-    detail: "Relatos",
+    label: "Avaliações públicas",
+    detail: "Relatos de clientes",
   },
   {
     value: "PARATY",
-    label: "Atendimento local",
+    label: "Atendimento em Paraty",
     detail: "Equipe local",
   },
   {
     value: "GRUPOS",
-    label: "Excursoes em Paraty",
-    detail: "Grupos e Receptivo",
+    label: "Grupos e excursões",
+    detail: "Receptivo",
   },
 ];
 
