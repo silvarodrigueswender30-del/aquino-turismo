@@ -27,14 +27,28 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
   return (
     <section
       id="pilares"
-      className={cn("py-16 sm:py-24 bg-shell-white scroll-mt-24", className)}
+      className={cn("relative py-16 sm:py-24 scroll-mt-24 bg-cover bg-center bg-no-repeat", className)}
+      style={{ backgroundImage: "url('/images/backgrounds/como-trabalhamos-bg.avif')" }}
       role="region"
       aria-label="Pilares da Aquino Tour"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+      {/* Overlay global ultra leve */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none" 
+        style={{ background: "linear-gradient(180deg, rgba(250,248,242,.20) 0%, rgba(250,248,242,.05) 100%)" }}
+        aria-hidden="true" 
+      />
 
-        {/* ── Header editorial ────────────────────────────── */}
-        <div className="mb-8 sm:mb-16 max-w-xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+        {/* ✈️ Header editorial ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}
+        <div className="mb-8 sm:mb-16 max-w-xl relative">
+          {/* Fumaça branca atrás do header */}
+          <div 
+            className="absolute -inset-10 md:-inset-12 -z-10 pointer-events-none" 
+            style={{ background: "radial-gradient(ellipse at center, rgba(250,248,242,0.92) 0%, rgba(250,248,242,0.72) 40%, rgba(250,248,242,0) 75%)" }} 
+            aria-hidden="true" 
+          />
           <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
             COMO TRABALHAMOS
           </p>
@@ -43,18 +57,25 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
           </h2>
         </div>
 
-        {/* ── Pilares ─────────────────────────────────────── */}
+        {/* ✈️ Pilares ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}
         {/* Mobile: empilhado verticalmente  |  Desktop: grid 3 colunas */}
         <div
-          className="flex flex-col border-y border-ocean-navy/10 divide-y divide-ocean-navy/10 md:grid md:grid-cols-3 md:divide-y-0 md:divide-x"
+          className="flex flex-col border-y border-ocean-navy/20 divide-y divide-ocean-navy/20 md:grid md:grid-cols-3 md:divide-y-0 md:divide-x"
           role="list"
         >
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
               role="listitem"
-              className="w-full flex flex-col gap-4 md:gap-5 py-8 md:py-10 md:px-10 md:first:pl-0 md:last:pr-0"
+              className="relative w-full flex flex-col gap-4 md:gap-5 py-8 md:py-10 md:px-10 md:first:pl-0 md:last:pr-0"
             >
+              {/* Fumaça branca atrás do pilar */}
+              <div 
+                className="absolute -inset-x-4 -inset-y-6 md:-inset-8 -z-10 pointer-events-none" 
+                style={{ background: "radial-gradient(ellipse at center, rgba(250,248,242,0.95) 0%, rgba(250,248,242,0.70) 50%, rgba(250,248,242,0) 80%)" }} 
+                aria-hidden="true" 
+              />
+              
               {/* Golden Sand microdetail */}
               <span className="block h-px w-8 bg-golden-sand" aria-hidden="true" />
 
