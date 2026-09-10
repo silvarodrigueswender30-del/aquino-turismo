@@ -27,28 +27,32 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
   return (
     <section
       id="pilares"
-      className={cn("relative py-16 sm:py-24 scroll-mt-24 bg-cover bg-center bg-no-repeat", className)}
-      style={{ backgroundImage: "url('/images/backgrounds/como-trabalhamos-bg.avif')" }}
+      className={cn("relative py-16 sm:py-24 scroll-mt-24", className)}
       role="region"
       aria-label="Pilares da Aquino Tour"
     >
-      {/* Overlay global ultra leve */}
+      {/* Responsive Photo Background */}
       <div 
-        className="absolute inset-0 z-0 pointer-events-none" 
-        style={{ background: "linear-gradient(180deg, rgba(250,248,242,.20) 0%, rgba(250,248,242,.05) 100%)" }}
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat bg-[url('/images/backgrounds/como-trabalhamos-mobile.avif')] md:bg-[url('/images/backgrounds/como-trabalhamos-bg.avif')]"
         aria-hidden="true" 
+      />
+
+      {/* Continuous Editorial Veil (Mobile vs Desktop) */}
+      <div 
+        className="absolute inset-0 -z-10 block md:hidden pointer-events-none"
+        style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.85) 0%, rgba(250,248,242,0.72) 30%, rgba(250,248,242,0.50) 65%, rgba(250,248,242,0.25) 100%)" }}
+        aria-hidden="true"
+      />
+      <div 
+        className="absolute inset-0 -z-10 hidden md:block pointer-events-none"
+        style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.80) 0%, rgba(250,248,242,0.65) 40%, rgba(250,248,242,0.40) 75%, rgba(250,248,242,0.15) 100%)" }}
+        aria-hidden="true"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
 
         {/* ✈️ Header editorial ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}
-        <div className="mb-8 sm:mb-16 max-w-xl relative">
-          {/* Fumaça branca atrás do header */}
-          <div 
-            className="absolute -inset-10 md:-inset-12 -z-10 pointer-events-none" 
-            style={{ background: "radial-gradient(ellipse at center, rgba(250,248,242,0.92) 0%, rgba(250,248,242,0.72) 40%, rgba(250,248,242,0) 75%)" }} 
-            aria-hidden="true" 
-          />
+        <div className="mb-8 sm:mb-16 max-w-xl">
           <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
             COMO TRABALHAMOS
           </p>
@@ -69,13 +73,6 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
               role="listitem"
               className="relative w-full flex flex-col gap-4 md:gap-5 py-8 md:py-10 md:px-10 md:first:pl-0 md:last:pr-0"
             >
-              {/* Fumaça branca atrás do pilar */}
-              <div 
-                className="absolute -inset-x-4 -inset-y-6 md:-inset-8 -z-10 pointer-events-none" 
-                style={{ background: "radial-gradient(ellipse at center, rgba(250,248,242,0.95) 0%, rgba(250,248,242,0.70) 50%, rgba(250,248,242,0) 80%)" }} 
-                aria-hidden="true" 
-              />
-              
               {/* Golden Sand microdetail */}
               <span className="block h-px w-8 bg-golden-sand" aria-hidden="true" />
 
