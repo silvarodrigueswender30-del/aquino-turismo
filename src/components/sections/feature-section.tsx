@@ -4,14 +4,13 @@ import { ArrowUpRight } from "lucide-react";
 const CARDS = [
   {
     image: "/images/banners/passeios-main.avif",
-    alt: "Embarcação em passeio marítimo em Paraty",
+    alt: "Banner da Aquino Tour: Descubra Paraty pelo mar, com passeios de lancha e escuna.",
     title: "Paraty pelo mar",
-    support: "Praias e ilhas da região",
+    support: "Passeios de escuna pela Baía de Paraty e praias da região",
   },
   {
     image: "/images/banners/passeios-small.avif",
-    alt: "Praia e vegetação da Mata Atlântica em Paraty",
-
+    alt: "Banner da Aquino Tour: Descubra Paraty por terra, passeios de Jeep e cachoeiras.",
     title: "Paraty por terra",
     support: "Cachoeiras, alambiques e cultura local",
   },
@@ -22,7 +21,7 @@ export function FeatureSection() {
     <section id="experiencias" className="w-full bg-shell-white py-20 md:py-28 overflow-hidden scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* ── Abertura editorial ─────────────────────────────── */}
+        {/* ✈️✈️ Abertura editorial ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}
         <div className="mb-14 md:mb-16 max-w-2xl">
           <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
             PASSEIOS AQUINO TOUR
@@ -35,35 +34,26 @@ export function FeatureSection() {
           </p>
         </div>
 
-        {/* ── Grid assimétrico: card grande + card menor + texto ─ */}
+        {/* ✈️✈️ Grid assimétrico: card grande + card menor + texto ✈️ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start">
 
           {/* Card 1 — Protagonista 2/3 */}
           <div className="
             group relative md:col-span-2 rounded-[20px] overflow-hidden
-            min-h-[340px] md:min-h-[420px]
+            aspect-[1.79] w-full
             transition-transform duration-500 ease-out
-            hover:-translate-y-[3px]
+            hover:-translate-y-[2px]
           ">
+            {/* Imagem limpa sem overlays agressivos para preservar a arte da campanha */}
             <img
               src={CARDS[0].image}
               alt={CARDS[0].alt}
-              className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+              className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]"
             />
-            {/* Overlay Navy apenas na base */}
-            <div
-              aria-hidden
-              className="absolute inset-x-0 bottom-0 z-10 h-[55%]"
-              style={{ background: "linear-gradient(to top, rgba(13,39,66,0.82) 0%, transparent 100%)" }}
-            />
-            {/* Label */}
-            <div className="absolute bottom-0 left-0 z-20 p-6 md:p-8">
-              <p className="font-heading font-normal tracking-[-0.01em] text-shell-white text-xl md:text-2xl leading-tight">
-                {CARDS[0].title}
-              </p>
-              <p className="mt-1 text-shell-white/70 font-sans text-sm tracking-wide">
-                {CARDS[0].support}
-              </p>
+            {/* Acessibilidade: Conteúdo textual semanticamente preservado para leitores de tela */}
+            <div className="sr-only">
+              <h3>{CARDS[0].title}</h3>
+              <p>{CARDS[0].support}</p>
             </div>
           </div>
 
@@ -72,27 +62,19 @@ export function FeatureSection() {
 
             {/* Card 2 — menor, hierarquia secundária */}
             <div className="
-              group relative rounded-[20px] overflow-hidden h-52 md:h-56
+              group relative rounded-[20px] overflow-hidden 
+              aspect-[1.79] w-full
               transition-transform duration-500 ease-out
-              hover:-translate-y-[3px]
+              hover:-translate-y-[2px]
             ">
               <img
                 src={CARDS[1].image}
                 alt={CARDS[1].alt}
-                className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]"
               />
-              <div
-                aria-hidden
-                className="absolute inset-x-0 bottom-0 z-10 h-[60%]"
-                style={{ background: "linear-gradient(to top, rgba(13,39,66,0.80) 0%, transparent 100%)" }}
-              />
-              <div className="absolute bottom-0 left-0 z-20 p-5">
-                <p className="font-heading font-normal text-shell-white text-base leading-tight tracking-[-0.01em]">
-                  {CARDS[1].title}
-                </p>
-                <p className="mt-0.5 text-shell-white/65 font-sans text-xs tracking-wide">
-                  {CARDS[1].support}
-                </p>
+              <div className="sr-only">
+                <h3>{CARDS[1].title}</h3>
+                <p>{CARDS[1].support}</p>
               </div>
             </div>
 
