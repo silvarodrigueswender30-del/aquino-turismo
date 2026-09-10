@@ -40,16 +40,23 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
       {/* Continuous Editorial Veil (Mobile vs Desktop) */}
       <div 
         className="absolute inset-0 -z-10 block md:hidden pointer-events-none"
-        style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.85) 0%, rgba(250,248,242,0.72) 30%, rgba(250,248,242,0.50) 65%, rgba(250,248,242,0.25) 100%)" }}
+        style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.34) 0%, rgba(250,248,242,0.26) 45%, rgba(250,248,242,0.16) 75%, rgba(250,248,242,0.08) 100%)" }}
         aria-hidden="true"
       />
       <div 
         className="absolute inset-0 -z-10 hidden md:block pointer-events-none"
-        style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.80) 0%, rgba(250,248,242,0.65) 40%, rgba(250,248,242,0.40) 75%, rgba(250,248,242,0.15) 100%)" }}
+        style={{ background: "linear-gradient(90deg, rgba(250,248,242,0.28) 0%, rgba(250,248,242,0.20) 35%, rgba(250,248,242,0.12) 65%, rgba(250,248,242,0.06) 100%)" }}
         aria-hidden="true"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+        {/* Text Protection Layer (Larga e Suave, sem bordas ou cards) */}
+        <div 
+          className="absolute -inset-x-4 -inset-y-8 md:-inset-x-12 md:-inset-y-12 -z-10 pointer-events-none"
+          style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.58) 0%, rgba(250,248,242,0.42) 35%, rgba(250,248,242,0.18) 75%, transparent 100%)" }}
+          aria-hidden="true"
+        />
 
         {/* ✈️ Header editorial ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}
         <div className="mb-8 sm:mb-16 max-w-xl">
