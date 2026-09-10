@@ -84,9 +84,10 @@ export function GallerySlider() {
       {/* Imagem de fundo full-bleed */}
       <div className="absolute inset-0">
         <img 
-          src="/images/galeria/002.avif" 
+          src="/images/destinations/escuna-section-bg.avif" 
           alt="Paisagem marítima na Baía de Paraty" 
           className="w-full h-full object-cover" 
+          loading="lazy"
         />
       </div>
 
