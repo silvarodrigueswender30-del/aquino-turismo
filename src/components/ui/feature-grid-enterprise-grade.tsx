@@ -27,24 +27,24 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
   return (
     <section
       id="pilares"
-      className={cn("relative py-16 sm:py-24 scroll-mt-24", className)}
+      className={cn("relative z-0 overflow-hidden py-16 sm:py-24 scroll-mt-24", className)}
       role="region"
       aria-label="Pilares da Aquino Tour"
     >
       {/* Responsive Photo Background */}
       <div 
-        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat bg-[url('/images/backgrounds/como-trabalhamos-mobile.avif')] md:bg-[url('/images/backgrounds/como-trabalhamos-bg.avif')]"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-[url('/images/backgrounds/como-trabalhamos-mobile.avif')] md:bg-[url('/images/backgrounds/como-trabalhamos-bg.avif')]"
         aria-hidden="true" 
       />
 
       {/* Continuous Editorial Veil (Mobile vs Desktop) */}
       <div 
-        className="absolute inset-0 -z-10 block md:hidden pointer-events-none"
+        className="absolute inset-0 z-[1] block md:hidden pointer-events-none"
         style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.34) 0%, rgba(250,248,242,0.26) 45%, rgba(250,248,242,0.16) 75%, rgba(250,248,242,0.08) 100%)" }}
         aria-hidden="true"
       />
       <div 
-        className="absolute inset-0 -z-10 hidden md:block pointer-events-none"
+        className="absolute inset-0 z-[1] hidden md:block pointer-events-none"
         style={{ background: "linear-gradient(90deg, rgba(250,248,242,0.28) 0%, rgba(250,248,242,0.20) 35%, rgba(250,248,242,0.12) 65%, rgba(250,248,242,0.06) 100%)" }}
         aria-hidden="true"
       />
@@ -53,7 +53,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
 
         {/* Text Protection Layer (Larga e Suave, sem bordas ou cards) */}
         <div 
-          className="absolute -inset-x-4 -inset-y-8 md:-inset-x-12 md:-inset-y-12 -z-10 pointer-events-none"
+          className="absolute -inset-x-4 -inset-y-8 md:-inset-x-12 md:-inset-y-12 z-[-1] pointer-events-none"
           style={{ background: "linear-gradient(180deg, rgba(250,248,242,0.58) 0%, rgba(250,248,242,0.42) 35%, rgba(250,248,242,0.18) 75%, transparent 100%)" }}
           aria-hidden="true"
         />
