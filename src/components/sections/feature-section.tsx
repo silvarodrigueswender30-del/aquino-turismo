@@ -3,14 +3,15 @@ import { ArrowUpRight } from "lucide-react";
 
 const CARDS = [
   {
-    image: "/images/imagem5.avif",
+    image: "/images/banners/passeios-main.avif",
     alt: "Embarcação em passeio marítimo em Paraty",
     title: "Paraty pelo mar",
     support: "Praias e ilhas da região",
   },
   {
-    image: "/images/imagem6.avif",
+    image: "/images/banners/passeios-small.avif",
     alt: "Praia e vegetação da Mata Atlântica em Paraty",
+
     title: "Paraty por terra",
     support: "Cachoeiras, alambiques e cultura local",
   },
