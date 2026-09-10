@@ -1,6 +1,5 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
@@ -23,25 +22,18 @@ export function HeroSection() {
 
             <main>
                 <section className="relative flex min-h-[86vh] items-center overflow-hidden sm:min-h-[88vh]">
-                    {/* Imagem Mobile — visível apenas abaixo de md (768px) */}
-                    <Image
-                        src="/images/hero/home-mobile.avif"
-                        alt="Vista de Paraty pela janela de um avião, com chapéu, representando a chegada para conhecer o destino"
-                        fill
-                        priority
-                        fetchPriority="high"
-                        sizes="100vw"
-                        className="absolute inset-0 z-0 object-cover object-center md:hidden"
-                    />
-                    {/* Imagem Desktop — visível apenas em md (768px) e acima */}
-                    <Image 
-                        src="/images/hero/home-hero.avif" 
-                        alt="Vista de Paraty pela janela de um avião, com chapéu, representando a chegada para conhecer o destino" 
-                        fill
-                        priority
-                        sizes="100vw"
-                        className="absolute inset-0 z-0 hidden object-cover object-center md:block md:object-[center_60%]"
-                    />
+                    {/* Implementação semântica responsiva para evitar double download de Hero Images */}
+                    <picture className="absolute inset-0 z-0">
+                        <source media="(min-width: 768px)" srcSet="/images/hero/hero-aquino-desktop.avif" />
+                        <source media="(max-width: 767px)" srcSet="/images/hero/hero-aquino-mobile.avif" />
+                        <img 
+                            src="/images/hero/hero-aquino-desktop.avif" 
+                            alt="Turistas aproveitando um passeio de barco premium pela Baía de Paraty, com mar azul cristalino"
+                            className="h-full w-full object-cover object-center"
+                            fetchPriority="high"
+                            decoding="sync"
+                        />
+                    </picture>
                     {/* Overlay Mobile (mantido) */}
                     <div
                         aria-hidden
