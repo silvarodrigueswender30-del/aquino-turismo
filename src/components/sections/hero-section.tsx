@@ -23,14 +23,24 @@ export function HeroSection() {
 
             <main>
                 <section className="relative flex min-h-[86vh] items-center overflow-hidden sm:min-h-[88vh]">
-                    {/* Imagem de Fundo cobrindo toda a seção */}
+                    {/* Imagem Mobile — visível apenas abaixo de md (768px) */}
+                    <Image
+                        src="/images/hero/home-mobile.avif"
+                        alt="Vista de Paraty pela janela de um avião, com chapéu, representando a chegada para conhecer o destino"
+                        fill
+                        priority
+                        fetchPriority="high"
+                        sizes="100vw"
+                        className="absolute inset-0 z-0 object-cover object-center md:hidden"
+                    />
+                    {/* Imagem Desktop — visível apenas em md (768px) e acima */}
                     <Image 
                         src="/images/hero/home-hero.avif" 
                         alt="Vista de Paraty pela janela de um avião, com chapéu, representando a chegada para conhecer o destino" 
                         fill
                         priority
                         sizes="100vw"
-                        className="absolute inset-0 z-0 object-cover object-center md:object-[center_60%]"
+                        className="absolute inset-0 z-0 hidden object-cover object-center md:block md:object-[center_60%]"
                     />
                     {/* Overlay assimetrico para legibilidade sem apagar a fotografia. */}
                     <div
