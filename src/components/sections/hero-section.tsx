@@ -29,7 +29,7 @@ export function HeroSection() {
                         <img 
                             src="/images/hero/hero-aquino-desktop.avif" 
                             alt="Turistas aproveitando um passeio de barco premium pela Baía de Paraty, com mar azul cristalino"
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center brightness-[1.02] contrast-[1.02] saturate-[1.03]"
                             fetchPriority="high"
                             decoding="sync"
                         />
@@ -44,14 +44,33 @@ export function HeroSection() {
                         className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(17,32,46,.04)_0%,rgba(17,32,46,.12)_52%,rgba(17,32,46,.42)_100%)] md:hidden"
                     />
 
-                    {/* Overlay Desktop (refinado - UI/UX Premium) */}
+                    {/* Overlay Desktop (CSS solicitado pelo usuário) */}
                     <div
                         aria-hidden
-                        className="absolute inset-0 z-0 hidden md:block bg-[linear-gradient(90deg,rgba(10,28,46,0.90)_0%,rgba(10,28,46,0.78)_28%,rgba(10,28,46,0.48)_47%,rgba(10,28,46,0.18)_68%,rgba(10,28,46,0.03)_100%)]"
+                        className="absolute inset-0 z-0 hidden md:block"
+                        style={{
+                            background: `linear-gradient(
+                                90deg,
+                                rgba(8, 27, 43, 0.92) 0%,
+                                rgba(8, 27, 43, 0.82) 22%,
+                                rgba(8, 27, 43, 0.58) 36%,
+                                rgba(8, 27, 43, 0.28) 48%,
+                                rgba(8, 27, 43, 0.08) 60%,
+                                rgba(8, 27, 43, 0.00) 72%
+                            )`
+                        }}
                     />
                     <div
                         aria-hidden
-                        className="absolute inset-0 z-0 hidden md:block bg-[linear-gradient(180deg,rgba(0,0,0,0.02)_0%,rgba(0,0,0,0.04)_60%,rgba(7,20,32,0.30)_100%)]"
+                        className="absolute inset-0 z-0 hidden md:block"
+                        style={{
+                            background: `linear-gradient(
+                                180deg,
+                                transparent 58%,
+                                rgba(6, 21, 34, 0.10) 78%,
+                                rgba(6, 21, 34, 0.26) 100%
+                            )`
+                        }}
                     />
 
                     <div className="relative z-10 w-full px-5 pb-10 pt-26 sm:px-6 sm:pb-12 sm:pt-28 md:px-10 lg:pb-18 lg:pt-32">
