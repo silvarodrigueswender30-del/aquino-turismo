@@ -42,14 +42,24 @@ export function HeroSection() {
                         sizes="100vw"
                         className="absolute inset-0 z-0 hidden object-cover object-center md:block md:object-[center_60%]"
                     />
-                    {/* Overlay assimetrico para legibilidade sem apagar a fotografia. */}
+                    {/* Overlay Mobile (mantido) */}
                     <div
                         aria-hidden
-                        className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(13,39,66,.86)_0%,rgba(13,39,66,.66)_34%,rgba(13,39,66,.26)_66%,rgba(13,39,66,.06)_100%)]"
+                        className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(13,39,66,.86)_0%,rgba(13,39,66,.66)_34%,rgba(13,39,66,.26)_66%,rgba(13,39,66,.06)_100%)] md:hidden"
                     />
                     <div
                         aria-hidden
-                        className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(17,32,46,.04)_0%,rgba(17,32,46,.12)_52%,rgba(17,32,46,.42)_100%)]"
+                        className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(17,32,46,.04)_0%,rgba(17,32,46,.12)_52%,rgba(17,32,46,.42)_100%)] md:hidden"
+                    />
+
+                    {/* Overlay Desktop (refinado - UI/UX Premium) */}
+                    <div
+                        aria-hidden
+                        className="absolute inset-0 z-0 hidden md:block bg-[linear-gradient(90deg,rgba(10,28,46,0.90)_0%,rgba(10,28,46,0.78)_28%,rgba(10,28,46,0.48)_47%,rgba(10,28,46,0.18)_68%,rgba(10,28,46,0.03)_100%)]"
+                    />
+                    <div
+                        aria-hidden
+                        className="absolute inset-0 z-0 hidden md:block bg-[linear-gradient(180deg,rgba(0,0,0,0.02)_0%,rgba(0,0,0,0.04)_60%,rgba(7,20,32,0.30)_100%)]"
                     />
 
                     <div className="relative z-10 w-full px-5 pb-10 pt-26 sm:px-6 sm:pb-12 sm:pt-28 md:px-10 lg:pb-18 lg:pt-32">
@@ -57,12 +67,12 @@ export function HeroSection() {
                             {/* Texto Principal à Esquerda */}
                             <div className="mx-auto max-w-[40rem] text-center text-shell-white lg:ml-0 lg:w-[56%] lg:text-left">
                                 
-                                <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand drop-shadow-sm sm:mb-4 sm:text-xs">AQUINO TOUR · PARATY</p>
+                                <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mb-4 sm:text-xs">AQUINO TOUR · PARATY</p>
                                 
-                                <h1 className="mx-auto max-w-[37rem] text-balance font-heading text-[2.7rem] font-normal leading-[1.03] tracking-[-0.025em] drop-shadow-lg sm:text-5xl md:text-[3.4rem] lg:mx-0 xl:text-[3.95rem]">
+                                <h1 className="mx-auto max-w-[37rem] text-balance font-heading text-[2.7rem] font-normal leading-[1.03] tracking-[-0.025em] [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:text-5xl md:text-[3.4rem] lg:mx-0 xl:text-[3.95rem]">
                                     Passeios em Paraty para viver o melhor da cidade
                                 </h1>
-                                <p className="mx-auto mt-5 max-w-[30rem] text-base font-normal leading-7 text-shell-white/92 drop-shadow-md sm:mt-6 sm:text-lg lg:mx-0">
+                                <p className="mx-auto mt-5 max-w-[30rem] text-base font-normal leading-7 text-shell-white/92 [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mt-6 sm:text-lg lg:mx-0">
                                     Conheça cachoeiras, alambiques, praias e ilhas com passeios de jipe, escuna e lancha e conte com atendimento local para escolher a experiência ideal.
                                 </p>
 
