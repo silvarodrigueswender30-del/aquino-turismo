@@ -1,10 +1,9 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
-import { Anchor, Car, Ship, Waves } from "lucide-react";
+import { Anchor, Car, Ship, TreePalm, Waves } from "lucide-react";
 import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 // --- Service Types ---
@@ -62,87 +61,162 @@ const services: Service[] = [
   },
 ];
 
-// --- Sub-component for individual cards ---
-const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
+function Barcode({ className }: { className?: string }) {
+  const bars = [
+    2, 1, 3, 1, 1, 2, 3, 1, 2, 1, 1, 3, 2, 1, 1, 2, 3, 1, 2, 1, 3, 1, 2, 1, 1,
+    3, 2, 1,
+  ];
+
   return (
-    <div
-      className="group relative flex flex-col justify-between overflow-hidden rounded-[20px] aspect-[4/5] max-h-[400px] md:aspect-[4/5] lg:aspect-[3/4] lg:max-h-[480px] w-full p-6 lg:p-6 xl:p-8 transition-transform duration-500 ease-out md:hover:-translate-y-1 bg-deep-marine/5"
+    <div className={`flex h-full items-stretch justify-center gap-[1.5px] ${className ?? ""}`}>
+      {bars.map((barWidth, index) => (
+        <span
+          key={index}
+          className="block h-full bg-current"
+          style={{ width: `${barWidth}px` }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function PlaneTrail({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 140 90"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
     >
-      {/* Background Image (Provisional) */}
-      <Image 
-        src={`/images/services/${index + 1}.avif`} 
-        alt={`Imagem ilustrativa de ${service.title}`} 
-        fill
-        sizes="(max-width: 768px) 85vw, 33vw"
-        className="object-cover pointer-events-none select-none transition-transform duration-700 ease-out md:group-hover:scale-[1.02] z-0"
+      <path
+        d="M15 78 C 35 78, 40 55, 55 50 C 70 45, 75 25, 95 15"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="2"
+        strokeDasharray="4 5"
+        strokeLinecap="round"
+        fill="none"
       />
-      
-      {/* Overlay gradient for readability */}
-      <div 
-        aria-hidden 
-        className="absolute inset-0 z-10 bg-gradient-to-t from-ocean-navy/90 via-ocean-navy/50 to-transparent pointer-events-none"
+      <g transform="translate(90,4) rotate(35)">
+        <path
+          d="M0 8 L22 8 L34 2 L38 4 L28 10 L38 12 L28 15 L34 18 L30 20 L18 14 L0 14 Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
+}
+
+function StampIcon({ className }: { className?: string }) {
+  return (
+    <div className={`relative ${className ?? ""}`} aria-hidden="true">
+      <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <circle
+          cx="50"
+          cy="50"
+          r="38"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+          strokeDasharray="2 3"
+        />
+      </svg>
+      <TreePalm
+        className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2"
+        strokeWidth={1.25}
+      />
+    </div>
+  );
+}
+
+// --- Sub-component for individual cards ---
+const ServiceCard = ({ service }: { service: Service }) => {
+  const Icon = service.icon;
+  const whatsappUrl = service.href.includes("jipe")
+    ? getWhatsappUrl(WHATSAPP_MESSAGES.jeep)
+    : service.href.includes("escuna")
+      ? getWhatsappUrl(WHATSAPP_MESSAGES.escuna)
+      : service.href.includes("lancha")
+        ? getWhatsappUrl(WHATSAPP_MESSAGES.lancha)
+        : null;
+
+  return (
+    <div className="group relative flex min-h-[22rem] w-full overflow-hidden rounded-2xl border-[1.5px] border-ocean-navy/80 bg-[#F7F1E1] shadow-[0_10px_30px_-14px_rgba(11,42,64,0.3)] transition-[transform,box-shadow] duration-300 md:min-h-[20rem] md:hover:-translate-y-1 md:hover:shadow-[0_18px_40px_-16px_rgba(11,42,64,0.4)] lg:min-h-[21rem]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 15%, rgba(11,42,64,0.6) 0px, transparent 1px)",
+          backgroundSize: "14px 14px",
+        }}
       />
 
-      {/* Top Content: Icon & Number */}
-      <div className="z-20 flex justify-between w-full items-start">
-        <service.icon className="h-6 w-6 text-shell-white drop-shadow-sm" strokeWidth={1.5} />
-        <span className="text-xs font-sans tracking-widest text-shell-white/80 font-medium">
-          {service.number}
-        </span>
-      </div>
+      <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-between p-4 lg:p-5">
+        <div className="flex items-center justify-between gap-3">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ocean-navy/5 text-ocean-navy">
+            <Icon className="h-4 w-4" strokeWidth={1.75} />
+          </span>
+          <span className="font-mono text-[11px] tracking-[0.2em] text-golden-sand">
+            {service.number}
+          </span>
+        </div>
 
-      {/* Bottom Content: Info */}
-      <div className="z-20 flex flex-col flex-grow mt-4">
-        <h3 className="text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-heading font-light tracking-wide text-shell-white drop-shadow-sm mb-2">
-          {service.title}
-        </h3>
-        <p className="text-sm md:text-base lg:text-sm xl:text-base text-shell-white/90 leading-relaxed font-sans font-light drop-shadow-sm mb-4 flex-grow">
-          {service.description}
-        </p>
-        
-        <div className="mt-auto">
+        <div className="mt-4 flex-1">
+          <h3 className="font-heading text-lg font-light leading-snug text-ocean-navy lg:text-xl">
+            {service.title}
+          </h3>
+          <p className="mt-1.5 font-sans text-[13px] leading-relaxed text-slate-blue/90">
+            {service.description}
+          </p>
+        </div>
+
+        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
           {service.external ? (
             <a
               href={service.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit rounded-[10px] bg-shell-white/90 px-4 py-2 font-sans text-xs font-semibold text-ocean-navy transition hover:bg-shell-white"
+              className="inline-flex w-fit items-center rounded-full bg-ocean-navy px-3.5 py-1.5 font-sans text-[11px] font-medium text-shell-white transition-colors hover:bg-ocean-navy/90"
             >
               {service.cta}
             </a>
           ) : (
             <Link
               href={service.href}
-              className="inline-flex w-fit rounded-[10px] bg-shell-white/90 px-4 py-2 font-sans text-xs font-semibold text-ocean-navy transition hover:bg-shell-white"
+              className="inline-flex w-fit items-center rounded-full bg-ocean-navy px-3.5 py-1.5 font-sans text-[11px] font-medium text-shell-white transition-colors hover:bg-ocean-navy/90"
             >
               {service.cta}
             </Link>
           )}
-        </div>
-          
-        {/* Secondary WhatsApp link for tours */}
-        <div className="mt-3 min-h-[20px] flex items-center">
-          {!service.external && service.href !== "/grupos-e-caravanas" && (
+
+          {whatsappUrl && (
             <a
-              href={
-                service.href.includes('jipe') ? getWhatsappUrl(WHATSAPP_MESSAGES.jeep) :
-                service.href.includes('escuna') ? getWhatsappUrl(WHATSAPP_MESSAGES.escuna) :
-                getWhatsappUrl(WHATSAPP_MESSAGES.lancha)
-              }
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Consultar ${service.title.toLowerCase()} no WhatsApp`}
-              className="group/wa inline-flex w-fit items-center gap-[6px] font-sans text-[13px] font-medium text-shell-white/80 transition-colors hover:text-turquoise-sea"
+              className="font-sans text-[11px] font-medium text-slate-blue/70 underline-offset-2 transition-colors hover:text-turquoise-sea hover:underline"
             >
-              <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] fill-current" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-              </svg>
-              <span className="border-b border-transparent transition-colors group-hover/wa:border-turquoise-sea/30 pb-[1px]">
-                Consultar no WhatsApp
-              </span>
+              WhatsApp
             </a>
           )}
         </div>
+
+        <StampIcon className="pointer-events-none absolute -bottom-2 -left-2 h-14 w-14 text-golden-sand/25" />
+        <PlaneTrail className="pointer-events-none absolute -top-1 right-1 h-10 w-16 text-ocean-navy" />
+      </div>
+
+      <div className="relative z-10 flex shrink-0 items-stretch">
+        <span className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-warm-sand" />
+        <div className="h-full w-px border-l-2 border-dashed border-ocean-navy/30" />
+        <span className="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-warm-sand" />
+      </div>
+
+      <div className="relative z-10 flex w-8 shrink-0 items-center justify-center py-4 lg:w-9">
+        <Barcode className="h-[88%] w-full text-ocean-navy" />
       </div>
     </div>
   );
@@ -160,7 +234,34 @@ export function ServicesSection() {
   });
 
   return (
-    <section id="passeios" className="relative w-full bg-warm-sand py-16 md:py-24 scroll-mt-24">
+    <section id="passeios" className="relative w-full overflow-hidden bg-warm-sand py-16 md:py-24 scroll-mt-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] opacity-65 md:h-[520px]"
+        style={{
+          backgroundImage: "url('/images/services/fundo1.avif')",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 0%, black 50%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to bottom, black 0%, black 50%, transparent 100%)",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-warm-sand/55 md:h-[440px]"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 0%, black 68%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to bottom, black 0%, black 68%, transparent 100%)",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-[260px] h-40 bg-gradient-to-b from-transparent via-warm-sand/70 to-warm-sand blur-2xl md:top-[340px] md:h-52"
+      />
       <div className="relative z-20 flex flex-col items-center justify-center w-full max-w-[1320px] mx-auto px-6 md:px-12 lg:px-8 xl:px-12 overflow-hidden md:overflow-visible">
         
         {/* Header editorial */}
@@ -184,7 +285,7 @@ export function ServicesSection() {
                 key={index} 
                 className="flex-[0_0_82%] min-w-0 pl-4 md:pl-0 md:flex-none"
               >
-                <ServiceCard service={service} index={index} />
+                <ServiceCard service={service} />
               </div>
             ))}
           </div>
