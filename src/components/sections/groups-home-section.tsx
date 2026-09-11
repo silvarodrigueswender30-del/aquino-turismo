@@ -1,10 +1,26 @@
+import Image from 'next/image';
 import { AQUINO_MAR_GROUPS_URL } from "@/lib/site";
 import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export function GroupsHomeSection() {
   return (
-    <section className="w-full bg-ocean-navy py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:px-12 lg:grid-cols-[1fr_0.85fr] lg:px-16">
+    <section className="relative z-0 overflow-hidden w-full bg-ocean-navy py-16 md:py-24">
+      {/* Brand Watermark - Dark Section */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none select-none absolute right-[-110px] -bottom-16 z-[1] w-[280px] opacity-[0.035] sm:w-[400px] sm:opacity-[0.04] md:right-[-130px] md:-bottom-24 lg:w-[500px] lg:right-[-140px] lg:-bottom-28 lg:opacity-[0.05]"
+      >
+        <Image
+          src="/images/brand/anchor-watermark.webp"
+          alt=""
+          width={800}
+          height={800}
+          className="h-auto w-full object-contain brightness-125 contrast-125"
+          priority={false}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:px-12 lg:grid-cols-[1fr_0.85fr] lg:px-16">
         <div className="max-w-2xl">
           <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-golden-sand">
             GRUPOS E EXCURSÕES

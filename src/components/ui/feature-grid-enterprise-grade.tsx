@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { cn } from "@/lib/utils";
 
 export interface FeatureGridProps {
@@ -31,6 +32,20 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
       role="region"
       aria-label="Pilares da Aquino Tour"
     >
+      {/* Brand Watermark - Light Section */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none select-none absolute right-[-100px] -bottom-16 z-[1] w-[280px] opacity-[0.035] sm:w-[400px] sm:opacity-[0.04] md:right-[-120px] md:-bottom-24 lg:w-[480px] lg:right-[-130px] lg:-bottom-28 lg:opacity-[0.045]"
+      >
+        <Image
+          src="/images/brand/anchor-watermark.webp"
+          alt=""
+          width={800}
+          height={800}
+          className="h-auto w-full object-contain"
+          priority={false}
+        />
+      </div>
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header editorial */}
         <div className="mb-12 sm:mb-20 max-w-xl">
