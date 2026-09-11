@@ -73,38 +73,38 @@ function PricingSection() {
             </a>
           </div>
           
-          {/* Right Column: Image Grid (Provisional Images) */}
+          {/* Right Column: Image Grid (Editorial Campaign Imagery) */}
           <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-0">
-            {/* Image 1 */}
+            {/* Image 1 (Top Left Square) */}
             <div className="relative bg-deep-marine/5 rounded-[20px] aspect-square overflow-hidden group">
               <Image 
-                src="/images/imagem5.avif" 
-                alt="Embarcação em passeio marítimo em Paraty" 
+                src="/images/experience/experience-01.avif" 
+                alt="Roteiro de experiência Aquino Tour em Paraty" 
                 fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 300px"
+                className="object-cover object-center transition-transform duration-700 md:group-hover:scale-[1.01]" 
               />
             </div>
 
-            {/* Image 2 (Central alta) */}
+            {/* Image 2 (Right Tall Vertical - Hero Ticket) */}
             <div className="relative bg-deep-marine/5 rounded-[20px] row-span-2 overflow-hidden group min-h-[300px] md:min-h-0">
               <Image 
-                src="/images/hero-1.jpeg" 
-                alt="Paisagem marítima em Paraty" 
+                src="/images/experience/experience-02.avif" 
+                alt="Ticket editorial de passeio e experiência em Paraty" 
                 fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 300px"
+                className="object-cover object-center transition-transform duration-700 md:group-hover:scale-[1.01]" 
               />
             </div>
 
-            {/* Image 3 */}
+            {/* Image 3 (Bottom Left Square) */}
             <div className="relative bg-deep-marine/5 rounded-[20px] aspect-square overflow-hidden group">
               <Image 
-                src="/images/imagem6.avif" 
-                alt="Praia e mar em Paraty" 
+                src="/images/experience/experience-03.avif" 
+                alt="Experiência turística receptiva em Paraty" 
                 fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 300px"
+                className="object-cover object-center transition-transform duration-700 md:group-hover:scale-[1.01]" 
               />
             </div>
           </div>
