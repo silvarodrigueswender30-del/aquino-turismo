@@ -8,11 +8,13 @@ import { AquinoNavbar } from '@/components/sections/navbar'
 import { getWhatsappUrl, WHATSAPP_MESSAGES } from '@/lib/whatsapp'
 
 const carouselCards = [
-    { title: "Passeio de Escuna",     imageUrl: "/images/hero-carousel/slide-1.avif", alt: "Escuna navegando em águas cristalinas em Paraty" },
-    { title: "Ilhas de Paraty",       imageUrl: "/images/hero-carousel/slide-2.avif", alt: "Enseada tropical com barcos ancorados em Paraty" },
-    { title: "Praias Paradisíacas",   imageUrl: "/images/hero-carousel/slide-3.avif", alt: "Praia paradisíaca no pôr do sol em Paraty" },
-    { title: "Mergulho e Natureza",   imageUrl: "/images/hero-carousel/slide-4.avif", alt: "Passageiros mergulhando em Paraty" },
-    { title: "Passeio em Família",    imageUrl: "/images/hero-carousel/slide-5.avif", alt: "Passeio premium para casais e famílias em Paraty" },
+    { title: "", imageUrl: "/images/routes/route-08.avif", alt: "Roteiro Lagoa Azul em Paraty - Aquino Tour" },
+    { title: "", imageUrl: "/images/routes/route-02.avif", alt: "Roteiro Ilha dos Cocos em Paraty - Aquino Tour" },
+    { title: "", imageUrl: "/images/routes/route-03.avif", alt: "Roteiro Cachoeira Pedra Branca em Paraty - Aquino Tour" },
+    { title: "", imageUrl: "/images/routes/route-06.avif", alt: "Roteiro Praia da Lula em Paraty - Aquino Tour" },
+    { title: "", imageUrl: "/images/routes/route-05.avif", alt: "Roteiro Cachoeira do Tobogã em Paraty - Aquino Tour" },
+    { title: "", imageUrl: "/images/routes/route-09.avif", alt: "Roteiro Ilha Comprida em Paraty - Aquino Tour" },
+    { title: "", imageUrl: "/images/routes/route-01.avif", alt: "Roteiro Poço do Tarzan em Paraty - Aquino Tour" },
 ]
 
 export function HeroSection() {
@@ -141,8 +143,8 @@ function MarqueeCard({ card, index }: { card: { title: string, imageUrl: string,
     return (
         <div
             className={cn(
-                "group relative h-52 w-40 flex-shrink-0 cursor-pointer overflow-hidden rounded-[14px] bg-deep-marine shadow-[0_18px_36px_rgba(17,32,46,0.22)] transition-[opacity,transform] duration-500 sm:h-64 sm:w-48 md:h-72 md:w-56",
-                isLead ? "scale-100 opacity-100" : "scale-[.93] opacity-[.68]"
+                "group relative h-64 w-48 flex-shrink-0 cursor-pointer overflow-hidden rounded-[16px] bg-deep-marine shadow-[0_18px_36px_rgba(17,32,46,0.22)] transition-[opacity,transform] duration-500 sm:h-80 sm:w-60 md:h-96 md:w-72",
+                isLead ? "scale-100 opacity-100" : "scale-[.95] opacity-[.85]"
             )}
         >
             {hasError ? (
@@ -157,14 +159,16 @@ function MarqueeCard({ card, index }: { card: { title: string, imageUrl: string,
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                 />
             )}
-            {/* Gradiente base do card para texto */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-[linear-gradient(180deg,transparent_0%,rgba(13,39,66,.10)_36%,rgba(13,39,66,.78)_100%)]" />
-            {/* Label do card */}
-            <div className="pointer-events-none absolute bottom-4 left-4 right-4 text-shell-white">
-                <p className="font-heading text-sm font-normal leading-tight tracking-[-0.01em] drop-shadow-md transition-transform group-hover:translate-y-[-2px] sm:text-base md:text-lg">
-                    {card.title}
-                </p>
-            </div>
+            {card.title ? (
+                <>
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-[linear-gradient(180deg,transparent_0%,rgba(13,39,66,.10)_36%,rgba(13,39,66,.78)_100%)]" />
+                    <div className="pointer-events-none absolute bottom-4 left-4 right-4 text-shell-white">
+                        <p className="font-heading text-sm font-normal leading-tight tracking-[-0.01em] drop-shadow-md transition-transform group-hover:translate-y-[-2px] sm:text-base md:text-lg">
+                            {card.title}
+                        </p>
+                    </div>
+                </>
+            ) : null}
         </div>
     )
 }
