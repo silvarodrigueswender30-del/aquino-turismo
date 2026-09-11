@@ -4,37 +4,51 @@ import { Marquee } from "@/components/ui/marquee";
 
 const galleryItems = [
   {
-    nome: "Praia da Lula",
-    descricao: "Águas calmas e Mata Atlântica na Baía de Paraty",
-    alt: "Praia da Lula na Baía de Paraty",
-    image: "/images/galeria/ilhas/island-1.avif",
+    nome: "Rota 01 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 01",
+    image: "/images/routes/route-01.avif",
   },
   {
-    nome: "Praia Vermelha",
-    descricao: "Uma das praias conhecidas dos roteiros de escuna da região",
-    alt: "Praia Vermelha em Paraty",
-    image: "/images/galeria/ilhas/island-2.avif",
+    nome: "Rota 02 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 02",
+    image: "/images/routes/route-02.avif",
   },
   {
-    nome: "Ilha Comprida",
-    descricao: "Área conhecida pelas águas transparentes e vida marinha",
-    alt: "Ilha Comprida em Paraty",
-    image: "/images/galeria/ilhas/island-3.avif",
+    nome: "Rota 03 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 03",
+    image: "/images/routes/route-03.avif",
   },
   {
-    nome: "Lagoa Azul",
-    descricao: "Uma das paisagens mais procuradas nos passeios pela Baía de Paraty",
-    alt: "Lagoa Azul em Paraty",
-    image: "/images/galeria/ilhas/island-4.avif",
+    nome: "Rota 04 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 04",
+    image: "/images/routes/route-04.avif",
   },
   {
-    nome: "Saco da Velha",
-    descricao: "Enseada tranquila com natureza preservada na Baía de Paraty",
-    alt: "Saco da Velha em Paraty",
-    image: "/images/galeria/ilhas/island-5.avif",
+    nome: "Rota 05 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 05",
+    image: "/images/routes/route-05.avif",
+  },
+  {
+    nome: "Rota 06 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 06",
+    image: "/images/routes/route-06.avif",
+  },
+  {
+    nome: "Rota 07 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 07",
+    image: "/images/routes/route-07.avif",
+  },
+  {
+    nome: "Rota 08 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 08",
+    image: "/images/routes/route-08.avif",
+  },
+  {
+    nome: "Rota 09 - Baía de Paraty",
+    alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 09",
+    image: "/images/routes/route-09.avif",
   },
 ];
-
 
 export function IslandsSection() {
   return (
@@ -68,23 +82,12 @@ export function IslandsSection() {
                     <img
                       src={ilha.image}
                       alt={ilha.alt}
-                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                       loading="lazy"
                     />
                   </picture>
-                  {/* Minimal Overlay na base */}
-                  <div
-                    className="absolute inset-x-0 bottom-0 z-10 h-[45%] pointer-events-none"
-                    style={{ background: "linear-gradient(to top, rgba(13,39,66,0.65) 0%, transparent 100%)" }}
-                    aria-hidden="true"
-                  />
-                  
-                  {/* Texto */}
-                  <div className="absolute bottom-0 left-0 z-20 w-full p-4 md:p-6">
-                    <h3 className="font-heading font-light tracking-wide text-shell-white text-lg md:text-xl leading-snug drop-shadow-sm">
-                      {ilha.nome}
-                    </h3>
-                  </div>
+                  {/* Texto acessível apenas para leitor de tela pois a arte gráfica já traz a tipografia incorporada */}
+                  <span className="sr-only">{ilha.nome}</span>
                 </div>
               </div>
             ))}
