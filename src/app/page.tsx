@@ -16,6 +16,7 @@ import { AnimatedTestimonialsBasic } from "@/components/ui/animated-testimonials
 import { JsonLd, organizationJsonLd, websiteJsonLd } from "@/components/seo/json-ld";
 import { SITE_URL } from "@/lib/site";
 import { GroupsHomeSection } from "@/components/sections/groups-home-section";
+import { LocationSection } from "@/components/sections/location-section";
 
 const homeJsonLd = [
   organizationJsonLd,
@@ -170,6 +171,8 @@ export default function Home() {
         <ClientGallerySection />
 
         <AnimatedTestimonialsBasic />
+
+        <LocationSection />
 
         <FaqSection />
       </div>
