@@ -28,13 +28,13 @@ const stats = [
 
 export default function StatsCardSection() {
   return (
-    <section className="border-b border-ocean-navy/10 bg-transparent py-10 md:py-14">
+    <section className="border-b border-dashed border-ocean-navy/15 bg-transparent py-10 md:py-14">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
-        <div className="grid grid-cols-2 border-y border-ocean-navy/10 md:grid-cols-4 md:divide-x md:divide-ocean-navy/10">
+        <div className="grid grid-cols-2 border-y border-dashed border-ocean-navy/20 md:grid-cols-4 md:divide-x md:divide-dashed md:divide-ocean-navy/20">
           {stats.map((item) => (
             <div
               key={item.label}
-              className="flex min-h-[7.5rem] flex-col justify-center border-b border-ocean-navy/10 px-3 py-5 text-center last:border-b-0 even:border-l even:border-ocean-navy/10 md:min-h-36 md:border-b-0 md:px-8 md:py-7 md:text-left md:even:border-l-0"
+              className="flex min-h-[7.5rem] flex-col justify-center border-b border-dashed border-ocean-navy/20 px-3 py-5 text-center last:border-b-0 even:border-l even:border-dashed even:border-ocean-navy/20 md:min-h-36 md:border-b-0 md:px-8 md:py-7 md:text-left md:even:border-l-0"
             >
               <div className="mb-2 flex items-center justify-center gap-1.5 md:mb-3 md:justify-start md:gap-2">
                 {item.icon
