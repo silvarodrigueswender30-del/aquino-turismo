@@ -23,13 +23,10 @@ const baseImages = [
   { src: "/images/galeria/clientes/cliente-7.avif", alt: "Registros de viagem de nossos visitantes" },
   { src: "/images/galeria/clientes/cliente-8.avif", alt: "Momentos especiais vividos em Paraty" },
   { src: "/images/galeria/clientes/cliente-9.avif", alt: "Fim de tarde durante viagem em família" },
-  { src: "/images/galeria/clientes/cliente-10.avif", alt: "Momentos de alegria em Paraty" },
-  { src: "/images/galeria/clientes/cliente-11.avif", alt: "Aproveitando as experiências de Paraty" },
-  { src: "/images/galeria/clientes/cliente-12.avif", alt: "Sorrisos de nossos clientes durante a viagem" },
 ]
 
-// Array com as 12 fotos de clientes
-const galleryImages = baseImages
+// Array duplicado para garantir o número ideal de containers e manter a animação em loop fluida
+const galleryImages = [...baseImages, ...baseImages]
 
 export function ClientGallerySection() {
   const css = `
@@ -80,7 +77,7 @@ export function ClientGallerySection() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        loopAdditionalSlides={4}
+        loopAdditionalSlides={6}
         slidesPerView="auto"
         spaceBetween={16}
         coverflowEffect={{
