@@ -37,17 +37,17 @@ export default function StatsCardSection() {
               key={item.label}
               className="relative flex min-h-[7.5rem] flex-col justify-center border-b border-dashed border-ocean-navy/20 px-3 py-5 text-center last:border-b-0 even:border-l even:border-dashed even:border-ocean-navy/20 md:min-h-36 md:border-b-0 md:px-8 md:py-7 md:text-left md:first:border-l-0 md:[&:not(:first-child)]:border-l md:[&:not(:first-child)]:border-dashed md:[&:not(:first-child)]:border-ocean-navy/20"
             >
-              {/* Notches de perfuração superior e inferior nos divisores verticais em desktop */}
-              {index > 0 && (
+              {/* Notches de perfuração superior e inferior nos divisores verticais (Mobile & Desktop) */}
+              {((index % 2 === 1) || index > 0) && (
                 <>
-                  <span className="absolute -top-2.5 -left-2.5 hidden h-5 w-5 rounded-full bg-coastal-mist md:block z-10" />
-                  <span className="absolute -bottom-2.5 -left-2.5 hidden h-5 w-5 rounded-full bg-coastal-mist md:block z-10" />
+                  <span className={`absolute -top-2.5 -left-2.5 h-5 w-5 rounded-full bg-coastal-mist z-10 ${index % 2 === 0 ? "hidden md:block" : "block"}`} />
+                  <span className={`absolute -bottom-2.5 -left-2.5 h-5 w-5 rounded-full bg-coastal-mist z-10 ${index % 2 === 0 ? "hidden md:block" : "block"}`} />
                 </>
               )}
 
-              {/* Código de barras azul escuro no padrão exato de "Como Trabalhamos" */}
-              {index > 0 && (
-                <div className="absolute left-1 top-1/2 hidden h-[65%] w-3 -translate-y-1/2 items-center justify-center text-ocean-navy md:flex">
+              {/* Código de barras azul escuro no padrão de "Como Trabalhamos" (Mobile & Desktop) */}
+              {((index % 2 === 1) || index > 0) && (
+                <div className={`absolute left-1 top-1/2 h-[65%] w-3 -translate-y-1/2 items-center justify-center text-ocean-navy ${index % 2 === 0 ? "hidden md:flex" : "flex"}`}>
                   <Barcode className="h-full w-full text-ocean-navy" />
                 </div>
               )}
