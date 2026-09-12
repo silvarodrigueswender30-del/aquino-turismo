@@ -98,8 +98,8 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
             </div>
 
             {/* aba do barcode lateral */}
-            <div className="flex w-12 flex-shrink-0 items-center justify-center py-6 pl-4 pr-2 md:w-14 md:pl-5 lg:w-16 lg:pl-6">
-              <Barcode className="h-[85%] w-full text-ocean-navy" />
+            <div className="flex w-12 flex-shrink-0 items-center justify-center py-2 pl-4 pr-2 md:w-14 md:py-6 md:pl-5 lg:w-16 lg:pl-6">
+              <Barcode className="h-[96%] w-full text-ocean-navy md:h-[88%]" />
             </div>
           </div>
 

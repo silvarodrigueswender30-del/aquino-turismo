@@ -211,8 +211,8 @@ const ServiceCard = ({ service }: { service: Service }) => {
         <span className="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-warm-sand" />
       </div>
 
-      <div className="relative z-10 flex w-12 shrink-0 items-center justify-end py-4 pl-4.5 pr-1 lg:w-14 lg:pl-5.5">
-        <Barcode className="h-[88%] w-full text-ocean-navy" />
+      <div className="relative z-10 flex w-12 shrink-0 items-center justify-end py-2 pl-4.5 pr-1 md:py-4 lg:w-14 lg:pl-5.5">
+        <Barcode className="h-[96%] w-full text-ocean-navy md:h-[88%]" />
       </div>
     </div>
   );
