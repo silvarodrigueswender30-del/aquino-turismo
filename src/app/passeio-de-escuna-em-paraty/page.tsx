@@ -118,6 +118,7 @@ export default function PasseioEscunaPage() {
         description="Aproveite o mar calmo da região em um passeio coletivo com paradas para banho, contemplação e momentos de lazer em praias e ilhas paradisíacas."
         imageSrc="/images/destinations/hero03.avif"
         imageAlt="Passeio de escuna na baía de Paraty"
+        imageClassName="object-contain md:object-cover object-center sm:object-[center_35%]"
         primaryCta={{
           label: "Consultar passeio via WhatsApp",
           href: getWhatsappUrl(WHATSAPP_MESSAGES.escuna),

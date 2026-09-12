@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { AquinoNavbar } from "@/components/sections/navbar"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 interface TourHeroProps {
   eyebrow: string
@@ -11,6 +12,7 @@ interface TourHeroProps {
   description: string
   imageSrc: string
   imageAlt: string
+  imageClassName?: string
   primaryCta: {
     label: string
     href: string
@@ -29,6 +31,7 @@ export function TourHero({
   description,
   imageSrc,
   imageAlt,
+  imageClassName,
   primaryCta,
   secondaryCta,
 }: TourHeroProps) {
@@ -44,7 +47,7 @@ export function TourHero({
               alt={imageAlt}
               fill
               priority
-              className="object-cover object-center brightness-[1.02] contrast-[1.02] saturate-[1.03]"
+              className={cn("object-cover object-center brightness-[1.02] contrast-[1.02] saturate-[1.03]", imageClassName)}
               sizes="100vw"
             />
           </div>
