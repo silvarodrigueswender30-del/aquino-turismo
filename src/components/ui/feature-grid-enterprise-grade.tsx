@@ -99,17 +99,17 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
 
             {/* aba do barcode lateral */}
             <div className="flex w-12 flex-shrink-0 items-center justify-center py-6 pr-2 md:w-14 lg:w-16">
-              <Barcode orientation="horizontal" className="h-[85%] w-full text-ocean-navy" />
+              <Barcode className="h-[85%] w-full text-ocean-navy" />
             </div>
           </div>
 
           {/* FAIXA DIAGONAL LISTRADA NO RODAPÉ DO TICKET */}
           <div
             aria-hidden="true"
-            className="h-3 w-full bg-ocean-navy md:h-4"
+            className="h-3 w-full bg-ocean-navy md:h-3.5"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(45deg, rgba(247,241,225,0.9) 0px, rgba(247,241,225,0.9) 6px, transparent 6px, transparent 12px)",
+                "repeating-linear-gradient(45deg, rgba(247,241,225,0.95) 0px, rgba(247,241,225,0.95) 3px, transparent 3px, transparent 7px)",
             }}
           />
         </div>
