@@ -3,8 +3,10 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { MapPin, Phone } from "lucide-react"
 import { FaInstagram } from "react-icons/fa"
 import { INSTAGRAM_URL } from "@/lib/site"
+import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp"
 
 export function FooterSection() {
   const currentYear = new Date().getFullYear()
@@ -14,7 +16,7 @@ export function FooterSection() {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-16 pb-12 md:pt-20 md:pb-14">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-12 md:pb-16 border-b border-white/10">
-          {/* COLUNA 1 — MARCA */}
+          {/* COLUNA 1 — MARCA & NAP */}
           <div className="md:col-span-5 flex flex-col items-start text-left">
             <Image
               src="/images/brand/aquinotour-logo.png"
@@ -23,9 +25,26 @@ export function FooterSection() {
               height={100}
               className="h-14 md:h-16 w-auto object-contain mb-4"
             />
-            <p className="font-sans text-sm md:text-base text-shell-white/80 max-w-sm leading-relaxed">
+            <p className="font-sans text-sm md:text-base text-shell-white/80 max-w-sm leading-relaxed mb-4">
               Passeios e turismo receptivo em Paraty.
             </p>
+            <div className="space-y-2 font-sans text-xs text-shell-white/75">
+              <p className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 shrink-0 text-golden-sand mt-0.5" />
+                <span>R. Guapuruvu, 371 - Caborê, Paraty - RJ, 23970-000</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-golden-sand" />
+                <a 
+                  href={getWhatsappUrl(WHATSAPP_MESSAGES.home)} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-shell-white transition-colors"
+                >
+                  +55 (24) 99909-6384
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* COLUNA 2 — NAVEGAÇÃO */}
@@ -105,7 +124,7 @@ export function FooterSection() {
             </span>
           </p>
           <p className="text-center sm:text-right">
-            Paraty, Rio de Janeiro
+            R. Guapuruvu, 371 - Caborê, Paraty - RJ
           </p>
         </div>
       </div>
