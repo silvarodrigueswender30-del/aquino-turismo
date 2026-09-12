@@ -45,22 +45,22 @@ export default function StatsCardSection() {
                 </>
               )}
 
-              <div className="mb-2 flex items-center justify-center gap-1.5 md:mb-3 md:justify-between md:gap-2">
-                <div className="flex items-center gap-1.5 md:gap-2">
-                  {item.icon ? (
-                    <Star className="h-3 w-3 fill-golden-sand text-golden-sand md:h-4 md:w-4" strokeWidth={1.5} aria-hidden="true" />
-                  ) : (
-                    <span className="h-px w-6 bg-golden-sand md:w-8" aria-hidden="true" />
-                  )}
-                  <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-slate-blue md:text-[0.72rem] md:tracking-[0.16em]">
-                    {item.detail}
-                  </span>
-                </div>
-
-                {/* Barrinhas do código de barras de forma horizontal acompanhando o divisor */}
-                <div className="hidden sm:flex h-2.5 w-14 items-center overflow-hidden opacity-35">
+              {/* Código de barras em pé ao lado da linha tracejada do divisor */}
+              {index > 0 && (
+                <div className="absolute left-1 top-1/2 hidden h-[65%] w-6 -translate-y-1/2 items-center justify-center opacity-30 md:flex">
                   <Barcode orientation="horizontal" className="h-full w-full text-ocean-navy" />
                 </div>
+              )}
+
+              <div className="mb-2 flex items-center justify-center gap-1.5 md:mb-3 md:justify-start md:gap-2">
+                {item.icon ? (
+                  <Star className="h-3 w-3 fill-golden-sand text-golden-sand md:h-4 md:w-4" strokeWidth={1.5} aria-hidden="true" />
+                ) : (
+                  <span className="h-px w-6 bg-golden-sand md:w-8" aria-hidden="true" />
+                )}
+                <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-slate-blue md:text-[0.72rem] md:tracking-[0.16em]">
+                  {item.detail}
+                </span>
               </div>
 
               <div className="font-heading text-[clamp(1.5rem,6.5vw,2.55rem)] font-light leading-none tracking-normal text-ocean-navy md:text-[clamp(1.75rem,3.4vw,2.55rem)]">
