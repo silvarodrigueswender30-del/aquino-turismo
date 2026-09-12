@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: "/images/imagem6.avif",
+        url: "/images/services/fundo1.avif",
         width: 1200,
         height: 630,
         alt: "Passeio de jipe em Paraty",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Passeio de jipe em Paraty | Aquino Tour",
     description: "Conheça cachoeiras, alambiques e a natureza da Mata Atlântica.",
-    images: ["/images/imagem6.avif"],
+    images: ["/images/services/fundo1.avif"],
   },
 }
 
@@ -116,7 +116,7 @@ export default function PasseioJipePage() {
         eyebrow="PASSEIO DE JIPE"
         title="Paraty por terra: natureza, cachoeiras e cultura local"
         description="Uma imersão na região rural de Paraty. Conheça as principais cachoeiras, visite alambiques tradicionais e viva uma experiência em contato com a Mata Atlântica."
-        imageSrc="/images/imagem6.avif"
+        imageSrc="/images/services/fundo1.avif"
         imageAlt="Praia e vegetação da Mata Atlântica em Paraty"
         primaryCta={{
           label: "Consultar passeio via WhatsApp",
