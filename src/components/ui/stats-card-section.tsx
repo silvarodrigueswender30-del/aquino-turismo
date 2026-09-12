@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Star } from "lucide-react";
+import { Barcode } from "@/components/ui/ticket-barcode";
 
 const stats = [
   {
@@ -45,23 +46,30 @@ export default function StatsCardSection() {
                 </div>
               )}
 
-              <div className="flex flex-1 flex-col justify-center px-4 py-6 text-center md:min-h-36 md:px-8 md:py-7 md:text-left">
-                <div className="mb-2 flex items-center justify-center gap-1.5 md:mb-3 md:justify-start md:gap-2">
-                  {item.icon ? (
-                    <Star className="h-3 w-3 fill-golden-sand text-golden-sand md:h-4 md:w-4" strokeWidth={1.5} aria-hidden="true" />
-                  ) : (
-                    <span className="h-px w-6 bg-golden-sand md:w-8" aria-hidden="true" />
-                  )}
-                  <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-slate-blue md:text-[0.72rem] md:tracking-[0.16em]">
-                    {item.detail}
-                  </span>
+              <div className="flex flex-1 items-center justify-between px-4 py-6 md:min-h-36 md:px-6 md:py-7">
+                <div className="flex flex-col justify-center text-center md:text-left">
+                  <div className="mb-2 flex items-center justify-center gap-1.5 md:mb-3 md:justify-start md:gap-2">
+                    {item.icon ? (
+                      <Star className="h-3 w-3 fill-golden-sand text-golden-sand md:h-4 md:w-4" strokeWidth={1.5} aria-hidden="true" />
+                    ) : (
+                      <span className="h-px w-6 bg-golden-sand md:w-8" aria-hidden="true" />
+                    )}
+                    <span className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-slate-blue md:text-[0.72rem] md:tracking-[0.16em]">
+                      {item.detail}
+                    </span>
+                  </div>
+                  <div className="font-heading text-[clamp(1.5rem,6.5vw,2.55rem)] font-light leading-none tracking-normal text-ocean-navy md:text-[clamp(1.75rem,3.4vw,2.55rem)]">
+                    {item.value}
+                  </div>
+                  <p className="mt-2 font-sans text-[0.72rem] font-medium leading-snug text-slate-blue md:mt-3 md:text-sm">
+                    {item.label}
+                  </p>
                 </div>
-                <div className="font-heading text-[clamp(1.5rem,6.5vw,2.55rem)] font-light leading-none tracking-normal text-ocean-navy md:text-[clamp(1.75rem,3.4vw,2.55rem)]">
-                  {item.value}
+
+                {/* Código de barras lateral ao lado da linha tracejada (idêntico a Passeios em Paraty) */}
+                <div className="flex w-10 shrink-0 items-center justify-end py-2 pl-3 pr-1 md:w-12 md:py-3 lg:w-14 lg:pl-4">
+                  <Barcode className="h-[92%] w-full text-ocean-navy md:h-[88%]" />
                 </div>
-                <p className="mt-2 font-sans text-[0.72rem] font-medium leading-snug text-slate-blue md:mt-3 md:text-sm">
-                  {item.label}
-                </p>
               </div>
             </React.Fragment>
           ))}
