@@ -205,21 +205,21 @@ export default function PasseioLanchaPage() {
           {
             title: "Passeio de Escuna",
             description: "Navegue pela baía em uma experiência com estrutura para grupos maiores.",
-            imageSrc: "/images/hero/escuna-home.webp",
+            imageSrc: "/images/destinations/hero03.avif",
             imageAlt: "Passeio de escuna",
             href: "/passeio-de-escuna-em-paraty"
           },
           {
             title: "Passeio de Jipe",
             description: "Conheça a região rural, cachoeiras e alambiques da cidade.",
-            imageSrc: "/images/imagem6.avif",
+            imageSrc: "/images/services/fundo1.avif",
             imageAlt: "Passeio de jipe",
             href: "/passeio-de-jipe-em-paraty"
           },
           {
             title: "Grupos e Excursões",
             description: "Atendimento receptivo especializado para agências e organizadores.",
-            imageSrc: "/images/galeria/passeio-1.webp",
+            imageSrc: "/images/services/fundo1.avif",
             imageAlt: "Grupos e excursões",
             href: "/grupos-e-caravanas"
           }

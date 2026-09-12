@@ -213,14 +213,14 @@ export default function PasseioEscunaPage() {
           {
             title: "Passeio de Jipe",
             description: "Conheça a região rural, cachoeiras e alambiques da cidade.",
-            imageSrc: "/images/imagem6.avif",
+            imageSrc: "/images/services/fundo1.avif",
             imageAlt: "Passeio de jipe",
             href: "/passeio-de-jipe-em-paraty"
           },
           {
             title: "Grupos e Excursões",
             description: "Atendimento receptivo especializado para agências e organizadores.",
-            imageSrc: "/images/galeria/passeio-1.webp",
+            imageSrc: "/images/services/fundo1.avif",
             imageAlt: "Grupos e excursões",
             href: "/grupos-e-caravanas"
           }

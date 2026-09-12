@@ -206,7 +206,7 @@ export default function PasseioJipePage() {
           {
             title: "Passeio de Escuna",
             description: "Navegue pela baía de Paraty em uma experiência com paradas em praias e ilhas.",
-            imageSrc: "/images/hero-carousel/slide-1.avif",
+            imageSrc: "/images/destinations/hero03.avif",
             imageAlt: "Passeio de escuna",
             href: "/passeio-de-escuna-em-paraty"
           },
@@ -220,7 +220,7 @@ export default function PasseioJipePage() {
           {
             title: "Grupos e Excursões",
             description: "Atendimento receptivo especializado para agências e organizadores.",
-            imageSrc: "/images/galeria/passeio-1.webp",
+            imageSrc: "/images/services/fundo1.avif",
             imageAlt: "Grupos e excursões",
             href: "/grupos-e-caravanas"
           }

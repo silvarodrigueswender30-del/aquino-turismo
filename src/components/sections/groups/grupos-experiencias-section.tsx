@@ -5,22 +5,22 @@ import { ArrowUpRight } from "lucide-react"
 
 const experiencias = [
   {
-    image: "/images/hero-carousel/slide-1.avif",
-    alt: "Passeio de escuna na baía de Paraty",
+    image: "/images/services/fundo1.avif",
+    alt: "Passeio de jipe pela Mata Atlântica em Paraty",
     title: "Passeio de Jipe",
     body: "Uma experiência pela região rural de Paraty que combina natureza, cachoeiras, alambiques e cultura local.",
     href: "/passeio-de-jipe-em-paraty"
   },
   {
-    image: "/images/hero-carousel/slide-3.avif",
-    alt: "Embarcação em passeio marítimo em Paraty",
+    image: "/images/destinations/hero03.avif",
+    alt: "Passeio de escuna na baía de Paraty",
     title: "Passeio de Escuna",
     body: "Uma opção coletiva para navegar pela baía de Paraty e conhecer praias e ilhas da região.",
     href: "/passeio-de-escuna-em-paraty"
   },
   {
-    image: "/images/hero-carousel/slide-2.avif",
-    alt: "Ilhas de Paraty",
+    image: "/images/hero-carousel/slide-5.avif",
+    alt: "Passeio de lancha em Paraty",
     title: "Passeio de Lancha",
     body: "Alternativa para famílias e grupos menores que procuram uma experiência mais reservada e flexível.",
     href: "/passeio-de-lancha-em-paraty"

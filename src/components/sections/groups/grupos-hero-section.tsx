@@ -14,8 +14,8 @@ export function GruposHeroSection() {
       <main>
         <section className="relative flex min-h-[82vh] items-end overflow-hidden pb-16 sm:min-h-[86vh] sm:pb-20 md:pb-24">
           <Image
-            src="/images/hero-carousel/slide-1.avif"
-            alt="Passeio de escuna em Paraty"
+            src="/images/services/fundo1.avif"
+            alt="Turismo receptivo para grupos em Paraty"
             fill
             priority
             className="object-cover object-center"
