@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import { Plane } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Barcode } from "@/components/ui/ticket-barcode";
 
 export interface FeatureGridProps {
   className?: string;
@@ -28,7 +30,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
   return (
     <section
       id="pilares"
-      className={cn("relative z-0 overflow-hidden bg-shell-white py-20 sm:py-32 scroll-mt-24", className)}
+      className={cn("relative z-0 overflow-hidden bg-shell-white py-16 sm:py-24 scroll-mt-24", className)}
       role="region"
       aria-label="Pilares da Aquino Tour"
     >
@@ -46,38 +48,61 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
           priority={false}
         />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        {/* Header editorial */}
-        <div className="mb-12 sm:mb-20 max-w-xl">
-          <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-4">
-            COMO TRABALHAMOS
-          </p>
-          <h2 className="font-heading font-light tracking-[-0.02em] leading-[1.15] text-ocean-navy text-3xl sm:text-4xl md:text-5xl">
-            O jeito Aquino Tour de receber.
-          </h2>
-        </div>
 
-        {/* Pilares: CSS Grid real com 3 colunas independentes */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16"
-          role="list"
-        >
-          {pillars.map((pillar) => (
-            <div
-              key={pillar.id}
-              role="listitem"
-              className="relative w-full flex flex-col gap-4 py-8 md:py-0 border-t border-ocean-navy/15 md:border-t-0 md:border-l md:pl-12 lg:pl-16 first:border-t-0 md:first:border-l-0 md:first:pl-0 max-w-xs"
-            >
-              <h3 className="font-heading font-normal text-ocean-navy text-xl md:text-2xl leading-snug tracking-[-0.01em]">
-                {pillar.title}
-              </h3>
-              <p className="font-sans text-sm md:text-base leading-relaxed text-slate-blue/90 break-words">
-                {pillar.body}
-              </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+        <div className="relative overflow-hidden rounded-2xl border-[1.5px] border-ocean-navy/80 bg-[#F7F1E1] shadow-[0_10px_30px_-14px_rgba(11,42,64,0.3)]">
+
+          {/* FAIXA NAVY NO TOPO */}
+          <div className="relative flex items-center justify-between bg-ocean-navy px-6 py-3.5 md:px-8 md:py-4">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-golden-sand">
+              Como Trabalhamos
+            </span>
+            <Plane className="h-4 w-4 text-shell-white" strokeWidth={2} aria-hidden="true" />
+          </div>
+
+          {/* CORPO: colunas lado a lado — conteúdo principal + aba do barcode */}
+          <div className="relative flex items-stretch">
+
+            {/* coluna principal — H2 e grid de pilares */}
+            <div className="flex-1 p-6 md:p-10 lg:p-12">
+              <h2 className="mb-8 md:mb-12 font-heading text-3xl font-light leading-[1.15] tracking-[-0.02em] text-ocean-navy sm:text-4xl md:text-5xl">
+                O jeito Aquino Tour de receber.
+              </h2>
+
+              <div
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12"
+                role="list"
+              >
+                {pillars.map((pillar) => (
+                  <div
+                    key={pillar.id}
+                    role="listitem"
+                    className="relative flex w-full flex-col gap-3 border-t border-ocean-navy/15 pt-6 first:border-t-0 first:pt-0 md:border-t-0 md:border-l md:pl-8 md:pt-0 md:first:border-l-0 md:first:pl-0 lg:pl-10"
+                  >
+                    <h3 className="font-heading font-normal text-ocean-navy text-xl md:text-2xl leading-snug tracking-[-0.01em]">
+                      {pillar.title}
+                    </h3>
+                    <p className="font-sans text-sm md:text-base leading-relaxed text-slate-blue/90 break-words">
+                      {pillar.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
 
+            {/* divisor tracejado vertical + furos de perfuração */}
+            <div className="relative flex flex-shrink-0 items-stretch">
+              <span className="absolute -top-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-shell-white" />
+              <div className="h-full w-px border-l-2 border-dashed border-ocean-navy/30" />
+              <span className="absolute -bottom-3 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-shell-white" />
+            </div>
+
+            {/* aba do barcode lateral */}
+            <div className="flex w-12 flex-shrink-0 items-center justify-center py-6 pr-2 md:w-14 lg:w-16">
+              <Barcode orientation="horizontal" className="h-[85%] w-full text-ocean-navy" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
