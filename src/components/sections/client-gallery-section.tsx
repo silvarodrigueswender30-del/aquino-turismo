@@ -13,17 +13,19 @@ import {
   EffectCoverflow,
 } from "swiper/modules"
 
-// Imagens provisórias
 const baseImages = [
-  { src: "/images/galeria/clientes/cliente-1.avif", alt: "Navegação em Paraty" },
-  { src: "/images/galeria/clientes/cliente-2.avif", alt: "Roteiro náutico em Paraty" },
-  { src: "/images/galeria/clientes/cliente-3.avif", alt: "Mergulho livre em águas cristalinas" },
-  { src: "/images/galeria/clientes/cliente-4.avif", alt: "Pausa para fotos no passeio" },
-  { src: "/images/galeria/clientes/cliente-5.avif", alt: "Momento de descanso na praia" },
-  { src: "/images/galeria/clientes/cliente-6.avif", alt: "Passeio por ilhas de Paraty" },
-  { src: "/images/galeria/clientes/cliente-7.avif", alt: "Vista panorâmica durante a navegação" },
-  { src: "/images/galeria/clientes/cliente-8.avif", alt: "Momentos especiais no mar" },
-  { src: "/images/galeria/clientes/cliente-9.avif", alt: "Fim de tarde na baía" },
+  { src: "/images/galeria/clientes/cliente-1.avif", alt: "Família hospedada vivendo momentos especiais em Paraty" },
+  { src: "/images/galeria/clientes/cliente-2.avif", alt: "Casal sorrindo durante viagem em Paraty" },
+  { src: "/images/galeria/clientes/cliente-3.avif", alt: "Hóspedes aproveitando dias tranquilos em Paraty" },
+  { src: "/images/galeria/clientes/cliente-4.avif", alt: "Grupo reunido em uma viagem para Paraty" },
+  { src: "/images/galeria/clientes/cliente-5.avif", alt: "Momentos de lazer e relaxamento em Paraty" },
+  { src: "/images/galeria/clientes/cliente-6.avif", alt: "Família explorando as belezas de Paraty" },
+  { src: "/images/galeria/clientes/cliente-7.avif", alt: "Registros de viagem de nossos visitantes" },
+  { src: "/images/galeria/clientes/cliente-8.avif", alt: "Momentos especiais vividos em Paraty" },
+  { src: "/images/galeria/clientes/cliente-9.avif", alt: "Fim de tarde durante viagem em família" },
+  { src: "/images/galeria/clientes/cliente-10.avif", alt: "Momentos de alegria em Paraty" },
+  { src: "/images/galeria/clientes/cliente-11.avif", alt: "Aproveitando as experiências de Paraty" },
+  { src: "/images/galeria/clientes/cliente-12.avif", alt: "Sorrisos de nossos clientes durante a viagem" },
 ]
 
 // Array triplicado para garantir buffer de clonagem do loop em qualquer resolução
