@@ -24,6 +24,35 @@ export const organizationJsonLd = {
   sameAs: [INSTAGRAM_URL],
   telephone: "+55 24 99909-6384",
   logo: `${SITE_URL}/images/brand/aquinotour-logo.png`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "R. Guapuruvu, 371",
+    addressLocality: "Paraty",
+    addressRegion: "RJ",
+    postalCode: "23970-000",
+    addressCountry: "BR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -23.2163,
+    longitude: -44.7214,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "08:00",
+      closes: "20:00",
+    },
+  ],
   areaServed: {
     "@type": "AdministrativeArea",
     name: "Paraty, Rio de Janeiro, Brasil",
