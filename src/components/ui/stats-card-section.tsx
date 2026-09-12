@@ -45,9 +45,9 @@ export default function StatsCardSection() {
                 </>
               )}
 
-              {/* Código de barras no padrão exato de "Como Trabalhamos", compacto na altura da seção */}
+              {/* Código de barras azul escuro no padrão exato de "Como Trabalhamos" */}
               {index > 0 && (
-                <div className="absolute left-1 top-1/2 hidden h-[65%] w-3 -translate-y-1/2 items-center justify-center opacity-40 md:flex">
+                <div className="absolute left-1 top-1/2 hidden h-[65%] w-3 -translate-y-1/2 items-center justify-center text-ocean-navy md:flex">
                   <Barcode className="h-full w-full text-ocean-navy" />
                 </div>
               )}
