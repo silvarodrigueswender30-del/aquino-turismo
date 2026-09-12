@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: "/images/hero-carousel/slide-5.avif",
+        url: "/images/destinations/hero-lancha.avif",
         width: 1200,
         height: 630,
         alt: "Passeio de lancha em Paraty",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Passeio de lancha em Paraty | Aquino Tour",
     description: "Explore praias e ilhas de forma mais reservada e flexível.",
-    images: ["/images/hero-carousel/slide-5.avif"],
+    images: ["/images/destinations/hero-lancha.avif"],
   },
 }
 
@@ -116,8 +116,8 @@ export default function PasseioLanchaPage() {
         eyebrow="PASSEIO DE LANCHA"
         title="Explore a baía em uma experiência mais reservada"
         description="Navegue pelo mar de Paraty com mais flexibilidade. Uma opção excelente para famílias e pequenos grupos que desejam otimizar o tempo e personalizar seu roteiro pelas praias e ilhas."
-        imageSrc="/images/hero-carousel/slide-5.avif"
-        imageAlt="Passeio em família de lancha em Paraty"
+        imageSrc="/images/destinations/hero-lancha.avif"
+        imageAlt="Passeio de lancha em Paraty"
         primaryCta={{
           label: "Consultar lanchas via WhatsApp",
           href: getWhatsappUrl(WHATSAPP_MESSAGES.lancha),

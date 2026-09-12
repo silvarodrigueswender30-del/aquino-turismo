@@ -206,7 +206,7 @@ export default function PasseioEscunaPage() {
           {
             title: "Passeio de Lancha",
             description: "Explore a região costeira de forma mais reservada e flexível.",
-            imageSrc: "/images/hero-carousel/slide-5.avif",
+            imageSrc: "/images/destinations/hero-lancha.avif",
             imageAlt: "Passeio de lancha",
             href: "/passeio-de-lancha-em-paraty"
           },

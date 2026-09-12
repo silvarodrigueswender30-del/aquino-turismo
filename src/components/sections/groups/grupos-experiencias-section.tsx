@@ -19,7 +19,7 @@ const experiencias = [
     href: "/passeio-de-escuna-em-paraty"
   },
   {
-    image: "/images/hero-carousel/slide-5.avif",
+    image: "/images/destinations/hero-lancha.avif",
     alt: "Passeio de lancha em Paraty",
     title: "Passeio de Lancha",
     body: "Alternativa para famílias e grupos menores que procuram uma experiência mais reservada e flexível.",
