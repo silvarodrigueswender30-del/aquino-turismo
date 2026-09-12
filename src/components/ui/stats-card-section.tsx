@@ -45,10 +45,10 @@ export default function StatsCardSection() {
                 </>
               )}
 
-              {/* Código de barras em pé ao lado da linha tracejada do divisor */}
+              {/* Código de barras no padrão exato de "Como Trabalhamos", compacto na altura da seção */}
               {index > 0 && (
-                <div className="absolute left-1 top-1/2 hidden h-[65%] w-6 -translate-y-1/2 items-center justify-center opacity-30 md:flex">
-                  <Barcode orientation="horizontal" className="h-full w-full text-ocean-navy" />
+                <div className="absolute left-1 top-1/2 hidden h-[65%] w-3 -translate-y-1/2 items-center justify-center opacity-40 md:flex">
+                  <Barcode className="h-full w-full text-ocean-navy" />
                 </div>
               )}
 
