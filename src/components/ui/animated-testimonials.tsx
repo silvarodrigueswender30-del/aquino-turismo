@@ -3,6 +3,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Plane, Star, TreePalm } from "lucide-react"
+import { Barcode } from "@/components/ui/ticket-barcode"
 
 /**
  * ===========================================================================
@@ -12,7 +13,7 @@ import { Plane, Star, TreePalm } from "lucide-react"
  *  - borda navy visível
  *  - fundo cream (#F7F1E1)
  *  - divisor tracejado + furos de perfuração (HORIZONTAIS nas laterais)
- *  - faixa de código de barras (rodapé, largura total do card)
+ *  - faixa de código de barras compartilhada (rodapé, largura total do card)
  *  - avião + rastro (canto superior direito)
  *  - carimbo com palmeira (canto superior esquerdo)
  * ===========================================================================
@@ -71,7 +72,7 @@ export function TestimonialCard({ item, index }: TestimonialCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border-[1.5px] border-ocean-navy/80 bg-[#F7F1E1] shadow-[0_10px_30px_-14px_rgba(11,42,64,0.3)] transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-[0_18px_40px_-16px_rgba(11,42,64,0.4)]"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border-[1.5px] border-ocean-navy/80 bg-[#F7F1E1] shadow-[0_10px_30px_-14px_rgba(11,42,64,0.3)] transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-[0_18px_40px_-16px_rgba(11,42,64,0.4)]"
     >
       {/* textura sutil de papel */}
       <div
@@ -97,14 +98,14 @@ export function TestimonialCard({ item, index }: TestimonialCardProps) {
             <span className="text-xs font-medium text-slate-blue/70">{item.source}</span>
           </div>
 
-          {/* depoimento */}
-          <p className="mt-4 text-sm leading-relaxed text-slate-blue md:text-base">
+          {/* depoimento com line-clamp-4 para alinhar alturas */}
+          <p className="mt-4 line-clamp-4 font-sans text-sm leading-relaxed text-slate-blue md:text-base">
             &ldquo;{item.quote}&rdquo;
           </p>
         </div>
 
         {/* autor */}
-        <div className="mt-5 flex items-center gap-3 border-t border-ocean-navy/10 pt-4">
+        <div className="mt-4 flex items-center gap-3 border-t border-ocean-navy/10 pt-3.5">
           <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-ocean-navy/15 bg-ocean-navy/5 font-heading text-sm font-semibold text-ocean-navy">
             {item.initials}
           </span>
@@ -131,9 +132,9 @@ export function TestimonialCard({ item, index }: TestimonialCardProps) {
         />
       </div>
 
-      {/* ===================== FAIXA DO CÓDIGO DE BARRAS (rodapé) ===================== */}
-      <div className="relative z-10 flex h-9 w-full flex-shrink-0 items-center justify-center px-4 md:h-10">
-        <Barcode className="h-[70%] w-full text-ocean-navy" />
+      {/* ===================== FAIXA DO CÓDIGO DE BARRAS (rodapé com respiro) ===================== */}
+      <div className="relative z-10 flex h-10 w-full flex-shrink-0 items-center justify-center px-6 pt-2 pb-2 md:h-11">
+        <Barcode orientation="horizontal" className="h-full w-full text-ocean-navy" />
       </div>
     </motion.div>
   )
@@ -168,29 +169,12 @@ export function AnimatedTestimonialsBasic() {
 }
 
 /* ===========================================================================
- * SUBCOMPONENTES SVG (idênticos aos usados na seção de Passeios)
+ * SUBCOMPONENTES SVG
  * =========================================================================== */
-
-function Barcode({ className }: { className?: string }) {
-  const BAR_COUNT = 70
-  const bars = Array.from({ length: BAR_COUNT }, (_, i) => ((i * 7) % 3) + 1)
-
-  return (
-    <div className={`flex h-full items-stretch justify-center gap-[1.5px] overflow-hidden ${className ?? ""}`}>
-      {bars.map((widthPx, i) => (
-        <span
-          key={i}
-          className="block h-full flex-none bg-current"
-          style={{ width: `${widthPx}px` }}
-        />
-      ))}
-    </div>
-  )
-}
 
 function PlaneTrail({ className }: { className?: string }) {
   return (
-    <div className={`relative ${className ?? ""}`}>
+    <div className={`relative ${className ?? ""}`} aria-hidden="true">
       <svg viewBox="0 0 100 60" fill="none" className="absolute inset-0 h-full w-full">
         <path
           d="M4 54 C 16 58, 10 40, 20 37 C 30 34, 23 20, 34 16 C 44 12, 50 9, 62 5"
@@ -209,7 +193,7 @@ function PlaneTrail({ className }: { className?: string }) {
 
 function StampIcon({ className }: { className?: string }) {
   return (
-    <div className={`relative ${className ?? ""}`}>
+    <div className={`relative ${className ?? ""}`} aria-hidden="true">
       <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
         <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />

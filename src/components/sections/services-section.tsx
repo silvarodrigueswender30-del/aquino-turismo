@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import { Anchor, Car, Plane, Ship, TreePalm, Waves } from "lucide-react";
 import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
+import { Barcode } from "@/components/ui/ticket-barcode";
 
 // --- Service Types ---
 export interface Service {
@@ -75,25 +76,6 @@ const services: Service[] = [
     external: false,
   },
 ];
-
-function Barcode({ className }: { className?: string }) {
-  const bars = [
-    12, 3, 2, 6, 3, 10, 14, 4, 3, 16, 2, 2, 4, 13, 7, 3, 14, 8, 2, 3, 12, 4,
-    2, 13, 5, 3, 15, 6, 2, 9, 3, 12,
-  ];
-
-  return (
-    <div className={`flex h-full w-full flex-col justify-center gap-[4px] overflow-hidden ${className ?? ""}`}>
-      {bars.map((barHeight, index) => (
-        <span
-          key={index}
-          className="block w-full flex-none bg-current"
-          style={{ height: `${barHeight}px` }}
-        />
-      ))}
-    </div>
-  );
-}
 
 function PlaneTrail({ className }: { className?: string }) {
   return (
