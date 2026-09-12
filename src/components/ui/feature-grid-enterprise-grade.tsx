@@ -102,6 +102,16 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className }) => {
               <Barcode orientation="horizontal" className="h-[85%] w-full text-ocean-navy" />
             </div>
           </div>
+
+          {/* FAIXA DIAGONAL LISTRADA NO RODAPÉ DO TICKET */}
+          <div
+            aria-hidden="true"
+            className="h-3 w-full bg-ocean-navy md:h-4"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, rgba(247,241,225,0.9) 0px, rgba(247,241,225,0.9) 6px, transparent 6px, transparent 12px)",
+            }}
+          />
         </div>
       </div>
     </section>
