@@ -18,51 +18,39 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    imageUrl: "/images/galeria/ilhas/island-1.avif",
-    title: "Praia da Lula",
-    location: "Baía de Paraty",
-  },
-  {
-    id: 2,
-    imageUrl: "/images/galeria/ilhas/island-2.avif",
-    title: "Praia Vermelha",
-    location: "Paraty, RJ",
-  },
-  {
-    id: 3,
-    imageUrl: "/images/galeria/ilhas/island-3.avif",
+    imageUrl: "/images/galeria/ilha-comprida.avif",
     title: "Ilha Comprida",
     location: "Baía de Paraty",
   },
   {
-    id: 4,
-    imageUrl: "/images/galeria/ilhas/island-4.avif",
-    title: "Lagoa Azul",
-    location: "Paraty, RJ",
-  },
-  {
-    id: 5,
-    imageUrl: "/images/galeria/ilhas/island-5.avif",
-    title: "Saco da Velha",
-    location: "Baía de Paraty",
-  },
-  {
-    id: 6,
-    imageUrl: "/images/galeria/ilhas/island-6.avif",
-    title: "Praia da Conceição",
-    location: "Paraty, RJ",
-  },
-  {
-    id: 7,
-    imageUrl: "/images/galeria/ilhas/island-7.avif",
+    id: 2,
+    imageUrl: "/images/galeria/ilha-dos-cocos.avif",
     title: "Ilha dos Cocos",
     location: "Baía de Paraty",
   },
   {
-    id: 8,
-    imageUrl: "/images/galeria/ilhas/island-8.avif",
-    title: "Baía de Paraty",
+    id: 3,
+    imageUrl: "/images/galeria/lagoa-azul.avif",
+    title: "Lagoa Azul",
     location: "Paraty, RJ",
+  },
+  {
+    id: 4,
+    imageUrl: "/images/galeria/praia-da-conceicao.avif",
+    title: "Praia da Conceição",
+    location: "Paraty, RJ",
+  },
+  {
+    id: 5,
+    imageUrl: "/images/galeria/praia-vermelha.avif",
+    title: "Praia Vermelha",
+    location: "Paraty, RJ",
+  },
+  {
+    id: 6,
+    imageUrl: "/images/galeria/saco-da-velha.avif",
+    title: "Saco da Velha",
+    location: "Baía de Paraty",
   },
 ];
 
