@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: "/images/hero/escuna-home.webp",
+        url: "/images/destinations/hero03.avif",
         width: 1200,
         height: 630,
         alt: "Passeio de escuna em Paraty",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Passeio de escuna em Paraty | Aquino Tour",
     description: "Navegue pela baía de Paraty em uma experiência com paradas em praias e ilhas.",
-    images: ["/images/hero/escuna-home.webp"],
+    images: ["/images/destinations/hero03.avif"],
   },
 }
 
@@ -116,7 +116,7 @@ export default function PasseioEscunaPage() {
         eyebrow="PASSEIO DE ESCUNA"
         title="Navegue pelas belezas da Baía de Paraty"
         description="Aproveite o mar calmo da região em um passeio coletivo com paradas para banho, contemplação e momentos de lazer em praias e ilhas paradisíacas."
-        imageSrc="/images/hero/escuna-home.webp"
+        imageSrc="/images/destinations/hero03.avif"
         imageAlt="Passeio de escuna na baía de Paraty"
         primaryCta={{
           label: "Consultar passeio via WhatsApp",
