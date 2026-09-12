@@ -14,13 +14,13 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Passeio de escuna em Paraty | Aquino Tour",
-  description: "Navegue pela baía de Paraty em uma experiência com paradas em praias e ilhas. Consulte horários e opções.",
+  description: "Passeio de escuna em Paraty: navegue pela baía com paradas em praias e ilhas paradisíacas. Consulte horários e garanta sua vaga pelo WhatsApp.",
   alternates: {
     canonical: "/passeio-de-escuna-em-paraty",
   },
   openGraph: {
     title: "Passeio de escuna em Paraty | Aquino Tour",
-    description: "Navegue pela baía de Paraty em uma experiência com paradas em praias e ilhas. Consulte horários e opções.",
+    description: "Passeio de escuna em Paraty: navegue pela baía com paradas em praias e ilhas paradisíacas. Consulte horários e garanta sua vaga pelo WhatsApp.",
     url: `${SITE_URL}/passeio-de-escuna-em-paraty`,
     siteName: SITE_NAME,
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Passeio de escuna em Paraty | Aquino Tour",
-    description: "Navegue pela baía de Paraty em uma experiência com paradas em praias e ilhas.",
+    description: "Passeio de escuna em Paraty: navegue pela baía com paradas em praias e ilhas paradisíacas. Consulte horários e garanta sua vaga pelo WhatsApp.",
     images: ["/images/destinations/hero03.avif"],
   },
 }

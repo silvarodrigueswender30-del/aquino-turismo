@@ -14,13 +14,13 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Passeio de jipe em Paraty | Aquino Tour",
-  description: "Conheça cachoeiras, alambiques e a natureza da Mata Atlântica em um roteiro rural com a Aquino Tour Paraty.",
+  description: "Passeio de jipe em Paraty: conheça cachoeiras, alambiques e a Mata Atlântica em um roteiro rural inesquecível. Reserve seu lugar pelo WhatsApp.",
   alternates: {
     canonical: "/passeio-de-jipe-em-paraty",
   },
   openGraph: {
     title: "Passeio de jipe em Paraty | Aquino Tour",
-    description: "Conheça cachoeiras, alambiques e a natureza da Mata Atlântica em um roteiro rural com a Aquino Tour Paraty.",
+    description: "Passeio de jipe em Paraty: conheça cachoeiras, alambiques e a Mata Atlântica em um roteiro rural inesquecível. Reserve seu lugar pelo WhatsApp.",
     url: `${SITE_URL}/passeio-de-jipe-em-paraty`,
     siteName: SITE_NAME,
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Passeio de jipe em Paraty | Aquino Tour",
-    description: "Conheça cachoeiras, alambiques e a natureza da Mata Atlântica.",
+    description: "Passeio de jipe em Paraty: conheça cachoeiras, alambiques e a Mata Atlântica em um roteiro rural inesquecível. Reserve seu lugar pelo WhatsApp.",
     images: ["/images/services/fundo1.avif"],
   },
 }
