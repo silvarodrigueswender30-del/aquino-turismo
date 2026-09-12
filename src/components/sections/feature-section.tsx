@@ -18,7 +18,7 @@ const CARDS = [
 
 export function FeatureSection() {
   return (
-    <section id="experiencias" className="w-full bg-shell-white py-20 md:py-28 overflow-hidden scroll-mt-24">
+    <section id="experiencias" className="w-full bg-coastal-mist py-20 md:py-28 overflow-hidden scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* ✈️✈️ Abertura editorial ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}

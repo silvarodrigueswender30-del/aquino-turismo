@@ -146,16 +146,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <JsonLd data={homeJsonLd} />
       <HeroSection />
-      <div
-        className="relative -mt-px overflow-hidden"
-        style={{
-          background: `
-            radial-gradient(circle at 82% 8%, rgba(95,197,199,.11), transparent 30%),
-            radial-gradient(circle at 6% 78%, rgba(22,91,140,.055), transparent 34%),
-            linear-gradient(180deg, #FAF8F2 0%, rgba(169,216,232,.16) 30%, rgba(250,248,242,.94) 52%, rgba(241,232,215,.26) 76%, #FAF8F2 100%)
-          `,
-        }}
-      >
+      <div className="relative -mt-px overflow-hidden bg-coastal-mist">
         <section className="relative flex w-full items-center overflow-hidden border-b border-ocean-navy/10 py-5 md:py-6">
           <div className="relative z-10 w-full">
             <LogoMarquee />

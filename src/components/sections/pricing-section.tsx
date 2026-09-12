@@ -3,7 +3,7 @@ import { getWhatsappUrl, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 function PricingSection() {
   return (
-    <section id="planejamento" className="w-full bg-shell-white pt-20 pb-16 md:pt-32 md:pb-24 scroll-mt-24">
+    <section id="planejamento" className="w-full bg-coastal-mist pt-20 pb-16 md:pt-32 md:pb-24 scroll-mt-24">
       {/* Content Layer */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">

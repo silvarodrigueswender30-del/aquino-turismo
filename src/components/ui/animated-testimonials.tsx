@@ -45,7 +45,7 @@ const aquinoTestimonials: TestimonialItem[] = [
 
 export function AnimatedTestimonialsBasic() {
   return (
-    <section className="w-full bg-shell-white pt-16 pb-20 md:pt-24 md:pb-28 border-t border-ocean-navy/10 overflow-hidden relative">
+    <section className="w-full bg-coastal-mist pt-16 pb-20 md:pt-24 md:pb-28 border-t border-ocean-navy/10 overflow-hidden relative">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12 md:mb-16">

@@ -134,3 +134,28 @@ body {
     backdrop-filter: none;
   }
 }
+
+/* ─── Sistema de Fundo Atmosférico "Coastal Mist" (Design System Aquino Tour) ─── */
+@layer utilities {
+  .bg-coastal-mist {
+    background: 
+      radial-gradient(circle at 82% 8%, rgba(95, 197, 199, 0.08), transparent 35%),
+      linear-gradient(180deg, #FAF8F2 0%, rgba(169, 216, 232, 0.10) 50%, #FAF8F2 100%);
+  }
+
+  @media (min-width: 768px) {
+    .bg-coastal-mist {
+      background: 
+        radial-gradient(circle at 82% 8%, rgba(95, 197, 199, 0.11), transparent 30%),
+        radial-gradient(circle at 6% 78%, rgba(22, 91, 140, 0.055), transparent 34%),
+        linear-gradient(180deg, #FAF8F2 0%, rgba(169, 216, 232, 0.16) 30%, rgba(250, 248, 242, 0.94) 52%, rgba(241, 232, 215, 0.26) 76%, #FAF8F2 100%);
+    }
+  }
+
+  .bg-coastal-mist-subtle {
+    background: 
+      radial-gradient(circle at 82% 8%, rgba(95, 197, 199, 0.07), transparent 35%),
+      linear-gradient(180deg, #FAF8F2 0%, rgba(169, 216, 232, 0.09) 50%, #FAF8F2 100%);
+  }
+}
+
