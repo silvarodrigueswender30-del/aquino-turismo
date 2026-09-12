@@ -14,7 +14,7 @@ export function GruposHeroSection() {
       <main>
         <section className="relative flex min-h-[82vh] items-end overflow-hidden pb-16 sm:min-h-[86vh] sm:pb-20 md:pb-24">
           <Image
-            src="/images/services/fundo1.avif"
+            src="/images/destinations/grupo.avif"
             alt="Turismo receptivo para grupos em Paraty"
             fill
             priority

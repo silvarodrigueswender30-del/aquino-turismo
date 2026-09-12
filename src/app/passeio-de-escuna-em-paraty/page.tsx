@@ -220,7 +220,7 @@ export default function PasseioEscunaPage() {
           {
             title: "Grupos e Excursões",
             description: "Atendimento receptivo especializado para agências e organizadores.",
-            imageSrc: "/images/services/fundo1.avif",
+            imageSrc: "/images/destinations/grupo.avif",
             imageAlt: "Grupos e excursões",
             href: "/grupos-e-caravanas"
           }

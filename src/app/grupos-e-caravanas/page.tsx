@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/destinations/grupo.avif",
         width: 1200,
         height: 630,
-        alt: "Aquino Tour em Paraty",
+        alt: "Turismo Receptivo para Grupos em Paraty",
       },
     ],
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Turismo Receptivo para Grupos em Paraty | Aquino Tour",
     description:
       "Passeios e atendimento receptivo para grupos e excursões em Paraty.",
-    images: ["/og-image.jpg"],
+    images: ["/images/destinations/grupo.avif"],
   },
 };
 
