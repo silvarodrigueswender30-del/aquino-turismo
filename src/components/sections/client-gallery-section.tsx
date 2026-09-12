@@ -28,8 +28,8 @@ const baseImages = [
   { src: "/images/galeria/clientes/cliente-12.avif", alt: "Sorrisos de nossos clientes durante a viagem" },
 ]
 
-// Array triplicado para garantir buffer de clonagem do loop em qualquer resolução
-const galleryImages = [...baseImages, ...baseImages, ...baseImages]
+// Array com as 12 fotos de clientes
+const galleryImages = baseImages
 
 export function ClientGallerySection() {
   const css = `
@@ -80,7 +80,7 @@ export function ClientGallerySection() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        loopAdditionalSlides={9}
+        loopAdditionalSlides={4}
         slidesPerView="auto"
         spaceBetween={16}
         coverflowEffect={{
