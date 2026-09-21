@@ -83,10 +83,10 @@ export function HeroSection() {
                                 <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mb-4 sm:text-xs">Descubra a essência de Paraty</p>
                                 
                                 <h1 className="mx-auto max-w-[37rem] text-balance font-heading text-[2.7rem] font-normal leading-[1.03] tracking-[-0.025em] [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:text-5xl md:text-[3.4rem] lg:mx-0 xl:text-[3.95rem]">
-                                    Experiências que revelam a beleza, a história e a natureza de Paraty.
+                                    Passeios em Paraty para viver o melhor da cidade.
                                 </h1>
                                 <p className="mx-auto mt-5 max-w-[30rem] text-base font-normal leading-7 text-shell-white/92 [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mt-6 sm:text-lg lg:mx-0">
-                                    Explore praias e ilhas, cachoeiras, alambiques, a Mata Atlântica e o encantador Centro Histórico, em experiências cuidadosamente planejadas para tornar sua visita inesquecível.
+                                    Experiências que revelam a beleza, a história e a natureza de Paraty. Explore praias e ilhas, cachoeiras, alambiques, a Mata Atlântica e o encantador Centro Histórico, em experiências cuidadosamente planejadas para tornar sua visita inesquecível.
                                 </p>
 
                                 <div>
