@@ -80,13 +80,13 @@ export function HeroSection() {
                             {/* Texto Principal à Esquerda */}
                             <div className="mx-auto max-w-[40rem] text-center text-shell-white lg:ml-0 lg:w-[56%] lg:text-left">
                                 
-                                <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mb-4 sm:text-xs">AQUINO TOUR · PARATY</p>
+                                <p className="mb-3.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-golden-sand [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mb-4 sm:text-xs">Descubra a essência de Paraty</p>
                                 
                                 <h1 className="mx-auto max-w-[37rem] text-balance font-heading text-[2.7rem] font-normal leading-[1.03] tracking-[-0.025em] [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:text-5xl md:text-[3.4rem] lg:mx-0 xl:text-[3.95rem]">
-                                    Passeios em Paraty para viver o melhor da cidade
+                                    Experiências que revelam a beleza, a história e a natureza de Paraty.
                                 </h1>
                                 <p className="mx-auto mt-5 max-w-[30rem] text-base font-normal leading-7 text-shell-white/92 [text-shadow:0_1px_2px_rgba(0,0,0,0.12)] sm:mt-6 sm:text-lg lg:mx-0">
-                                    Conheça cachoeiras, alambiques, praias e ilhas com passeios de jipe, escuna e lancha e conte com atendimento local para escolher a experiência ideal.
+                                    Explore praias e ilhas, cachoeiras, alambiques, a Mata Atlântica e o encantador Centro Histórico, em experiências cuidadosamente planejadas para tornar sua visita inesquecível.
                                 </p>
 
                                 <div>

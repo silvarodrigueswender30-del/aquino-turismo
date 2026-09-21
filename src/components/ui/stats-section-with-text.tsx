@@ -14,16 +14,17 @@ export function Stats() {
                 Paraty é o nosso ponto de partida.
               </h2>
               <p className="max-w-lg text-left font-sans text-base font-normal leading-7 text-slate-blue sm:text-lg">
-                Passeios e turismo receptivo com orientação local para turistas, famílias, grupos e agências que querem viver Paraty com mais clareza.
+                Oferecemos experiências cuidadosamente selecionadas para apresentar a riqueza natural, histórica e cultural da região, com atendimento personalizado para turistas, famílias, grupos e agências.
               </p>
             </div>
           </div>
 
-          <div className="grid gap-0 border-y border-ocean-navy/10 sm:grid-cols-3 sm:divide-x sm:divide-ocean-navy/10">
+          <div className="grid gap-0 border-y border-ocean-navy/10 sm:grid-cols-2 sm:divide-x sm:divide-ocean-navy/10 lg:grid-cols-4">
             {[
-              ["Por terra", "experiências que conectam natureza, cultura local e região rural"],
-              ["Pelo mar", "praias, ilhas e paisagens da baía de Paraty"],
-              ["Receptivo", "atendimento próximo para planejar passeios individuais e em grupo"],
+              ["Por terra", "Caminhos que revelam a Mata Atlântica, cachoeiras, alambiques, cultura e os encantos da região rural de Paraty."],
+              ["Pelo mar", "Navegue pela Baía de Paraty e descubra praias, ilhas, águas cristalinas e paisagens preservadas."],
+              ["Experiências", "Passeios pensados para proporcionar momentos especiais, unindo natureza, história, cultura e hospitalidade."],
+              ["Atendimento receptivo", "Orientação e atendimento personalizado para organizar sua experiência em Paraty, seja individualmente, em família ou em grupo."],
             ].map(([title, text]) => (
               <div key={title} className="border-b border-ocean-navy/10 py-5 sm:border-b-0 sm:px-6 sm:py-7">
                 <span className="mb-4 block h-px w-8 bg-golden-sand sm:mb-5" aria-hidden="true" />
