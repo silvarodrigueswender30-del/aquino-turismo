@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingWhatsappButton } from "@/components/ui/floating-whatsapp-button";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Passeios e turismo receptivo em Paraty para turistas, famílias, grupos, excursões e agências. Conheça opções de jipe, escuna e lancha com atendimento local.",
+    "Passeios e turismo receptivo em Paraty para turistas, famÃ­lias, grupos, excursÃµes e agÃªncias. ConheÃ§a opÃ§Ãµes de jipe, escuna e lancha com atendimento local.",
   robots: {
     index: true,
     follow: true,
@@ -37,15 +37,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aquino Tour | Passeios e Turismo Receptivo em Paraty",
     description:
-      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famílias, grupos e agências.",
+      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famÃ­lias, grupos e agÃªncias.",
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/seo/aquino-tour-og.png",
         width: 1200,
         height: 630,
-        alt: "Aquino Tour — Passeio em Paraty",
+        alt: "Aquino Tour — Turismo em Paraty",
       },
     ],
     locale: "pt_BR",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Aquino Tour | Passeios em Paraty",
     description:
       "Passeios e turismo receptivo em Paraty com atendimento local.",
-    images: ["/og-image.jpg"],
+    images: ["/images/seo/aquino-tour-og.png"],
   },
 };
 
@@ -78,3 +78,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+

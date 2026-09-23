@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/hero-section";
 import { LogoMarquee } from "@/components/sections/logo-marquee";
 import { FeatureSection } from "@/components/sections/feature-section";
@@ -35,7 +35,7 @@ const homeJsonLd = [
     serviceType: "Passeios de jipe, escuna, lancha e turismo receptivo",
     url: `${SITE_URL}/`,
     description:
-      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famílias, grupos, excursões e agências.",
+      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famÃ­lias, grupos, excursÃµes e agÃªncias.",
   },
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@ const homeJsonLd = [
         name: "Quais passeios a Aquino Tour oferece em Paraty?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A Aquino Tour trabalha com opções de passeio de jipe, escuna e lancha, além de atendimento para grupos e excursões. A disponibilidade e as condições de cada experiência devem ser consultadas para a data da viagem.",
+          text: "A Aquino Tour trabalha com opÃ§Ãµes de passeio de jipe, escuna e lancha, alÃ©m de atendimento para grupos e excursÃµes. A disponibilidade e as condiÃ§Ãµes de cada experiÃªncia devem ser consultadas para a data da viagem.",
         },
       },
       {
@@ -54,7 +54,7 @@ const homeJsonLd = [
         name: "O que inclui o passeio de jipe em Paraty?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "O passeio de jipe trabalha experiências pela região rural de Paraty, com atrações relacionadas a natureza, cachoeiras, alambiques e cultura local. Os pontos e condições do roteiro devem ser confirmados no atendimento.",
+          text: "O passeio de jipe trabalha experiÃªncias pela regiÃ£o rural de Paraty, com atraÃ§Ãµes relacionadas a natureza, cachoeiras, alambiques e cultura local. Os pontos e condiÃ§Ãµes do roteiro devem ser confirmados no atendimento.",
         },
       },
       {
@@ -62,7 +62,7 @@ const homeJsonLd = [
         name: "Quanto tempo dura o passeio de escuna?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Os passeios de escuna comercializados pela Aquino Tour possuem opções com duração aproximada de cinco horas. Horários, embarcação, roteiro e paradas devem ser confirmados para a data escolhida.",
+          text: "Os passeios de escuna comercializados pela Aquino Tour possuem opÃ§Ãµes com duraÃ§Ã£o aproximada de cinco horas. HorÃ¡rios, embarcaÃ§Ã£o, roteiro e paradas devem ser confirmados para a data escolhida.",
         },
       },
       {
@@ -70,36 +70,36 @@ const homeJsonLd = [
         name: "A Aquino Tour oferece passeio de lancha?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sim. Há opções de lancha para conhecer praias e ilhas da região. Capacidade, duração, roteiro e disponibilidade dependem da embarcação escolhida.",
+          text: "Sim. HÃ¡ opÃ§Ãµes de lancha para conhecer praias e ilhas da regiÃ£o. Capacidade, duraÃ§Ã£o, roteiro e disponibilidade dependem da embarcaÃ§Ã£o escolhida.",
         },
       },
       {
         "@type": "Question",
-        name: "A Aquino Tour atende grupos e excursões?",
+        name: "A Aquino Tour atende grupos e excursÃµes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sim. A Aquino Tour atende agências, guias, organizadores, caravanas, famílias e outros grupos que desejam incluir passeios em sua programação em Paraty.",
+          text: "Sim. A Aquino Tour atende agÃªncias, guias, organizadores, caravanas, famÃ­lias e outros grupos que desejam incluir passeios em sua programaÃ§Ã£o em Paraty.",
         },
       },
       {
         "@type": "Question",
-        name: "É possível consultar hospedagem para grupos?",
+        name: "Ã‰ possÃ­vel consultar hospedagem para grupos?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sim. Para grupos que também precisam de hospedagem, é possível consultar disponibilidade na Pousada Aquino Mar por meio da integração comercial entre as operações.",
+          text: "Sim. Para grupos que tambÃ©m precisam de hospedagem, Ã© possÃ­vel consultar disponibilidade na Pousada Aquino Mar por meio da integraÃ§Ã£o comercial entre as operaÃ§Ãµes.",
         },
       },
       {
         "@type": "Question",
-        name: "Como consultar valores e horários?",
+        name: "Como consultar valores e horÃ¡rios?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Informe pelo WhatsApp a data da viagem, a quantidade de pessoas e o passeio de interesse. A equipe verifica disponibilidade, horários e condições para o seu perfil.",
+          text: "Informe pelo WhatsApp a data da viagem, a quantidade de pessoas e o passeio de interesse. A equipe verifica disponibilidade, horÃ¡rios e condiÃ§Ãµes para o seu perfil.",
         },
       },
       {
         "@type": "Question",
-        name: "A Aquino Tour é de Paraty?",
+        name: "A Aquino Tour Ã© de Paraty?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Sim. A Aquino Tour atua com turismo, passeios e atendimento receptivo em Paraty, no Rio de Janeiro.",
@@ -112,24 +112,24 @@ const homeJsonLd = [
 export const metadata: Metadata = {
   title: "Passeios em Paraty: Jipe, Escuna e Lancha",
   description:
-    "Passeios de jipe, escuna e lancha em Paraty com atendimento local. Consulte opções para turistas, famílias, grupos, excursões e agências.",
+    "Passeios de jipe, escuna e lancha em Paraty com atendimento local. Consulte opÃ§Ãµes para turistas, famÃ­lias, grupos, excursÃµes e agÃªncias.",
   alternates: {
     canonical: `${SITE_URL}/`,
   },
   openGraph: {
     title: "Passeios em Paraty: Jipe, Escuna e Lancha | Aquino Tour",
     description:
-      "Conheça opções de passeio de jipe, escuna e lancha em Paraty com atendimento local da Aquino Tour.",
+      "ConheÃ§a opÃ§Ãµes de passeio de jipe, escuna e lancha em Paraty com atendimento local da Aquino Tour.",
     url: `${SITE_URL}/`,
     siteName: "Aquino Tour",
     locale: "pt_BR",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/seo/aquino-tour-og.png",
         width: 1200,
         height: 630,
-        alt: "Aquino Tour em Paraty",
+        alt: "Aquino Tour — Turismo em Paraty",
       },
     ],
   },
@@ -137,8 +137,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Passeios em Paraty: Jipe, Escuna e Lancha | Aquino Tour",
     description:
-      "Passeios em Paraty para turistas, famílias, grupos, excursões e agências.",
-    images: ["/og-image.jpg"],
+      "Passeios em Paraty para turistas, famÃ­lias, grupos, excursÃµes e agÃªncias.",
+    images: ["/images/seo/aquino-tour-og.png"],
   },
 };
 
@@ -180,3 +180,5 @@ export default function Home() {
     </div>
   );
 }
+
+
