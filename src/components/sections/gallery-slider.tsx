@@ -5,14 +5,12 @@ import { ChevronLeft, ChevronRight, MapPin, ImageOff } from "lucide-react";
 import { useState } from "react";
 
 // ─── Gallery data ──────────────────────────────────────────────────────
-// TODO: todas as 8 imagens abaixo são placeholders do Unsplash e NÃO
-// correspondem aos locais reais anunciados. Substituir por fotos reais
-// dos destinos antes de ir para produção.
 interface GalleryItem {
   id: number;
   imageUrl: string;
   title: string;
   location: string;
+  alt: string;
 }
 
 const galleryItems: GalleryItem[] = [
@@ -21,36 +19,42 @@ const galleryItems: GalleryItem[] = [
     imageUrl: "/images/galeria/ilha-comprida.avif",
     title: "Ilha Comprida",
     location: "Baía de Paraty",
+    alt: "Ilha Comprida na Baía de Paraty",
   },
   {
     id: 2,
-    imageUrl: "/images/galeria/ilha-dos-cocos.avif",
-    title: "Ilha dos Cocos",
+    imageUrl: "/images/galeria/ilha-do-coco.avif",
+    title: "Ilha do Coco",
     location: "Baía de Paraty",
+    alt: "Ilha do Coco em Paraty RJ",
   },
   {
     id: 3,
     imageUrl: "/images/galeria/lagoa-azul.avif",
     title: "Lagoa Azul",
     location: "Paraty, RJ",
+    alt: "Lagoa Azul em Paraty",
   },
   {
     id: 4,
     imageUrl: "/images/galeria/praia-da-conceicao.avif",
     title: "Praia da Conceição",
     location: "Paraty, RJ",
+    alt: "Praia da Conceição em Paraty RJ",
   },
   {
     id: 5,
     imageUrl: "/images/galeria/praia-vermelha.avif",
     title: "Praia Vermelha",
     location: "Paraty, RJ",
+    alt: "Praia Vermelha em Paraty",
   },
   {
     id: 6,
     imageUrl: "/images/galeria/saco-da-velha.avif",
     title: "Saco da Velha",
     location: "Baía de Paraty",
+    alt: "Saco da Velha na Baía de Paraty",
   },
 ];
 
@@ -115,7 +119,7 @@ export function GallerySlider() {
             >
               <img
                 src={item.imageUrl}
-                alt={item.title}
+                alt={item.alt}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 loading="lazy"
                 onError={(e) => {
