@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/hero-section";
 import { LogoMarquee } from "@/components/sections/logo-marquee";
 import { FeatureSection } from "@/components/sections/feature-section";

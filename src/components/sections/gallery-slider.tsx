@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 import Image from "next/image";
 
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ChevronLeft, ChevronRight, MapPin, ImageOff } from "lucide-react";
 import { useState } from "react";
 
-// â”€â”€â”€ Gallery data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── Gallery data ──────────────────────────────────────────────────────
 interface GalleryItem {
   id: number;
   imageUrl: string;

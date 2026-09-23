@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -22,7 +22,7 @@ export function FeatureSection() {
     <section id="experiencias" className="w-full bg-coastal-mist py-20 md:py-28 overflow-hidden scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* âœˆï¸âœˆï¸ Abertura editorial âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸ */}
+        {/* ✈ï¸✈ï¸ Abertura editorial ✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸✈ï¸ */}
         <div className="mb-14 md:mb-16 max-w-2xl">
           <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
             PASSEIOS AQUINO TOUR
@@ -35,10 +35,10 @@ export function FeatureSection() {
           </p>
         </div>
 
-        {/* âœˆï¸âœˆï¸ Grid assimétrico: card grande + card menor + texto âœˆï¸ */}
+        {/* ✈ï¸✈ï¸ Grid assimétrico: card grande + card menor + texto ✈ï¸ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start">
 
-          {/* Card 1 â€” Protagonista 2/3 */}
+          {/* Card 1 — Protagonista 2/3 */}
           <div className="
             group relative md:col-span-2 rounded-[20px] overflow-hidden
             aspect-[1.79] w-full
@@ -57,7 +57,7 @@ export function FeatureSection() {
           {/* Coluna direita: Card 2 + bloco de texto + CTA */}
           <div className="md:col-span-1 flex flex-col gap-5">
 
-            {/* Card 2 â€” menor, hierarquia secundária */}
+            {/* Card 2 — menor, hierarquia secundária */}
             <div className="
               group relative rounded-[20px] overflow-hidden 
               aspect-[1.79] w-full
@@ -71,7 +71,7 @@ export function FeatureSection() {
               </div>
             </div>
 
-            {/* Categoria editorial â€” Grupos & Experiências */}
+            {/* Categoria editorial — Grupos & Experiências */}
             <div className="
               rounded-[20px] border border-ocean-navy/8 bg-warm-sand/50
               px-6 py-7 flex flex-col justify-between gap-6
