@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Passeio de jipe em Paraty | Aquino Tour",
   description: "Passeio de jipe em Paraty: conheça cachoeiras, alambiques e a Mata Atlântica em um roteiro rural inesquecível. Reserve seu lugar pelo WhatsApp.",
   alternates: {
-    canonical: "/passeio-de-jipe-em-paraty",
+    canonical: `${SITE_URL}/passeio-de-jipe-em-paraty`,
   },
   openGraph: {
     title: "Passeio de jipe em Paraty | Aquino Tour",

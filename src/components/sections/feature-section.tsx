@@ -1,16 +1,17 @@
+﻿import Image from "next/image";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const CARDS = [
   {
     image: "/images/banners/passeios-main.avif",
-    alt: "Banner da Aquino Tour: Descubra Paraty pelo mar, com passeios de lancha e escuna.",
+    alt: "Descubra Paraty pelo mar, com passeios de lancha e escuna.",
     title: "Paraty pelo mar",
-    support: "Passeios de escuna pela Baía de Paraty e praias da região",
+    support: "Passeios de escuna pela BaÃ­a de Paraty e praias da regiÃ£o",
   },
   {
     image: "/images/banners/passeios-small.avif",
-    alt: "Banner da Aquino Tour: Descubra Paraty por terra, passeios de Jeep e cachoeiras.",
+    alt: "Descubra Paraty por terra, passeios de Jeep e cachoeiras.",
     title: "Paraty por terra",
     support: "Cachoeiras, alambiques e cultura local",
   },
@@ -21,7 +22,7 @@ export function FeatureSection() {
     <section id="experiencias" className="w-full bg-coastal-mist py-20 md:py-28 overflow-hidden scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* ✈️✈️ Abertura editorial ✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️✈️ */}
+        {/* âœˆï¸âœˆï¸ Abertura editorial âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸âœˆï¸ */}
         <div className="mb-14 md:mb-16 max-w-2xl">
           <p className="font-sans text-xs font-semibold tracking-[0.22em] text-golden-sand uppercase mb-3">
             PASSEIOS AQUINO TOUR
@@ -30,14 +31,14 @@ export function FeatureSection() {
             Descubra Paraty por terra e pelo mar
           </h2>
           <p className="mt-4 text-slate-blue font-sans text-base md:text-lg leading-relaxed max-w-xl">
-            A Aquino Tour ajuda você a encontrar o passeio mais adequado para o seu perfil, seja uma experiência de jipe pela região de cachoeiras e alambiques, um passeio de escuna pela baía ou uma saída de lancha para conhecer praias e ilhas.
+            A Aquino Tour ajuda vocÃª a encontrar o passeio mais adequado para o seu perfil, seja uma experiÃªncia de jipe pela regiÃ£o de cachoeiras e alambiques, um passeio de escuna pela baÃ­a ou uma saÃ­da de lancha para conhecer praias e ilhas.
           </p>
         </div>
 
-        {/* ✈️✈️ Grid assimétrico: card grande + card menor + texto ✈️ */}
+        {/* âœˆï¸âœˆï¸ Grid assimÃ©trico: card grande + card menor + texto âœˆï¸ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start">
 
-          {/* Card 1 — Protagonista 2/3 */}
+          {/* Card 1 â€” Protagonista 2/3 */}
           <div className="
             group relative md:col-span-2 rounded-[20px] overflow-hidden
             aspect-[1.79] w-full
@@ -45,12 +46,8 @@ export function FeatureSection() {
             hover:-translate-y-[2px]
           ">
             {/* Imagem limpa sem overlays agressivos para preservar a arte da campanha */}
-            <img
-              src={CARDS[0].image}
-              alt={CARDS[0].alt}
-              className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]"
-            />
-            {/* Acessibilidade: Conteúdo textual semanticamente preservado para leitores de tela */}
+            <Image src={CARDS[0].image} alt={CARDS[0].alt} fill sizes="(max-width: 768px) 100vw, 66vw" quality={85} className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]" />
+            {/* Acessibilidade: ConteÃºdo textual semanticamente preservado para leitores de tela */}
             <div className="sr-only">
               <h3>{CARDS[0].title}</h3>
               <p>{CARDS[0].support}</p>
@@ -60,25 +57,21 @@ export function FeatureSection() {
           {/* Coluna direita: Card 2 + bloco de texto + CTA */}
           <div className="md:col-span-1 flex flex-col gap-5">
 
-            {/* Card 2 — menor, hierarquia secundária */}
+            {/* Card 2 â€” menor, hierarquia secundÃ¡ria */}
             <div className="
               group relative rounded-[20px] overflow-hidden 
               aspect-[1.79] w-full
               transition-transform duration-500 ease-out
               hover:-translate-y-[2px]
             ">
-              <img
-                src={CARDS[1].image}
-                alt={CARDS[1].alt}
-                className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]"
-              />
+              <Image src={CARDS[1].image} alt={CARDS[1].alt} fill sizes="(max-width: 768px) 100vw, 33vw" quality={85} className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]" />
               <div className="sr-only">
                 <h3>{CARDS[1].title}</h3>
                 <p>{CARDS[1].support}</p>
               </div>
             </div>
 
-            {/* Categoria editorial — Grupos & Experiências */}
+            {/* Categoria editorial â€” Grupos & ExperiÃªncias */}
             <div className="
               rounded-[20px] border border-ocean-navy/8 bg-warm-sand/50
               px-6 py-7 flex flex-col justify-between gap-6
@@ -88,7 +81,7 @@ export function FeatureSection() {
                   Passeios para cada perfil
                 </p>
                 <p className="mt-2 text-slate-blue font-sans text-sm leading-relaxed">
-                  Atendimento local para turistas, famílias, grupos e agências.
+                  Atendimento local para turistas, famÃ­lias, grupos e agÃªncias.
                 </p>
               </div>
               {/* CTA */}
@@ -113,3 +106,4 @@ export function FeatureSection() {
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-export const SITE_URL = "https://aquino-turismo.vercel.app";
+export const SITE_URL = "https://aquinoturismoparaty.com.br";
 
 export const SITE_NAME = "Aquino Tour";
 export const INSTAGRAM_URL = "https://www.instagram.com/aquinotourparaty/";

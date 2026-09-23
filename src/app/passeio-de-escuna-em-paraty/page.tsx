@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Passeio de escuna em Paraty | Aquino Tour",
   description: "Passeio de escuna em Paraty: navegue pela baía com paradas em praias e ilhas paradisíacas. Consulte horários e garanta sua vaga pelo WhatsApp.",
   alternates: {
-    canonical: "/passeio-de-escuna-em-paraty",
+    canonical: `${SITE_URL}/passeio-de-escuna-em-paraty`,
   },
   openGraph: {
     title: "Passeio de escuna em Paraty | Aquino Tour",

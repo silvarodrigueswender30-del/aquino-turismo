@@ -1,10 +1,11 @@
-'use client';
+﻿"use client";
+import Image from "next/image";
 
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ChevronLeft, ChevronRight, MapPin, ImageOff } from "lucide-react";
 import { useState } from "react";
 
-// ─── Gallery data ──────────────────────────────────────────────────────
+// â”€â”€â”€ Gallery data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 interface GalleryItem {
   id: number;
   imageUrl: string;
@@ -18,14 +19,14 @@ const galleryItems: GalleryItem[] = [
     id: 1,
     imageUrl: "/images/galeria/ilha-comprida.avif",
     title: "Ilha Comprida",
-    location: "Baía de Paraty",
-    alt: "Ilha Comprida na Baía de Paraty",
+    location: "BaÃ­a de Paraty",
+    alt: "Ilha Comprida na BaÃ­a de Paraty",
   },
   {
     id: 2,
     imageUrl: "/images/galeria/ilha-do-coco.avif",
     title: "Ilha do Coco",
-    location: "Baía de Paraty",
+    location: "BaÃ­a de Paraty",
     alt: "Ilha do Coco em Paraty RJ",
   },
   {
@@ -38,9 +39,9 @@ const galleryItems: GalleryItem[] = [
   {
     id: 4,
     imageUrl: "/images/galeria/praia-da-conceicao.avif",
-    title: "Praia da Conceição",
+    title: "Praia da ConceiÃ§Ã£o",
     location: "Paraty, RJ",
-    alt: "Praia da Conceição em Paraty RJ",
+    alt: "Praia da ConceiÃ§Ã£o em Paraty RJ",
   },
   {
     id: 5,
@@ -53,16 +54,16 @@ const galleryItems: GalleryItem[] = [
     id: 6,
     imageUrl: "/images/galeria/saco-da-velha.avif",
     title: "Saco da Velha",
-    location: "Baía de Paraty",
-    alt: "Saco da Velha na Baía de Paraty",
+    location: "BaÃ­a de Paraty",
+    alt: "Saco da Velha na BaÃ­a de Paraty",
   },
 ];
 
 export function GallerySlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Fallback para manter os botões interativos
-  // Como o InfiniteSlider usa framer-motion linear contínuo, não tem paginação nativa.
+  // Fallback para manter os botÃµes interativos
+  // Como o InfiniteSlider usa framer-motion linear contÃ­nuo, nÃ£o tem paginaÃ§Ã£o nativa.
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
   };
@@ -75,15 +76,10 @@ export function GallerySlider() {
     <section className="relative w-full overflow-hidden pt-8 pb-24 md:pt-12 md:pb-32">
       {/* Imagem de fundo full-bleed */}
       <div className="absolute inset-0">
-        <img 
-          src="/images/destinations/escuna-section-bg.avif" 
-          alt="Paisagem marítima na Baía de Paraty" 
-          className="w-full h-full object-cover" 
-          loading="lazy"
-        />
+        <Image src="/images/destinations/escuna-section-bg.avif" alt="Paisagem marítima na Baía de Paraty" fill sizes="100vw" quality={85} className="object-cover" />
       </div>
 
-      {/* Máscara superior: funde a imagem saindo do branco/bg da página */}
+      {/* MÃ¡scara superior: funde a imagem saindo do branco/bg da pÃ¡gina */}
       <div 
         className="absolute top-0 left-0 right-0 h-[40%] z-10 pointer-events-none"
         style={{
@@ -95,7 +91,7 @@ export function GallerySlider() {
         }}
       />
 
-      {/* Máscara inferior: funde a imagem entrando na cor de fundo da próxima sessão */}
+      {/* MÃ¡scara inferior: funde a imagem entrando na cor de fundo da prÃ³xima sessÃ£o */}
       <div 
         className="absolute bottom-0 left-0 right-0 h-[22%] z-10 pointer-events-none"
         style={{
@@ -117,21 +113,11 @@ export function GallerySlider() {
               key={item.id}
               className="group relative w-[320px] md:w-[400px] aspect-[4/3] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 bg-transparent cursor-pointer"
             >
-              <img
-                src={item.imageUrl}
-                alt={item.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                loading="lazy"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                  const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
-                  if (fallback) fallback.style.display = "flex";
-                }}
-              />
+              <Image src={item.imageUrl} alt={item.alt} fill sizes="(max-width: 768px) 320px, 400px" quality={85} className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out" onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; const fallback = e.currentTarget.nextElementSibling as HTMLElement | null; if (fallback) fallback.style.display = "flex"; }} />
 
               <div className="absolute inset-0 hidden flex-col items-center justify-center bg-transparent gap-2">
                 <ImageOff className="w-8 h-8 text-[#2FB8D9]/50" aria-hidden="true" />
-                <span className="text-[#2FB8D9]/50 text-xs font-sans">Imagem indisponível</span>
+                <span className="text-[#2FB8D9]/50 text-xs font-sans">Imagem indisponÃ­vel</span>
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#063A45]/80 via-[#063A45]/20 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300" />
@@ -150,7 +136,7 @@ export function GallerySlider() {
         </InfiniteSlider>
       </div>
 
-      {/* Botões de navegação */}
+      {/* BotÃµes de navegaÃ§Ã£o */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
         <button 
           aria-label="Anterior"
@@ -172,7 +158,7 @@ export function GallerySlider() {
         </div>
 
         <button 
-          aria-label="Próximo"
+          aria-label="PrÃ³ximo"
           onClick={handleNext}
           className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white transition hover:bg-white/25"
         >
@@ -182,3 +168,8 @@ export function GallerySlider() {
     </section>
   );
 }
+
+
+
+
+
