@@ -5,47 +5,47 @@ import { Marquee } from "@/components/ui/marquee";
 
 const galleryItems = [
   {
-    nome: "Rota 01 - BaÃ­a de Paraty",
+    nome: "Rota 01 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 01",
     image: "/images/routes/route-01.avif",
   },
   {
-    nome: "Rota 02 - BaÃ­a de Paraty",
+    nome: "Rota 02 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 02",
     image: "/images/routes/route-02.avif",
   },
   {
-    nome: "Rota 03 - BaÃ­a de Paraty",
+    nome: "Rota 03 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 03",
     image: "/images/routes/route-03.avif",
   },
   {
-    nome: "Rota 04 - BaÃ­a de Paraty",
+    nome: "Rota 04 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 04",
     image: "/images/routes/route-04.avif",
   },
   {
-    nome: "Rota 05 - BaÃ­a de Paraty",
+    nome: "Rota 05 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 05",
     image: "/images/routes/route-05.avif",
   },
   {
-    nome: "Rota 06 - BaÃ­a de Paraty",
+    nome: "Rota 06 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 06",
     image: "/images/routes/route-06.avif",
   },
   {
-    nome: "Rota 07 - BaÃ­a de Paraty",
+    nome: "Rota 07 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 07",
     image: "/images/routes/route-07.avif",
   },
   {
-    nome: "Rota 08 - BaÃ­a de Paraty",
+    nome: "Rota 08 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 08",
     image: "/images/routes/route-08.avif",
   },
   {
-    nome: "Rota 09 - BaÃ­a de Paraty",
+    nome: "Rota 09 - Baía de Paraty",
     alt: "Roteiro de passeio Aquino Tour em Paraty - Rota 09",
     image: "/images/routes/route-09.avif",
   },
@@ -63,7 +63,7 @@ export function IslandsSection() {
             Praias e ilhas para descobrir em Paraty
           </h2>
           <p className="max-w-xl font-sans text-base md:text-lg leading-relaxed text-slate-blue mt-4">
-            A baÃ­a de Paraty reÃºne diferentes paisagens e paradas que podem fazer parte das experiÃªncias marÃ­timas disponÃ­veis na regiÃ£o.
+            A baía de Paraty reúne diferentes paisagens e paradas que podem fazer parte das experiências marítimas disponíveis na região.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export function IslandsSection() {
           <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-8 md:w-16 bg-gradient-to-l from-shell-white to-transparent" />
 
           <Marquee className="[--gap:1.25rem] md:[--gap:2rem] py-4" pauseOnHover duration={70}>
-            {/* Duplicando o array de itens para garantir o scroll contÃ­nuo */}
+            {/* Duplicando o array de itens para garantir o scroll contínuo */}
             {[...galleryItems, ...galleryItems].map((ilha, index) => (
               <div
                 className="group relative flex w-[76vw] max-w-[280px] md:max-w-none md:w-[300px] shrink-0 flex-col overflow-hidden rounded-[16px] shadow-none transition-transform duration-500 ease-out hover:-translate-y-1"
@@ -80,7 +80,7 @@ export function IslandsSection() {
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-deep-marine/5">
                   <Image src={ilha.image} alt={ilha.alt} fill sizes="(max-width: 768px) 280px, 300px" className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]" />
-                  {/* Texto acessÃ­vel apenas para leitor de tela pois a arte grÃ¡fica jÃ¡ traz a tipografia incorporada */}
+                  {/* Texto acessível apenas para leitor de tela pois a arte gráfica já traz a tipografia incorporada */}
                   <span className="sr-only">{ilha.nome}</span>
                 </div>
               </div>

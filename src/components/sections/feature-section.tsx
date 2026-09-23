@@ -7,7 +7,7 @@ const CARDS = [
     image: "/images/banners/passeios-main.avif",
     alt: "Descubra Paraty pelo mar, com passeios de lancha e escuna.",
     title: "Paraty pelo mar",
-    support: "Passeios de escuna pela BaÃ­a de Paraty e praias da regiÃ£o",
+    support: "Passeios de escuna pela Baía de Paraty e praias da região",
   },
   {
     image: "/images/banners/passeios-small.avif",
@@ -31,11 +31,11 @@ export function FeatureSection() {
             Descubra Paraty por terra e pelo mar
           </h2>
           <p className="mt-4 text-slate-blue font-sans text-base md:text-lg leading-relaxed max-w-xl">
-            A Aquino Tour ajuda vocÃª a encontrar o passeio mais adequado para o seu perfil, seja uma experiÃªncia de jipe pela regiÃ£o de cachoeiras e alambiques, um passeio de escuna pela baÃ­a ou uma saÃ­da de lancha para conhecer praias e ilhas.
+            A Aquino Tour ajuda você a encontrar o passeio mais adequado para o seu perfil, seja uma experiência de jipe pela região de cachoeiras e alambiques, um passeio de escuna pela baía ou uma saída de lancha para conhecer praias e ilhas.
           </p>
         </div>
 
-        {/* âœˆï¸âœˆï¸ Grid assimÃ©trico: card grande + card menor + texto âœˆï¸ */}
+        {/* âœˆï¸âœˆï¸ Grid assimétrico: card grande + card menor + texto âœˆï¸ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start">
 
           {/* Card 1 â€” Protagonista 2/3 */}
@@ -47,7 +47,7 @@ export function FeatureSection() {
           ">
             {/* Imagem limpa sem overlays agressivos para preservar a arte da campanha */}
             <Image src={CARDS[0].image} alt={CARDS[0].alt} fill sizes="(max-width: 768px) 100vw, 66vw" quality={85} className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]" />
-            {/* Acessibilidade: ConteÃºdo textual semanticamente preservado para leitores de tela */}
+            {/* Acessibilidade: Conteúdo textual semanticamente preservado para leitores de tela */}
             <div className="sr-only">
               <h3>{CARDS[0].title}</h3>
               <p>{CARDS[0].support}</p>
@@ -57,7 +57,7 @@ export function FeatureSection() {
           {/* Coluna direita: Card 2 + bloco de texto + CTA */}
           <div className="md:col-span-1 flex flex-col gap-5">
 
-            {/* Card 2 â€” menor, hierarquia secundÃ¡ria */}
+            {/* Card 2 â€” menor, hierarquia secundária */}
             <div className="
               group relative rounded-[20px] overflow-hidden 
               aspect-[1.79] w-full
@@ -71,7 +71,7 @@ export function FeatureSection() {
               </div>
             </div>
 
-            {/* Categoria editorial â€” Grupos & ExperiÃªncias */}
+            {/* Categoria editorial â€” Grupos & Experiências */}
             <div className="
               rounded-[20px] border border-ocean-navy/8 bg-warm-sand/50
               px-6 py-7 flex flex-col justify-between gap-6
@@ -81,7 +81,7 @@ export function FeatureSection() {
                   Passeios para cada perfil
                 </p>
                 <p className="mt-2 text-slate-blue font-sans text-sm leading-relaxed">
-                  Atendimento local para turistas, famÃ­lias, grupos e agÃªncias.
+                  Atendimento local para turistas, famílias, grupos e agências.
                 </p>
               </div>
               {/* CTA */}

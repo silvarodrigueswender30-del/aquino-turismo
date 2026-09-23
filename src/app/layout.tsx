@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Passeios e turismo receptivo em Paraty para turistas, famÃ­lias, grupos, excursÃµes e agÃªncias. ConheÃ§a opÃ§Ãµes de jipe, escuna e lancha com atendimento local.",
+    "Passeios e turismo receptivo em Paraty para turistas, famílias, grupos, excursões e agências. Conheça opções de jipe, escuna e lancha com atendimento local.",
   robots: {
     index: true,
     follow: true,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aquino Tour | Passeios e Turismo Receptivo em Paraty",
     description:
-      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famÃ­lias, grupos e agÃªncias.",
+      "Passeios de jipe, escuna e lancha em Paraty com atendimento local para turistas, famílias, grupos e agências.",
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [

@@ -19,14 +19,14 @@ const galleryItems: GalleryItem[] = [
     id: 1,
     imageUrl: "/images/galeria/ilha-comprida.avif",
     title: "Ilha Comprida",
-    location: "BaÃ­a de Paraty",
-    alt: "Ilha Comprida na BaÃ­a de Paraty",
+    location: "Baía de Paraty",
+    alt: "Ilha Comprida na Baía de Paraty",
   },
   {
     id: 2,
     imageUrl: "/images/galeria/ilha-do-coco.avif",
     title: "Ilha do Coco",
-    location: "BaÃ­a de Paraty",
+    location: "Baía de Paraty",
     alt: "Ilha do Coco em Paraty RJ",
   },
   {
@@ -39,9 +39,9 @@ const galleryItems: GalleryItem[] = [
   {
     id: 4,
     imageUrl: "/images/galeria/praia-da-conceicao.avif",
-    title: "Praia da ConceiÃ§Ã£o",
+    title: "Praia da Conceição",
     location: "Paraty, RJ",
-    alt: "Praia da ConceiÃ§Ã£o em Paraty RJ",
+    alt: "Praia da Conceição em Paraty RJ",
   },
   {
     id: 5,
@@ -54,16 +54,16 @@ const galleryItems: GalleryItem[] = [
     id: 6,
     imageUrl: "/images/galeria/saco-da-velha.avif",
     title: "Saco da Velha",
-    location: "BaÃ­a de Paraty",
-    alt: "Saco da Velha na BaÃ­a de Paraty",
+    location: "Baía de Paraty",
+    alt: "Saco da Velha na Baía de Paraty",
   },
 ];
 
 export function GallerySlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Fallback para manter os botÃµes interativos
-  // Como o InfiniteSlider usa framer-motion linear contÃ­nuo, nÃ£o tem paginaÃ§Ã£o nativa.
+  // Fallback para manter os botões interativos
+  // Como o InfiniteSlider usa framer-motion linear contínuo, não tem paginação nativa.
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
   };
@@ -79,7 +79,7 @@ export function GallerySlider() {
         <Image src="/images/destinations/escuna-section-bg.avif" alt="Paisagem marítima na Baía de Paraty" fill sizes="100vw" quality={85} className="object-cover" />
       </div>
 
-      {/* MÃ¡scara superior: funde a imagem saindo do branco/bg da pÃ¡gina */}
+      {/* Máscara superior: funde a imagem saindo do branco/bg da página */}
       <div 
         className="absolute top-0 left-0 right-0 h-[40%] z-10 pointer-events-none"
         style={{
@@ -91,7 +91,7 @@ export function GallerySlider() {
         }}
       />
 
-      {/* MÃ¡scara inferior: funde a imagem entrando na cor de fundo da prÃ³xima sessÃ£o */}
+      {/* Máscara inferior: funde a imagem entrando na cor de fundo da próxima sessão */}
       <div 
         className="absolute bottom-0 left-0 right-0 h-[22%] z-10 pointer-events-none"
         style={{
@@ -117,7 +117,7 @@ export function GallerySlider() {
 
               <div className="absolute inset-0 hidden flex-col items-center justify-center bg-transparent gap-2">
                 <ImageOff className="w-8 h-8 text-[#2FB8D9]/50" aria-hidden="true" />
-                <span className="text-[#2FB8D9]/50 text-xs font-sans">Imagem indisponÃ­vel</span>
+                <span className="text-[#2FB8D9]/50 text-xs font-sans">Imagem indisponível</span>
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#063A45]/80 via-[#063A45]/20 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300" />
@@ -136,7 +136,7 @@ export function GallerySlider() {
         </InfiniteSlider>
       </div>
 
-      {/* BotÃµes de navegaÃ§Ã£o */}
+      {/* Botões de navegação */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
         <button 
           aria-label="Anterior"
@@ -158,7 +158,7 @@ export function GallerySlider() {
         </div>
 
         <button 
-          aria-label="PrÃ³ximo"
+          aria-label="Próximo"
           onClick={handleNext}
           className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white transition hover:bg-white/25"
         >
